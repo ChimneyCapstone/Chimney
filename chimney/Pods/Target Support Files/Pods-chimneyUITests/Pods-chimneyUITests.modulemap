@@ -1,0 +1,6 @@
+framework module Pods_chimneyUITests {
+  umbrella header "Pods-chimneyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

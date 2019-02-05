@@ -7,6 +7,7 @@ target 'chimney' do
 
   # Pods for chimney
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
   target 'chimneyTests' do
     inherit! :search_paths

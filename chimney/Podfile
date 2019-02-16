@@ -9,6 +9,10 @@ target 'chimney' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
 
+  # Pods for Authenication
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Auth'
+
   target 'chimneyTests' do
     inherit! :search_paths
     # Pods for testing

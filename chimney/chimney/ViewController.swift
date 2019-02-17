@@ -7,47 +7,37 @@
 //
 
 import UIKit
-import FirebaseUI
+import FirebaseAuth
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
     
-    // loginTapped is for importing firebaseUI related to login
-    // Reference: https://www.youtube.com/watch?v=brpt9Thi6GU
-    @IBAction func loginTapped(_ sender: Any) {
-        // Get the default auth UI object
-        let authUI = FUIAuth.defaultAuthUI()
-        
-        guard authUI != nil else {
-            // Log the Error
-            print("Error: return nil when getting UI from FirebaseUI")
-            return
-        }
-        // Set ourselves as the delegate
-        authUI?.delegate = self
-        
-        // Get a reference to the auth UI view controller
-        let authViewController = authUI!.authViewController()
-        // Show it
-        present(authViewController, animated: true, completion: nil)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated
     }
+    
+    @IBAction func loginButton(_ sender: UIButton) {
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "login", sender: self)
+            } else {
+                let alert = UIAlertController(title: "There was a problem", message: nil, preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okButton)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
 }
 
-extension ViewController: FUIAuthDelegate {
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        // check there is an error
-        guard error != nil else {
-            // Log the error
-            print("Error: return error when delegating at the Viewcontroller")
-            return
-        }
-        
-        //        authDataResult?.user.uid
-        performSegue(withIdentifier: "goHome", sender: self)
-    }
-}
+

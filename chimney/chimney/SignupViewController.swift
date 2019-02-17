@@ -32,7 +32,7 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated
     }
     
-    // signupButton is for activating create User in out server.
+    // signupButton is for activating create user in out server.
     // Reference: https://www.youtube.com/watch?v=jKV9rV2JDVE
     @IBAction func signUpButton(_ sender: UIButton){
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in

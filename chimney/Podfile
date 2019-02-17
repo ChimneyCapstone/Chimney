@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
-
+source 'https://github.com/CocoaPods/Specs.git'
 target 'chimney' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
@@ -8,6 +8,10 @@ target 'chimney' do
   # Pods for chimney
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+
+  # Pods for address and site using Google Map API
+  pod 'GooglePlaces'
+  pod 'GoogleMaps'
 
   target 'chimneyTests' do
     inherit! :search_paths

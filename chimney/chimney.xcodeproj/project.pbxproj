@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1BE155506A8555F548487CB2 /* Pods_chimneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */; };
+		2B59D17D221A2944009E9BC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B59D17C221A2944009E9BC1 /* GoogleService-Info.plist */; };
+		2B59D17F221A2992009E9BC1 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B59D17E221A2992009E9BC1 /* Keys.plist */; };
+		2BF7FC6D221A218500D61B34 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF7FC6C221A218500D61B34 /* MapViewController.swift */; };
 		468E8924BBE5AC2B723F1E72 /* Pods_chimney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */; };
 		C5AC7062C131385F83AB88EF /* Pods_chimneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */; };
-		D39AFAFF22177D4400BA8A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39AFAFE22177D4400BA8A5C /* GoogleService-Info.plist */; };
 		D39AFB032218B34600BA8A5C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* SignupViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SigninViewController.swift */; };
-		D39AFB0B221A179D00BA8A5C /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39AFB0A221A179D00BA8A5C /* keys.plist */; };
 		D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5AB9F220133C000CE200A /* AppDelegate.swift */; };
 		D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABA1220133C000CE200A /* ViewController.swift */; };
 		D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C5ABA3220133C000CE200A /* Main.storyboard */; };
@@ -43,16 +44,17 @@
 /* Begin PBXFileReference section */
 		1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EE4F948C50CF93F05404AB /* Pods-chimneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B59D17C221A2944009E9BC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2B59D17E221A2992009E9BC1 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keys.plist; path = ../../../../Downloads/Keys.plist; sourceTree = "<group>"; };
+		2BF7FC6C221A218500D61B34 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86F0A8CA20E2B53CC8CB2AC /* Pods-chimney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimney/Pods-chimney.release.xcconfig"; sourceTree = "<group>"; };
 		CCD253AC79CFAC1173D0A035 /* Pods-chimneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE579A1634EF456DDBBCCCA5 /* Pods-chimneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D290603961E4A4BD2D513613 /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D39AFAFE22177D4400BA8A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D39AFB022218B34600BA8A5C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
-		D39AFB0A221A179D00BA8A5C /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		D3C5AB9C220133C000CE200A /* chimney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5AB9F220133C000CE200A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C5ABA1220133C000CE200A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,15 +148,16 @@
 			isa = PBXGroup;
 			children = (
 				D3C5AB9F220133C000CE200A /* AppDelegate.swift */,
-				D39AFAFE22177D4400BA8A5C /* GoogleService-Info.plist */,
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
 				D39AFB022218B34600BA8A5C /* SignupViewController.swift */,
 				D3C5ABA3220133C000CE200A /* Main.storyboard */,
+				2B59D17C221A2944009E9BC1 /* GoogleService-Info.plist */,
 				D3C5ABA6220133C100CE200A /* Assets.xcassets */,
 				D3C5ABA8220133C100CE200A /* LaunchScreen.storyboard */,
 				D3C5ABAB220133C100CE200A /* Info.plist */,
+				2B59D17E221A2992009E9BC1 /* Keys.plist */,
 				D39AFB042219E48300BA8A5C /* SigninViewController.swift */,
-				D39AFB0A221A179D00BA8A5C /* keys.plist */,
+				2BF7FC6C221A218500D61B34 /* MapViewController.swift */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -291,11 +294,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39AFB0B221A179D00BA8A5C /* keys.plist in Resources */,
 				D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */,
-				D39AFAFF22177D4400BA8A5C /* GoogleService-Info.plist in Resources */,
+				2B59D17D221A2944009E9BC1 /* GoogleService-Info.plist in Resources */,
 				D3C5ABA7220133C100CE200A /* Assets.xcassets in Resources */,
 				D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */,
+				2B59D17F221A2992009E9BC1 /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +327,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -339,7 +342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9068E226651992ACE43DE712 /* [CP] Check Pods Manifest.lock */ = {
@@ -394,7 +397,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -407,7 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A89E81656FCF91DDB45FD96C /* [CP] Check Pods Manifest.lock */ = {
@@ -442,6 +445,7 @@
 				D39AFB052219E48300BA8A5C /* SigninViewController.swift in Sources */,
 				D39AFB032218B34600BA8A5C /* SignupViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
+				2BF7FC6D221A218500D61B34 /* MapViewController.swift in Sources */,
 				D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

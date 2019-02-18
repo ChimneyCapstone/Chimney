@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GooglePlaces
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,11 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let path = Bundle.main.path(forResource: "Keys", ofType: "plist") {
             keys = NSDictionary(contentsOfFile: path)
         }
+        
         if let dict = keys {
             let clientKey = dict["parseClientKey"] as? String
             
             // Initialize Parse.
             GMSPlacesClient.provideAPIKey(clientKey!)
+            GMSServices.provideAPIKey(clientKey!)
         }
         
         return true
@@ -54,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
 
 
 }

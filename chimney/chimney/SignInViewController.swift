@@ -21,7 +21,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
+
     @IBAction func signInButtonTapped(_ sender: UIButton) {
         
         // TODO: Validate email and password

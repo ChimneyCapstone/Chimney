@@ -8,7 +8,7 @@ target 'chimney' do
   # Pods for chimney
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-
+  pod 'Firebase/Database'
   # Pods for address and site using Google Map API
   pod 'GooglePlaces'
   pod 'GoogleMaps'

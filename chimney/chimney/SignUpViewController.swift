@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import GoogleMaps
+import GooglePlaces
 
 class SignUpViewController: UIViewController {
     
@@ -22,6 +24,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    
+    
+    var arrayAddress = [GMSAutocompletePrediction]()
+    lazy var filter: GMSAutocompleteFilter = {
+        let filter = GMSAutocompleteFilter()
+        filter.type = .address
+        return filter
+    }()
     
     override func viewDidLoad() {
         

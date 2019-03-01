@@ -21,9 +21,11 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
+    
+    
+    // Reference: https://www.youtube.com/watch?v=asKXHVUZiIY
+    // https://www.youtube.com/watch?v=UPKCULKi0-A
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-        
         // TODO: Validate email and password
         
         if let email = emailTextField.text, let pass = passwordTextField.text {
@@ -51,11 +53,6 @@ class SignInViewController: UIViewController {
         
     }
     
-    @IBAction func backTapped(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-    
-    }
     
 }
 

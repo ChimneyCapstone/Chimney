@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let clientKey = dict["parseClientKey"] as? String
 
             // Initialize Parse.
-            GMSPlacesClient.provideAPIKey(clientKey!)
+            // GMSPlacesClient.provideAPIKey(clientKey!) // address auto-completing 
             GMSServices.provideAPIKey(clientKey!)
         }
         

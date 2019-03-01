@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B570140221FF8B000C2BFC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B57013F221FF8B000C2BFC9 /* GoogleService-Info.plist */; };
-		0B570142221FF8B700C2BFC9 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B570141221FF8B700C2BFC9 /* Keys.plist */; };
-		1BE155506A8555F548487CB2 /* Pods_chimneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */; };
-		468E8924BBE5AC2B723F1E72 /* Pods_chimney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */; };
-		C5AC7062C131385F83AB88EF /* Pods_chimneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */; };
+		26F35D7CADCF5AA82C9CFDB6 /* Pods_chimneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90B5788E674F9DE909235E /* Pods_chimneyTests.framework */; };
+		74E949884A8E36A035356988 /* Pods_chimney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6110B92BD3E97EDC8BDE0425 /* Pods_chimney.framework */; };
+		9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */; };
+		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
+		AB5DA7A0751ACD1E37488DC3 /* Pods_chimneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0551AF189CCAFB3E7598D791 /* Pods_chimneyUITests.framework */; };
 		D39AFB032218B34600BA8A5C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* SignUpViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
 		D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5AB9F220133C000CE200A /* AppDelegate.swift */; };
@@ -41,16 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B57013F221FF8B000C2BFC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0B570141221FF8B700C2BFC9 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21EE4F948C50CF93F05404AB /* Pods-chimneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C86F0A8CA20E2B53CC8CB2AC /* Pods-chimney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimney/Pods-chimney.release.xcconfig"; sourceTree = "<group>"; };
-		CCD253AC79CFAC1173D0A035 /* Pods-chimneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CE579A1634EF456DDBBCCCA5 /* Pods-chimneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.release.xcconfig"; sourceTree = "<group>"; };
-		D290603961E4A4BD2D513613 /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0551AF189CCAFB3E7598D791 /* Pods_chimneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6062C26FBF7A6BEF21CA7871 /* Pods-chimneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6110B92BD3E97EDC8BDE0425 /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B8EC8206541523CA22F838 /* Pods-chimney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.release.xcconfig"; path = "Target Support Files/Pods-chimney/Pods-chimney.release.xcconfig"; sourceTree = "<group>"; };
+		88CCE3752631EA79886AF44D /* Pods-chimneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.debug.xcconfig"; path = "Target Support Files/Pods-chimneyTests/Pods-chimneyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D684D4E2229CAB70070B0FA /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keys.plist; path = ../../../../Downloads/Keys.plist; sourceTree = "<group>"; };
+		9E90B5788E674F9DE909235E /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A437F026F3E3E2351043799B /* Pods-chimney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.debug.xcconfig"; path = "Target Support Files/Pods-chimney/Pods-chimney.debug.xcconfig"; sourceTree = "<group>"; };
 		D39AFB022218B34600BA8A5C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D3C5AB9C220133C000CE200A /* chimney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +65,8 @@
 		D3C5ABBB220133C100CE200A /* chimneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chimneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5ABBF220133C100CE200A /* chimneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chimneyUITests.swift; sourceTree = "<group>"; };
 		D3C5ABC1220133C100CE200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8710B333072A0E483FDA811 /* Pods-chimney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimney/Pods-chimney.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE25FB73DE851888CF35648 /* Pods-chimneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.release.xcconfig"; path = "Target Support Files/Pods-chimneyTests/Pods-chimneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3CDAC7C0F64FBDBCF0645AB /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				468E8924BBE5AC2B723F1E72 /* Pods_chimney.framework in Frameworks */,
+				74E949884A8E36A035356988 /* Pods_chimney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE155506A8555F548487CB2 /* Pods_chimneyTests.framework in Frameworks */,
+				26F35D7CADCF5AA82C9CFDB6 /* Pods_chimneyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,34 +90,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5AC7062C131385F83AB88EF /* Pods_chimneyUITests.framework in Frameworks */,
+				AB5DA7A0751ACD1E37488DC3 /* Pods_chimneyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AEBF60B169DB033D00E8A33 /* Frameworks */ = {
+		9C1C1AD81BF51F04BB80DFBB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */,
-				1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */,
-				AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		67E881B90CA6A746A7F99165 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D8710B333072A0E483FDA811 /* Pods-chimney.debug.xcconfig */,
-				C86F0A8CA20E2B53CC8CB2AC /* Pods-chimney.release.xcconfig */,
-				CCD253AC79CFAC1173D0A035 /* Pods-chimneyTests.debug.xcconfig */,
-				CE579A1634EF456DDBBCCCA5 /* Pods-chimneyTests.release.xcconfig */,
-				21EE4F948C50CF93F05404AB /* Pods-chimneyUITests.debug.xcconfig */,
-				D290603961E4A4BD2D513613 /* Pods-chimneyUITests.release.xcconfig */,
+				A437F026F3E3E2351043799B /* Pods-chimney.debug.xcconfig */,
+				74B8EC8206541523CA22F838 /* Pods-chimney.release.xcconfig */,
+				88CCE3752631EA79886AF44D /* Pods-chimneyTests.debug.xcconfig */,
+				DEE25FB73DE851888CF35648 /* Pods-chimneyTests.release.xcconfig */,
+				6062C26FBF7A6BEF21CA7871 /* Pods-chimneyUITests.debug.xcconfig */,
+				F3CDAC7C0F64FBDBCF0645AB /* Pods-chimneyUITests.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C991E1CBA918967D2666C3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6110B92BD3E97EDC8BDE0425 /* Pods_chimney.framework */,
+				9E90B5788E674F9DE909235E /* Pods_chimneyTests.framework */,
+				0551AF189CCAFB3E7598D791 /* Pods_chimneyUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D3C5AB93220133C000CE200A = {
@@ -127,8 +128,8 @@
 				D3C5ABB3220133C100CE200A /* chimneyTests */,
 				D3C5ABBE220133C100CE200A /* chimneyUITests */,
 				D3C5AB9D220133C000CE200A /* Products */,
-				67E881B90CA6A746A7F99165 /* Pods */,
-				0AEBF60B169DB033D00E8A33 /* Frameworks */,
+				9C1C1AD81BF51F04BB80DFBB /* Pods */,
+				9C991E1CBA918967D2666C3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,12 +150,12 @@
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
 				D39AFB022218B34600BA8A5C /* SignUpViewController.swift */,
 				D3C5ABA3220133C000CE200A /* Main.storyboard */,
+				9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */,
+				9D684D4E2229CAB70070B0FA /* Keys.plist */,
 				D3C5ABA6220133C100CE200A /* Assets.xcassets */,
 				D3C5ABA8220133C100CE200A /* LaunchScreen.storyboard */,
 				D3C5ABAB220133C100CE200A /* Info.plist */,
 				D39AFB042219E48300BA8A5C /* SignInViewController.swift */,
-				0B57013F221FF8B000C2BFC9 /* GoogleService-Info.plist */,
-				0B570141221FF8B700C2BFC9 /* Keys.plist */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -184,12 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5ABC4220133C100CE200A /* Build configuration list for PBXNativeTarget "chimney" */;
 			buildPhases = (
-				A1CF2746F86592AF294D5716 /* [CP] Check Pods Manifest.lock */,
+				3326F3B87FAD7D0C34EA634B /* [CP] Check Pods Manifest.lock */,
 				D3C5AB98220133C000CE200A /* Sources */,
 				D3C5AB99220133C000CE200A /* Frameworks */,
 				D3C5AB9A220133C000CE200A /* Resources */,
-				5DE0D01ACAAC6267B6E6546D /* [CP] Embed Pods Frameworks */,
-				23E58A9085B4926775B4F347 /* [CP] Copy Pods Resources */,
+				5DB96D6FBB25D1814124C385 /* [CP] Embed Pods Frameworks */,
+				8B66B017CBCFD86D8DD803E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,7 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5ABC7220133C100CE200A /* Build configuration list for PBXNativeTarget "chimneyTests" */;
 			buildPhases = (
-				A89E81656FCF91DDB45FD96C /* [CP] Check Pods Manifest.lock */,
+				DC60D35DEE8F12E85C697D16 /* [CP] Check Pods Manifest.lock */,
 				D3C5ABAC220133C100CE200A /* Sources */,
 				D3C5ABAD220133C100CE200A /* Frameworks */,
 				D3C5ABAE220133C100CE200A /* Resources */,
@@ -223,7 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5ABCA220133C100CE200A /* Build configuration list for PBXNativeTarget "chimneyUITests" */;
 			buildPhases = (
-				9068E226651992ACE43DE712 /* [CP] Check Pods Manifest.lock */,
+				ABE75CB086A5268D0078AF97 /* [CP] Check Pods Manifest.lock */,
 				D3C5ABB7220133C100CE200A /* Sources */,
 				D3C5ABB8220133C100CE200A /* Frameworks */,
 				D3C5ABB9220133C100CE200A /* Resources */,
@@ -292,10 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */,
-				0B570140221FF8B000C2BFC9 /* GoogleService-Info.plist in Resources */,
+				9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */,
 				D3C5ABA7220133C100CE200A /* Assets.xcassets in Resources */,
 				D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */,
-				0B570142221FF8B700C2BFC9 /* Keys.plist in Resources */,
+				9D684D502229CAB70070B0FA /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,83 +317,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23E58A9085B4926775B4F347 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5DE0D01ACAAC6267B6E6546D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9068E226651992ACE43DE712 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-chimneyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A1CF2746F86592AF294D5716 /* [CP] Check Pods Manifest.lock */ = {
+		3326F3B87FAD7D0C34EA634B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,7 +339,83 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A89E81656FCF91DDB45FD96C /* [CP] Check Pods Manifest.lock */ = {
+		5DB96D6FBB25D1814124C385 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B66B017CBCFD86D8DD803E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABE75CB086A5268D0078AF97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chimneyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC60D35DEE8F12E85C697D16 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -619,7 +620,7 @@
 		};
 		D3C5ABC5220133C100CE200A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8710B333072A0E483FDA811 /* Pods-chimney.debug.xcconfig */;
+			baseConfigurationReference = A437F026F3E3E2351043799B /* Pods-chimney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -637,7 +638,7 @@
 		};
 		D3C5ABC6220133C100CE200A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C86F0A8CA20E2B53CC8CB2AC /* Pods-chimney.release.xcconfig */;
+			baseConfigurationReference = 74B8EC8206541523CA22F838 /* Pods-chimney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,7 +656,7 @@
 		};
 		D3C5ABC8220133C100CE200A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCD253AC79CFAC1173D0A035 /* Pods-chimneyTests.debug.xcconfig */;
+			baseConfigurationReference = 88CCE3752631EA79886AF44D /* Pods-chimneyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -676,7 +677,7 @@
 		};
 		D3C5ABC9220133C100CE200A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE579A1634EF456DDBBCCCA5 /* Pods-chimneyTests.release.xcconfig */;
+			baseConfigurationReference = DEE25FB73DE851888CF35648 /* Pods-chimneyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -697,7 +698,7 @@
 		};
 		D3C5ABCB220133C100CE200A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21EE4F948C50CF93F05404AB /* Pods-chimneyUITests.debug.xcconfig */;
+			baseConfigurationReference = 6062C26FBF7A6BEF21CA7871 /* Pods-chimneyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -717,7 +718,7 @@
 		};
 		D3C5ABCC220133C100CE200A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D290603961E4A4BD2D513613 /* Pods-chimneyUITests.release.xcconfig */;
+			baseConfigurationReference = F3CDAC7C0F64FBDBCF0645AB /* Pods-chimneyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

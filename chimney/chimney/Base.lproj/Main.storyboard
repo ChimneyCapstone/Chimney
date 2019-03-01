@@ -94,10 +94,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="backTapped:" destination="ETg-hY-Sif" eventType="touchUpInside" id="7dP-fV-D84"/>
-                                    <action selector="loginButton:" destination="ETg-hY-Sif" eventType="touchUpInside" id="iYG-nr-tzt"/>
-                                    <action selector="loginTapped:" destination="Q5b-81-VeH" eventType="touchUpInside" id="pbM-E7-MJz"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ant-Ui-GxJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="a7R-xX-A1G"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-Ma-kOr">
@@ -123,9 +120,9 @@
                         <viewLayoutGuide key="safeArea" id="W5q-MQ-udq"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="IEp-VD-Uc4" id="UqZ-a3-0dV"/>
-                        <outlet property="passwordTextField" destination="EiK-gY-PdR" id="jMM-Zf-RKE"/>
-                        <outlet property="signInButton" destination="6Gw-Ma-kOr" id="Ws4-06-ZCv"/>
+                        <outlet property="emailTextField" destination="IEp-VD-Uc4" id="W1w-GX-cmU"/>
+                        <outlet property="passwordTextField" destination="EiK-gY-PdR" id="tKh-ze-fh8"/>
+                        <outlet property="signInButton" destination="6Gw-Ma-kOr" id="1Bz-sC-gd9"/>
                         <segue destination="igT-nC-Q2q" kind="show" identifier="signInToHome" id="NNz-gd-TPd"/>
                     </connections>
                 </viewController>
@@ -237,8 +234,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="backTapped:" destination="GfN-hU-bfy" eventType="touchUpInside" id="hIR-oo-Hk6"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="dFN-gj-qdY"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="2g0-2Q-xrg"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kym-6W-1zP">
@@ -258,7 +254,7 @@
                         <outlet property="emailTextField" destination="7KT-1s-a3q" id="Z5Z-TU-93J"/>
                         <outlet property="fullNameTextField" destination="Fbz-Zu-eGo" id="exC-hB-xBe"/>
                         <outlet property="passwordTextField" destination="kym-6W-1zP" id="Erg-gl-HDA"/>
-                        <outlet property="phoneTextField" destination="e0G-yn-z0F" id="Rtw-F8-RMM"/>
+                        <outlet property="phoneTextField" destination="e0G-yn-z0F" id="CfQ-eY-M5v"/>
                         <outlet property="signUpButton" destination="KNL-D9-kfV" id="p0v-bT-hM4"/>
                         <outlet property="stateTextField" destination="va2-hE-DqX" id="PgY-lf-IU9"/>
                         <outlet property="streetAddressTextField" destination="4iP-6H-Qsv" id="Biv-4a-BtF"/>
@@ -291,6 +287,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="tdk-2H-Y0p"/>
-        <segue reference="dFN-gj-qdY"/>
+        <segue reference="2g0-2Q-xrg"/>
     </inferredMetricsTieBreakers>
 </document>

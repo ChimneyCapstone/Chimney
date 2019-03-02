@@ -57,46 +57,52 @@ class SignUpViewController: UIViewController {
     }
 
     // after tapping sign up button
+    // reference: https://stackoverflow.com/questions/51388655/firebase-email-verification-swift
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         // if there is an empty space on each field, return the alert.
-        if fullNameTextField.text != nil  {
-            let alertController = UIAlertController(title: "Miss full name field", message: "you should type the full name", preferredStyle: .alert)
+        let errorString = "Error"
+        if fullNameTextField.text == nil  {
+            let alertController = UIAlertController(title: errorString, message: "you should type the full name", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
-        } else if emailTextField.text != nil {
-            let alertController = UIAlertController(title: "Miss email field", message: "you should type the email", preferredStyle: .alert)
+        } else if emailTextField.text == nil {
+            let alertController = UIAlertController(title: errorString, message: "you should type the email", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
-        } else if isValidEmail(testStr: emailTextField.text!)  {
-            let alertController = UIAlertController(title: "Need to type valid Email", message: "you should type the proper email", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
-        } else if passwordTextField.text != nil || confirmPasswordTextField.text == nil {
-            let alertController = UIAlertController(title: "", message: "you should type the name", preferredStyle: .alert)
+        } else if passwordTextField.text == nil || confirmPasswordTextField.text == nil {
+            let alertController = UIAlertController(title: errorString, message: "you should type the password", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
         } else if passwordTextField.text != confirmPasswordTextField.text {
-            let alertController = UIAlertController(title: "Miss password field", message: "you should type the password", preferredStyle: .alert)
+            let alertController = UIAlertController(title: errorString, message: "you should confirm password", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
-        } else if cityTextField.text != nil {
-            let alertController = UIAlertController(title: "Miss city textfield", message: "you should type the password", preferredStyle: .alert)
+        } else if cityTextField.text == nil {
+            let alertController = UIAlertController(title: errorString, message: "you should type the city", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
         } else if stateTextField.text == nil {
-            let alertController = UIAlertController(title: "Miss state field", message: "you should type the state", preferredStyle: .alert)
+            let alertController = UIAlertController(title: errorString, message: "you should type the state", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
         } else if zipTextField.text == nil {
-            let alertController = UIAlertController(title: "Miss zip field", message: "you should type the zipcode", preferredStyle: .alert)
+            let alertController = UIAlertController(title: errorString, message: "you should type the zipcode", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
         } else {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil && user != nil {
+                    let userData = ["full name": self.fullNameTextField.text! as String,
+                                    "city": self.cityTextField.text! as String,
+                                    "zipcode":self.zipTextField.text! as String,
+                                    "state":self.stateTextField.text! as String]
+                    
+                    self.ref.child("users").child(user!.user.uid).setValue(userData)
                     self.performSegue(withIdentifier: "loginToHome", sender: self)
                 } else {
-                    print("Error: \(error!.localizedDescription)")
+                    let alertController = UIAlertController(title: errorString, message: error!.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
         }

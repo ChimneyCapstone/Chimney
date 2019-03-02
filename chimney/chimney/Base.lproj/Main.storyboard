@@ -59,8 +59,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEp-VD-Uc4">
-                                <rect key="frame" x="77" y="176" width="228" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEp-VD-Uc4">
+                                <rect key="frame" x="77" y="176" width="202" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="taD-eR-5BM"/>
                                 </constraints>
@@ -68,8 +68,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiK-gY-PdR">
-                                <rect key="frame" x="77" y="239" width="228" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiK-gY-PdR">
+                                <rect key="frame" x="77" y="239" width="202" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="y9L-bf-Gpq"/>
                                 </constraints>
@@ -107,14 +107,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="IEp-VD-Uc4" firstAttribute="leading" secondItem="EiK-gY-PdR" secondAttribute="leading" id="5Ff-9w-h8H"/>
-                            <constraint firstItem="IEp-VD-Uc4" firstAttribute="leading" secondItem="W5q-MQ-udq" secondAttribute="leading" constant="77" id="GJL-ts-eDR"/>
-                            <constraint firstItem="W5q-MQ-udq" firstAttribute="trailing" secondItem="IEp-VD-Uc4" secondAttribute="trailing" constant="70" id="Ohb-4E-91K"/>
-                            <constraint firstItem="IEp-VD-Uc4" firstAttribute="trailing" secondItem="EiK-gY-PdR" secondAttribute="trailing" id="ZeE-hl-qMO"/>
-                            <constraint firstItem="IEp-VD-Uc4" firstAttribute="top" secondItem="W5q-MQ-udq" secondAttribute="top" constant="156" id="dOz-Vv-ibi"/>
-                            <constraint firstItem="EiK-gY-PdR" firstAttribute="top" secondItem="IEp-VD-Uc4" secondAttribute="bottom" constant="33" id="pKy-4P-FHt"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W5q-MQ-udq"/>
                     </view>
                     <connections>
@@ -125,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIX-UB-t5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="-213"/>
+            <point key="canvasLocation" x="1968.8" y="-213.64317841079463"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4Eh-By-520">
@@ -281,6 +273,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="tdk-2H-Y0p"/>
-        <segue reference="2g0-2Q-xrg"/>
+        <segue reference="2ZJ-6S-RsZ"/>
     </inferredMetricsTieBreakers>
 </document>

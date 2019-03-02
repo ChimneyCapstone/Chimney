@@ -13,14 +13,12 @@ import Firebase
 //class TableView: UIViewController, UITableViewDataSource {
 //    import UIKit
 
-class TableViewController: UIViewController, UITableViewDataSource {
+class TableView: UIViewController, UITableViewDataSource {
         
-//    @IBOutlet var tableView: UITableView!
-    // MARK: - Table view data source
-        
-    @IBOutlet weak var tableView: UIView!
+
+    @IBOutlet weak var TableView: UITableViewCell!
     func numberOfSections(in tableView: UITableView) -> Int {
-            return 3
+            return 1
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,13 +26,13 @@ class TableViewController: UIViewController, UITableViewDataSource {
         }
         
         func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            return "Section \(section)"
+            return "Request list"
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellReuseIdentifier", for: indexPath)
             
-            cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+            cell.textLabel?.text = "Task"
             
             return cell
         }

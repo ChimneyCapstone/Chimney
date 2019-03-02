@@ -102,9 +102,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <action selector="loginButton:" destination="ETg-hY-Sif" eventType="touchUpInside" id="YzO-yD-7zj"/>
-                                    <action selector="loginTapped:" destination="Q5b-81-VeH" eventType="touchUpInside" id="jd7-fD-O6f"/>
-                                    <action selector="signInButtonTapped:" destination="ETg-hY-Sif" eventType="touchUpInside" id="p15-Wx-a18"/>
+                                    <action selector="signInButtonTapped:" destination="ETg-hY-Sif" eventType="touchUpInside" id="jKB-H9-Mo2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,12 +120,10 @@
                     <connections>
                         <outlet property="emailTextField" destination="IEp-VD-Uc4" id="W1w-GX-cmU"/>
                         <outlet property="passwordTextField" destination="EiK-gY-PdR" id="tKh-ze-fh8"/>
-                        <outlet property="signInButton" destination="6Gw-Ma-kOr" id="1Bz-sC-gd9"/>
                         <segue destination="igT-nC-Q2q" kind="show" identifier="signInToHome" id="NNz-gd-TPd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIX-UB-t5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Q5b-81-VeH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1970" y="-213"/>
         </scene>
@@ -225,8 +221,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signUpButton:" destination="GfN-hU-bfy" eventType="touchUpInside" id="CHr-Zx-HYy"/>
-                                    <action selector="signUpButtonTapped:" destination="GfN-hU-bfy" eventType="touchUpInside" id="zEd-z2-9Xs"/>
+                                    <action selector="signUpButtonTapped:" destination="GfN-hU-bfy" eventType="touchUpInside" id="QJO-J3-3q2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-57-Tv5">
@@ -255,7 +250,6 @@
                         <outlet property="fullNameTextField" destination="Fbz-Zu-eGo" id="exC-hB-xBe"/>
                         <outlet property="passwordTextField" destination="kym-6W-1zP" id="Erg-gl-HDA"/>
                         <outlet property="phoneTextField" destination="e0G-yn-z0F" id="CfQ-eY-M5v"/>
-                        <outlet property="signUpButton" destination="KNL-D9-kfV" id="p0v-bT-hM4"/>
                         <outlet property="stateTextField" destination="va2-hE-DqX" id="PgY-lf-IU9"/>
                         <outlet property="streetAddressTextField" destination="4iP-6H-Qsv" id="Biv-4a-BtF"/>
                         <outlet property="zipTextField" destination="2aR-Uz-pYP" id="O5u-Yx-FhT"/>
@@ -264,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzN-2j-xOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061.5999999999999" y="725.48725637181417"/>
+            <point key="canvasLocation" x="2097" y="777"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fxb-r6-XM9">

@@ -14,12 +14,9 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
     }
     
     // sign in
@@ -33,7 +30,7 @@ class SignInViewController: UIViewController {
             
             Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
                 if error == nil{
-                    self.performSegue(withIdentifier: "loginToHome", sender: self)
+                    self.performSegue(withIdentifier: "signInToHome", sender: self)
                 }
                 else{
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -42,13 +39,8 @@ class SignInViewController: UIViewController {
                     alertController.addAction(defaultAction)
                     self.present(alertController, animated: true, completion: nil)
                 }
-                
             }
-            
         }
-        
     }
-    
-    
 }
 

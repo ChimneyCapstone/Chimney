@@ -16,7 +16,7 @@ import Firebase
 // This class is the view controller of sign-up page
 class SignUpViewController: UIViewController {
     
-    // Buttons and text fields
+    // Text fields
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -26,14 +26,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
     
     // database reference
     var ref: DatabaseReference!
     
     
 
-    //    variables for autocompleting
+//    variables for autocompleting
 //    place API 
 //    var arrayAddress = [GMSAutocompletePrediction]()
 //    lazy var filter: GMSAutocompleteFilter = {
@@ -48,6 +47,7 @@ class SignUpViewController: UIViewController {
         // initialize the reference 
         ref = Database.database().reference()
     }
+    
     // Check whether email address is vaild
     // Reference: https://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift/52282751
     func isValidEmail(testStr:String) -> Bool {
@@ -93,12 +93,13 @@ class SignUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil && user != nil {
                     let userData = ["full name": self.fullNameTextField.text! as String,
+                                    "address": self.streetAddressTextField.text! as String,
                                     "city": self.cityTextField.text! as String,
                                     "zipcode":self.zipTextField.text! as String,
                                     "state":self.stateTextField.text! as String]
                     
                     self.ref.child("users").child(user!.user.uid).setValue(userData)
-                    self.performSegue(withIdentifier: "loginToHome", sender: self)
+                    self.performSegue(withIdentifier: "signUpToHome", sender: self)
                 } else {
                     let alertController = UIAlertController(title: errorString, message: error!.localizedDescription, preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))

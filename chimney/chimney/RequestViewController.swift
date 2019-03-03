@@ -13,13 +13,35 @@ import GoogleMaps
 
 
 // This class is the view controller of sign-up page
-class RequestViewController: UIViewController {
+class RequestViewController: UIViewController, UITextViewDelegate {
  
     @IBOutlet weak var SubmitButton: UIButton!
-    @IBOutlet weak var RequestTextField: UITextField!
+    @IBOutlet weak var RequestTextField: UITextView!
 
     @IBOutlet weak var MoneyTextField: UITextField!
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        RequestTextField.delegate = self
+        RequestTextField.text = "What do you need? Please be as specific as possible."
+        RequestTextField.textColor = UIColor.lightGray
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        
+        if RequestTextField.textColor == UIColor.lightGray {
+            RequestTextField.text = ""
+            RequestTextField.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        
+        if RequestTextField.text == "" {
+            
+            RequestTextField.text = "Placeholder text ..."
+            RequestTextField.textColor = UIColor.lightGray
+        }
+    }
     
     // check the field whether it fulfilled or not
     func checkFulfilled () -> Bool {
@@ -40,7 +62,7 @@ class RequestViewController: UIViewController {
         if (checkFulfilled()) {
             var ref: DatabaseReference!
             ref = Database.database().reference().child("users").child("1XrCfEdrhFageQnLnshRLXiPXaO2").child("request");
-            ref.childByAutoId().setValue(RequestTextField.text)
+            ref.childByAutoId().setValue(["task": RequestTextField.text, "amount": MoneyTextField.text])
         } else {
             // Error: check error and show message
             let alertController = UIAlertController(title: "Error occurs", message: "something went wrong"/*error!.localizedDescription*/, preferredStyle: .alert)

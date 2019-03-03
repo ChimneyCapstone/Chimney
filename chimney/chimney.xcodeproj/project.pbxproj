@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F9E9A85CFDC947A81B804BD /* Pods_chimney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A89BE7608B715AF79ED7FB /* Pods_chimney.framework */; };
+		2B3DD0F4222B3C1600A01BEA /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DD0F3222B3C1600A01BEA /* RequestViewController.swift */; };
+		2B3DD0F6222B475700A01BEA /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DD0F5222B475700A01BEA /* ReviewViewController.swift */; };
 		2BF5B0E6222A03ED00261B6D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B0E5222A03ED00261B6D /* ExploreViewController.swift */; };
 		2BF5B0E8222A09DB00261B6D /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B0E7222A09DB00261B6D /* TableView.swift */; };
 		4E9E702938205A0AB633355D /* Pods_chimneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3662A25FAE13490FD16CDA3 /* Pods_chimneyUITests.framework */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		140697E126890E582BEB932B /* Pods-chimneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.release.xcconfig"; path = "Target Support Files/Pods-chimneyTests/Pods-chimneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B3DD0F3222B3C1600A01BEA /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		2B3DD0F5222B475700A01BEA /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		2BF5B0E5222A03ED00261B6D /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		2BF5B0E7222A09DB00261B6D /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		86A89BE7608B715AF79ED7FB /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +157,9 @@
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
 				2BF5B0E7222A09DB00261B6D /* TableView.swift */,
 				D39AFB022218B34600BA8A5C /* SignUpViewController.swift */,
+				2B3DD0F3222B3C1600A01BEA /* RequestViewController.swift */,
 				D3C5ABA3220133C000CE200A /* Main.storyboard */,
+				2B3DD0F5222B475700A01BEA /* ReviewViewController.swift */,
 				2BF5B0E5222A03ED00261B6D /* ExploreViewController.swift */,
 				9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */,
 				9D684D4E2229CAB70070B0FA /* Keys.plist */,
@@ -451,9 +457,11 @@
 			files = (
 				D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */,
 				2BF5B0E8222A09DB00261B6D /* TableView.swift in Sources */,
+				2B3DD0F4222B3C1600A01BEA /* RequestViewController.swift in Sources */,
 				D39AFB032218B34600BA8A5C /* SignUpViewController.swift in Sources */,
 				2BF5B0E6222A03ED00261B6D /* ExploreViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
+				2B3DD0F6222B475700A01BEA /* ReviewViewController.swift in Sources */,
 				D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

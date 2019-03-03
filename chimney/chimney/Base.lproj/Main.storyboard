@@ -498,6 +498,9 @@
                                         <segment title="My Neighbors"/>
                                         <segment title="My Requests"/>
                                     </segments>
+                                    <connections>
+                                        <action selector="calculateButton:" destination="nji-b0-WDv" eventType="valueChanged" id="Ygq-4e-Kpk"/>
+                                    </connections>
                                 </segmentedControl>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="37" id="aSr-Gf-rOM">
@@ -517,6 +520,7 @@
                     <navigationItem key="navigationItem" id="cgU-LA-1Bf"/>
                     <connections>
                         <outlet property="ReviewTableView" destination="75N-7G-M5i" id="4td-T2-egG"/>
+                        <outlet property="segmentedControl" destination="W1t-20-RXr" id="ufr-Vt-f6R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmn-ez-XYR" userLabel="First Responder" sceneMemberID="firstResponder"/>

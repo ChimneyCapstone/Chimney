@@ -10,9 +10,6 @@ import Foundation
 import UIKit
 import Firebase
 
-//class TableView: UIViewController, UITableViewDataSource {
-//    import UIKit
-
 class TableView: UIViewController, UITableViewDataSource {
         
 

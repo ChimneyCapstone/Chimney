@@ -255,9 +255,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="phoneTextEdit:" destination="FGu-vu-DGD" eventType="editingDidEnd" id="ZbJ-Ss-XkW"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z66-fa-hkw">
                                 <rect key="frame" x="46" y="318" width="282" height="30"/>

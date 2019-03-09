@@ -12,7 +12,6 @@ import UIKit
 import FirebaseAuth // for authenication
 import Firebase
 
-// Reference: https://stackoverflow.com/questions/1246439/uitextfield-for-phone-number
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     var myPhoneNumber = String()
@@ -30,6 +29,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // initialize the reference
         ref = Database.database().reference()
+        // for phone text field
         phoneTextField.delegate = self
         phoneTextField.keyboardType = .phonePad
     }
@@ -58,40 +58,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     // reference: https://stackoverflow.com/questions/53628375/how-to-store-user-data-in-ios-firebase-with-swift-4
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         // if there is an empty space on each field, return the alert.
-//        print(fullNameTextField.text)
-        let errorString = "Error"
-        if fullNameTextField.text == ""  {
-//            print("Debug1")
-            let alertController = UIAlertController(title: errorString, message: "you should type the full name", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
-            
-        } else if self.emailTextField.text == "" {
-//            print("Debug2")
-            let alertController = UIAlertController(title: errorString, message: "you should type the email", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
-        } else if self.passwordTextField.text == nil || confirmPasswordTextField.text == nil {
-//            print("Debug3")
-            let alertController = UIAlertController(title: errorString, message: "you should type the password", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
-        } else if self.passwordTextField.text != self.confirmPasswordTextField.text {
-//            print("Debug4")
-            let alertController = UIAlertController(title: errorString, message: "you should confirm password", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
-        } else if self.phoneTextField == nil {
-            let alertController = UIAlertController(title: errorString, message: "you type phone number", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
+        if self.fullNameTextField.isEmpty {
+            createAlertController("You should type your full name")
+        } else if self.emailTextField.isEmpty {
+            createAlertController("You should type email")
+        } else if self.passwordTextField.isEmpty {
+            createAlertController("You should type password")
+        } else if self.confirmPasswordTextField.isEmpty {
+            createAlertController("You should type password confirmation")
+        } else if self.phoneTextField.isEmpty {
+            createAlertController("You should type your phone")
         } else if isValidMobile(testStr: self.phoneTextField.text!) {
-            let alertController = UIAlertController(title: errorString, message: "Type valid phone number", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
+            createAlertController("You should type valid phone number")
+        } else if self.passwordTextField.text != self.confirmPasswordTextField.text {
+            createAlertController("You should match password with confirmed password")
         } else {
             // create user on Firebase
-//            print("Debug5")
             Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
                 if error == nil {
                     let userData = ["phone": self.phoneTextField.text,
@@ -100,12 +82,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     self.performSegue(withIdentifier: "nextStep", sender: self)
                 } else {
                     print("Debug " + error!.localizedDescription)
-                    let alertController = UIAlertController(title: errorString, message: error!.localizedDescription, preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                    self.present(alertController, animated: true, completion: nil)
+                    self.createAlertController(error!.localizedDescription)
                 }
             }
         }
+    }
+    
+    // Refactor for creating alertcontroller when error occurs
+    func createAlertController(_ msg: String) {
+        let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // check if it's valid phone number
@@ -127,6 +114,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
 }
 
+// to check whether the textfield is empty or not
+// https://stackoverflow.com/questions/52139322/elegant-way-to-check-if-uitextfield-is-empty
+// https://stackoverflow.com/questions/24102641/how-to-check-if-a-text-field-is-empty-or-not-in-swift
+extension UITextField {
+    var isEmpty: Bool {
+        return text?.isEmpty ?? true
+    }
+}
+
+// Reference: https://stackoverflow.com/questions/1246439/uitextfield-for-phone-number
 extension UITextFieldDelegate {
     func phoneMask(phoneTextField: UITextField, textField: UITextField, _ range: NSRange, _ string: String) -> (result: Bool, phoneNumber: String, maskPhoneNumber: String) {
         let oldString = textField.text!

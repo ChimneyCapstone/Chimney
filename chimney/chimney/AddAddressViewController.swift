@@ -49,7 +49,7 @@ class AddAddressViewController: UIViewController {
         definesPresentationContext = true
     }
     
-    // this function is for check the user status
+    // this function is for checking the user status
     // Reference: https://www.youtube.com/watch?v=Syv_5XDWPjY
     fileprivate func checkLoggedInUserStatus() {
         if Auth.auth().currentUser == nil {

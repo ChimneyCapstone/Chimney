@@ -25,14 +25,11 @@ class SignInViewController: UIViewController {
     // https://medium.com/@ashikabala01/how-to-build-login-and-sign-up-functionality-for-your-ios-app-using-firebase-within-15-mins-df4731faf2f7
     @IBAction func signInButtonTapped(_ sender: UIButton) {
         // TODO: Validate email and password
-        
         if let email = emailTextField.text, let pass = passwordTextField.text {
-            
             Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
-                if error == nil{
+                if error == nil {
                     self.performSegue(withIdentifier: "signInToHome", sender: self)
-                }
-                else{
+                } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     

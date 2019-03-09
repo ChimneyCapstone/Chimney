@@ -12,7 +12,7 @@
 		8A1B0371CACBBE8CA4D6544F /* Pods_chimney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D721F415672A4CBABC8C5997 /* Pods_chimney.framework */; };
 		9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */; };
 		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
-		D39AFB032218B34600BA8A5C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* SignUpViewController.swift */; };
+		D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
 		D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5AB9F220133C000CE200A /* AppDelegate.swift */; };
 		D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABA1220133C000CE200A /* ViewController.swift */; };
@@ -21,6 +21,7 @@
 		D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C5ABA8220133C100CE200A /* LaunchScreen.storyboard */; };
 		D3C5ABB5220133C100CE200A /* chimneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABB4220133C100CE200A /* chimneyTests.swift */; };
 		D3C5ABC0220133C100CE200A /* chimneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABBF220133C100CE200A /* chimneyUITests.swift */; };
+		D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,7 @@
 		9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D684D4E2229CAB70070B0FA /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keys.plist; path = ../../../../Downloads/Keys.plist; sourceTree = "<group>"; };
 		B6728C867EA9B314687619D7 /* Pods-chimneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D39AFB022218B34600BA8A5C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D3C5AB9C220133C000CE200A /* chimney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5AB9F220133C000CE200A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		D3C5ABBB220133C100CE200A /* chimneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chimneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5ABBF220133C100CE200A /* chimneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chimneyUITests.swift; sourceTree = "<group>"; };
 		D3C5ABC1220133C100CE200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D721F415672A4CBABC8C5997 /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8445D54EFDA1034276A6B96 /* Pods-chimney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimney/Pods-chimney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +139,8 @@
 			children = (
 				D3C5AB9F220133C000CE200A /* AppDelegate.swift */,
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
-				D39AFB022218B34600BA8A5C /* SignUpViewController.swift */,
+				D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */,
+				D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */,
 				D3C5ABA3220133C000CE200A /* Main.storyboard */,
 				9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */,
 				9D684D4E2229CAB70070B0FA /* Keys.plist */,
@@ -327,6 +330,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -336,6 +340,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -444,7 +449,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */,
-				D39AFB032218B34600BA8A5C /* SignUpViewController.swift in Sources */,
+				D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */,
+				D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
 				D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */,
 			);

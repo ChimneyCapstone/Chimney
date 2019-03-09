@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import GoogleMaps
-// import GooglePlaces // address auto-completing
+import GooglePlaces // address auto-completing
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let clientKey = dict["parseClientKey"] as? String
 
             // Initialize Parse.
-            // GMSPlacesClient.provideAPIKey(clientKey!) // address auto-completing 
+            GMSPlacesClient.provideAPIKey(clientKey!) // address auto-completing
             GMSServices.provideAPIKey(clientKey!)
         }
         

@@ -76,6 +76,12 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PhoneNumberKit (2.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.6.0)
+    - PhoneNumberKit/UIKit (= 2.6.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.6.0)
+  - PhoneNumberKit/UIKit (2.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -84,6 +90,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - PhoneNumberKit (~> 2.6)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -102,6 +109,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - PhoneNumberKit
 
 SPEC CHECKSUMS:
   Firebase: 59d557e064217fab6a03ff00baa73c06e73832e6
@@ -119,7 +127,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PhoneNumberKit: 167ee1f0bbb6efce7c62559e620eae745595532f
 
-PODFILE CHECKSUM: ffed07a3a12df8c22f82e0e1e219de4bdaab99f6
+PODFILE CHECKSUM: 280de61c78e2a12a4a2757251d05fe531c296159
 
 COCOAPODS: 1.5.3

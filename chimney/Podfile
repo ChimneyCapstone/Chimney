@@ -14,9 +14,6 @@ target 'chimney' do
   pod 'GoogleMaps'
   pod 'GooglePlacePicker'
 
-  # Pod for autoformatting a phone number kit
-  pod 'PhoneNumberKit', '~> 2.6'
-
   target 'chimneyTests' do
     inherit! :search_paths
     # Pods for testing

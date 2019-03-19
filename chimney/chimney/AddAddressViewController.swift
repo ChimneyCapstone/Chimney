@@ -97,7 +97,7 @@ extension AddAddressViewController: GMSAutocompleteResultsViewControllerDelegate
                 }
             }
             // move to main view
-            self.performSegue(withIdentifier: "pathForHome", sender: self)
+            self.performSegue(withIdentifier: "pathToHome", sender: self)
         }))
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
         self.present(alertController, animated: true, completion: nil)

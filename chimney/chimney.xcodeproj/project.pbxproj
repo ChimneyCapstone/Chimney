@@ -14,6 +14,10 @@
 		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
 		D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
+		D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546422417C74000B0253 /* RequestViewController.swift */; };
+		D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546622417C9A000B0253 /* ReviewViewController.swift */; };
+		D3A7546922417CB5000B0253 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546822417CB5000B0253 /* ExploreViewController.swift */; };
+		D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546A22417CD6000B0253 /* TableViewController.swift */; };
 		D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5AB9F220133C000CE200A /* AppDelegate.swift */; };
 		D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABA1220133C000CE200A /* ViewController.swift */; };
 		D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C5ABA3220133C000CE200A /* Main.storyboard */; };
@@ -53,6 +57,10 @@
 		B6728C867EA9B314687619D7 /* Pods-chimneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D3A7546422417C74000B0253 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		D3A7546622417C9A000B0253 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		D3A7546822417CB5000B0253 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		D3A7546A22417CD6000B0253 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D3C5AB9C220133C000CE200A /* chimney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5AB9F220133C000CE200A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C5ABA1220133C000CE200A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 				D3C5ABA8220133C100CE200A /* LaunchScreen.storyboard */,
 				D3C5ABAB220133C100CE200A /* Info.plist */,
 				D39AFB042219E48300BA8A5C /* SignInViewController.swift */,
+				D3A7546422417C74000B0253 /* RequestViewController.swift */,
+				D3A7546622417C9A000B0253 /* ReviewViewController.swift */,
+				D3A7546822417CB5000B0253 /* ExploreViewController.swift */,
+				D3A7546A22417CD6000B0253 /* TableViewController.swift */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -448,8 +460,12 @@
 			files = (
 				D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */,
 				D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */,
+				D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */,
+				D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */,
+				D3A7546922417CB5000B0253 /* ExploreViewController.swift in Sources */,
 				D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
+				D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */,
 				D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

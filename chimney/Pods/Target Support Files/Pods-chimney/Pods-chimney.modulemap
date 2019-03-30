@@ -1,6 +1,0 @@
-framework module Pods_chimney {
-  umbrella header "Pods-chimney-umbrella.h"
-
-  export *
-  module * { export * }
-}

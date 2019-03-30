@@ -7,6 +7,12 @@
 //
 
 import Foundation
+import UIKit
+import Firebase
 
 
-
+class ExploreViewController: UIViewController {
+    
+    
+    
+}

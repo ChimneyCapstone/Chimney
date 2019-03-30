@@ -41,8 +41,8 @@ class ReviewViewController: UIViewController {
                 let cell = ReviewTableView.dequeueReusableCell(withIdentifier: "CellReuseIdentifier", for: indexPath)
                 var ref: DatabaseReference!
                 ref = Database.database().reference()
-                let userID = Auth.auth().currentUser?.uid
-                ref.child("users").child("1XrCfEdrhFageQnLnshRLXiPXaO2").child("request").observeSingleEvent(of: .value, with: { (snapshot) in
+                let userID = Auth.auth().currentUser!.uid
+                ref.child("users").child(userID).child("request").observeSingleEvent(of: .value, with: { (snapshot) in
                     // Get user value
                     let value = snapshot.value as? String
                     cell.textLabel?.text = value

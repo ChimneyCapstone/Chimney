@@ -61,7 +61,8 @@ class RequestViewController: UIViewController, UITextViewDelegate {
         // if there is an empty space on each field, return the alert.
         if (checkFulfilled()) {
             var ref: DatabaseReference!
-            ref = Database.database().reference().child("users").child("1XrCfEdrhFageQnLnshRLXiPXaO2").child("request");
+            let uid = Auth.auth().currentUser!.uid
+            ref = Database.database().reference().child("users").child(uid).child("request");
             ref.childByAutoId().setValue(["task": RequestTextField.text, "amount": MoneyTextField.text])
         } else {
             // Error: check error and show message

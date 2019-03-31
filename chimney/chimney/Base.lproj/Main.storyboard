@@ -288,27 +288,27 @@
             </objects>
             <point key="canvasLocation" x="4401" y="134"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Explore View Controller-->
         <scene sceneID="0uV-ff-Pjj">
             <objects>
-                <tableViewController id="yFt-2K-n0B" sceneMemberID="viewController">
+                <tableViewController id="yFt-2K-n0B" customClass="ExploreViewController" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wf0-Nq-z93">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oMR-g3-epm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlainCell" id="Vzu-t3-2Ut">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oMR-g3-epm" id="4OX-l9-DDQ">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vzu-t3-2Ut" id="Jeh-bl-zww" customClass="UITableViewCell">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="yFt-2K-n0B" id="OMm-Ii-36G"/>
-                            <outlet property="delegate" destination="yFt-2K-n0B" id="hWw-jB-7hV"/>
+                            <outlet property="dataSource" destination="yFt-2K-n0B" id="QJ2-s7-bvB"/>
+                            <outlet property="delegate" destination="yFt-2K-n0B" id="Egi-oh-EdJ"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="e4p-jN-p77"/>
@@ -392,7 +392,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="yFt-2K-n0B" kind="relationship" relationship="rootViewController" id="Y2u-30-Fjs"/>
+                        <segue destination="yFt-2K-n0B" kind="relationship" relationship="rootViewController" id="3Hw-nf-Vdb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbF-6I-jQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -449,6 +449,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Iqs-My-v6R"/>
         <segue reference="BBu-bk-G0q"/>
-        <segue reference="SY5-s2-Z8Q"/>
+        <segue reference="yRe-KA-2IU"/>
     </inferredMetricsTieBreakers>
 </document>

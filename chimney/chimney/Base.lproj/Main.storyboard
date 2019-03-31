@@ -409,46 +409,36 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fTP-ej-y1E" kind="relationship" relationship="rootViewController" id="ade-k0-fGT"/>
+                        <segue destination="JCq-Ld-StB" kind="relationship" relationship="rootViewController" id="p6u-Q4-dUK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGi-8Q-ylm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5358" y="883"/>
         </scene>
-        <!--Review Table View-->
-        <scene sceneID="ZJy-Te-qOH">
+        <!--Review View Controller-->
+        <scene sceneID="pI6-3i-tlQ">
             <objects>
-                <tableViewController id="fTP-ej-y1E" customClass="ReviewTableView" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="36J-E2-Ku5">
+                <viewController id="JCq-Ld-StB" customClass="ReviewViewController" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVx-et-LJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fV7-Nx-4ho">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fV7-Nx-4ho" id="Pzo-sH-6Up">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fTP-ej-y1E" id="e4N-bS-j8r"/>
-                            <outlet property="delegate" destination="fTP-ej-y1E" id="kvE-ki-UDn"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="Emq-S4-K6t"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NVI-ht-GLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="aMo-Sy-so1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PoP-wi-wQb"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ErrorWithoutLogin" id="h0W-sy-F5P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxy-s1-Dnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6334" y="883"/>
+            <point key="canvasLocation" x="6361" y="883"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Iqs-My-v6R"/>
-        <segue reference="BBu-bk-G0q"/>
-        <segue reference="SY5-s2-Z8Q"/>
+        <segue reference="2GL-Xb-SPI"/>
+        <segue reference="h0W-sy-F5P"/>
     </inferredMetricsTieBreakers>
 </document>

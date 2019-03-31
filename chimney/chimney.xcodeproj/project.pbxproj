@@ -12,6 +12,7 @@
 		62B59257FD0381FAE2EB0792 /* Pods_chimneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03DA0F85DC39C9A4FDCC23 /* Pods_chimneyUITests.framework */; };
 		9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */; };
 		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
+		D34E784522512EC10062ED78 /* VerifiedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E784422512EC10062ED78 /* VerifiedUser.swift */; };
 		D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
 		D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546422417C74000B0253 /* RequestViewController.swift */; };
@@ -57,6 +58,7 @@
 		A4A7D44DC52DD9C5414B8417 /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26A0C6CD493F8C89A118584 /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC455CD1D8746C238BFCB783 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34E784422512EC10062ED78 /* VerifiedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedUser.swift; sourceTree = "<group>"; };
 		D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D3A7546422417C74000B0253 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +119,6 @@
 				3959C6529C3230D6F27D4C1B /* Pods-chimneyUITests.debug.xcconfig */,
 				B26A0C6CD493F8C89A118584 /* Pods-chimneyUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,6 +172,7 @@
 				D3A7546622417C9A000B0253 /* ReviewViewController.swift */,
 				D3A7546822417CB5000B0253 /* ExploreViewController.swift */,
 				D3A7546A22417CD6000B0253 /* TableViewController.swift */,
+				D34E784422512EC10062ED78 /* VerifiedUser.swift */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -467,6 +469,7 @@
 				D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
 				D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */,
+				D34E784522512EC10062ED78 /* VerifiedUser.swift in Sources */,
 				D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

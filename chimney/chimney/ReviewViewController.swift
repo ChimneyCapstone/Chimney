@@ -40,26 +40,6 @@ class ReviewViewController: UIViewController {
         
     }
     
-    // verified a user
-    func verifiedUser(user: User) -> User? {
-        // check whether user signed in or not
-        
-        if Auth.auth().currentUser != nil {
-            // User is signed in.
-            return user
-        } else {
-            // No user is signed in.
-            // ...
-            let alertController = UIAlertController(title: "Error", message: "Need to Sign in first to access the page", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel) { (_) -> Void in
-                self.performSegue(withIdentifier: "ErrorWithoutLogin", sender: self)
-            }
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
-        return nil
-    }
-    
     // create segmentControl and add to view controller
     func createSegment() -> UISegmentedControl {
         let items = ["Asked", "Took"]

@@ -6,6 +6,7 @@
 //  Changed by Kangwoo Choi on 3/30/19.
 //  Copyright © 2019 chimney. All rights reserved.
 //
+
 import Foundation
 import UIKit
 import Firebase
@@ -18,16 +19,18 @@ class ReviewViewController: UIViewController {
     
     var user: User?
     var ref: DatabaseReference!
+    var uid: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Review"
         ref = Database.database().reference()
         // create segmentControl and add to view controller
-        let segmentedControl = createSegment()
-        self.view.addSubview(segmentedControl)
+//        let segmentedControl = createSegment()
+//        self.view.addSubview(segmentedControl)
         
         user = verifiedUser(user: Auth.auth().currentUser!)
+        self.uid = self.user?.uid
         self.getRequestInfo()
         // set default swipe direction
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
@@ -40,32 +43,32 @@ class ReviewViewController: UIViewController {
         
     }
     
-    // create segmentControl and add to view controller
-    func createSegment() -> UISegmentedControl {
-        let items = ["Asked", "Took"]
-        let segmentedControl = UISegmentedControl(items: items)
-        segmentedControl.center = self.view.center
-        segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(ReviewViewController.indexChanged(_:)), for: .valueChanged)
-        
-        segmentedControl.layer.cornerRadius = 5.0
-        segmentedControl.backgroundColor = .red
-        segmentedControl.tintColor = .yellow
-        
-        return segmentedControl
-    }
+    // create segment control and add to view controller
+//    func createSegment() -> UISegmentedControl {
+//        let items = ["Asked", "Took"]
+//        let segmentedControl = UISegmentedControl(items: items)
+//        segmentedControl.center = self.view.center
+//        segmentedControl.selectedSegmentIndex = 0
+//        segmentedControl.addTarget(self, action: #selector(ReviewViewController.indexChanged(_:)), for: .valueChanged)
+//
+//        segmentedControl.layer.cornerRadius = 5.0
+//        segmentedControl.backgroundColor = .red
+//        segmentedControl.tintColor = .yellow
+//
+//        return segmentedControl
+//    }
     
-    // add function when tap controller
-    @objc func indexChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex{
-        case 0:
-            print("Asked");
-        case 1:
-            print("Took")
-        default:
-            break
-        }
-    }
+    // animation for segment control
+//    @objc func indexChanged(_ sender: UISegmentedControl) {
+//        switch sender.selectedSegmentIndex{
+//        case 0:
+//            print("Asked");
+//        case 1:
+//            print("Took")
+//        default:
+//            break
+//        }
+//    }
     
     // handle swipe motion
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
@@ -82,24 +85,39 @@ class ReviewViewController: UIViewController {
     }
     
     // get requests from other users and address from firebase real-time database
+    // extremely slow... and not able to get a user's request...
     func getRequestInfo() {
-        //
-        self.ref.observeSingleEvent(of: .value, with: { (snapshot) in
+        let requestRef = self.ref.child("users").child(self.uid!).child("request")
+        requestRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if (!snapshot.exists()) {
+                return
+            }
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
-                //                let key = snap.key
-                if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                    for snap in snapshots {
-                        if (snap.value as? Dictionary<String, AnyObject>) != nil {
-                            let key = snap.key
-                            
-//                            print(value)
-                            
-                        }
-                    }
+                let key = snap.key
+                var address =  self.getAddress(key: key)
+                if (address == "") {
+                    return
+                }
+//                print(key)
+                print(snap.value)
+                if let snapshots = snap.children.allObjects as? [DataSnapshot] {
+                    
                 }
             }
         })
     }
     
+    func getAddress(key: String) -> String {
+        let addressRef = self.ref.child("users").child(self.uid!).child("address")
+        var address = ""
+        addressRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                address += snap.value as! String
+                address += ", "
+            }
+        })
+        return address.dropLast().dropLast()
+    }
 }

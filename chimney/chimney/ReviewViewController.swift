@@ -86,7 +86,9 @@ class ReviewViewController: UIViewController {
     
     // get requests from other users and address from firebase real-time database
     // extremely slow... and not able to get a user's request...
-    func getRequestInfo() {
+    func getRequestInfo() -> [ Request ] {
+        var requestArr: [ Request ]
+        
         let requestRef = self.ref.child("users").child(self.uid!).child("request")
         requestRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if (!snapshot.exists()) {
@@ -95,17 +97,35 @@ class ReviewViewController: UIViewController {
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
                 let key = snap.key
-                var address =  self.getAddress(key: key)
+                let address =  self.getAddress(key: key)
+                var amount: String?
+                var task: String?
                 if (address == "") {
                     return
                 }
-//                print(key)
-                print(snap.value)
-                if let snapshots = snap.children.allObjects as? [DataSnapshot] {
-                    
+                if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                    for snap in snapshots {
+                        if (snap.value as? Dictionary<String, AnyObject>) != nil {
+//                            let key = snap.key
+                            let value = snap.value as? Dictionary<String, AnyObject>
+                            if value?["request"] != nil {
+                                let content = value?["request"] as? Dictionary<String, Dictionary<String, String>>
+                                let val = content!.values
+                                for a in val {
+                                    amount = a["amount"]!
+                                    task = a["task"]!
+                                }
+                                let r = Request.init(address: address, task: task, amount: amount)
+                                requestArr.append(r)
+                            }
+                        }
+                    }
                 }
+                
             }
         })
+        
+        return requestArr
     }
     
     func getAddress(key: String) -> String {
@@ -118,6 +138,6 @@ class ReviewViewController: UIViewController {
                 address += ", "
             }
         })
-        return address.dropLast().dropLast()
+        return String(address.dropLast().dropLast())
     }
 }

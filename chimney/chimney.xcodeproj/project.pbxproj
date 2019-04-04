@@ -13,6 +13,7 @@
 		9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */; };
 		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
 		D30417B7225546F200483F42 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30417B6225546F200483F42 /* Requests.swift */; };
+		D30417B92256C95900483F42 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30417B82256C95900483F42 /* ProfileViewController.swift */; };
 		D34E784522512EC10062ED78 /* VerifiedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E784422512EC10062ED78 /* VerifiedUser.swift */; };
 		D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
@@ -60,6 +61,7 @@
 		B26A0C6CD493F8C89A118584 /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC455CD1D8746C238BFCB783 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30417B6225546F200483F42 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		D30417B82256C95900483F42 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D34E784422512EC10062ED78 /* VerifiedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedUser.swift; sourceTree = "<group>"; };
 		D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				D3A7546A22417CD6000B0253 /* TableViewController.swift */,
 				D34E784422512EC10062ED78 /* VerifiedUser.swift */,
 				D30417B6225546F200483F42 /* Requests.swift */,
+				D30417B82256C95900483F42 /* ProfileViewController.swift */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */,
 				D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */,
 				D3A7546922417CB5000B0253 /* ExploreViewController.swift in Sources */,
+				D30417B92256C95900483F42 /* ProfileViewController.swift in Sources */,
 				D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
 				D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */,

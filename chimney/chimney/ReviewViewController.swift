@@ -20,18 +20,19 @@ class ReviewViewController: UIViewController {
     var user: User?
     var ref: DatabaseReference!
     var uid: String?
+    var arr: [ Request ]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Review"
-        ref = Database.database().reference()
+        self.ref = Database.database().reference()
         // create segmentControl and add to view controller
 //        let segmentedControl = createSegment()
 //        self.view.addSubview(segmentedControl)
         
-        user = verifiedUser(user: Auth.auth().currentUser!)
+        user = Auth.auth().currentUser
         self.uid = self.user?.uid
-        self.getRequestInfo()
+        self.arr = self.getRequestInfo()
         // set default swipe direction
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
         // add left swipe motion
@@ -75,6 +76,7 @@ class ReviewViewController: UIViewController {
         if sender.state == .ended {
             switch sender.direction {
             case .right:
+                
                 print("right")
             case .left:
                 print("left")
@@ -87,8 +89,7 @@ class ReviewViewController: UIViewController {
     // get requests from other users and address from firebase real-time database
     // extremely slow... and not able to get a user's request...
     func getRequestInfo() -> [ Request ] {
-        var requestArr: [ Request ]
-        
+        var requestArr: [ Request ] = []
         let requestRef = self.ref.child("users").child(self.uid!).child("request")
         requestRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if (!snapshot.exists()) {
@@ -115,7 +116,7 @@ class ReviewViewController: UIViewController {
                                     amount = a["amount"]!
                                     task = a["task"]!
                                 }
-                                let r = Request.init(address: address, task: task, amount: amount)
+                                let r = Request.init(address: address, task: task!, amount: amount!)
                                 requestArr.append(r)
                             }
                         }

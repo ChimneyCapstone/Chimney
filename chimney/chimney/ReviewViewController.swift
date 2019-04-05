@@ -87,7 +87,7 @@ class ReviewViewController: UIViewController {
     // get requests from other users and address from firebase real-time database
     // extremely slow... and not able to get a user's request...
     func getRequestInfo() -> [ Request ] {
-        var requestArr: [ Request ]
+        var requestArr: [ Request ] = []
         
         let requestRef = self.ref.child("users").child(self.uid!).child("request")
         requestRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -115,7 +115,7 @@ class ReviewViewController: UIViewController {
                                     amount = a["amount"]!
                                     task = a["task"]!
                                 }
-                                let r = Request.init(address: address, task: task, amount: amount)
+                                let r = Request.init(address: address, task: task!, amount: amount!)
                                 requestArr.append(r)
                             }
                         }

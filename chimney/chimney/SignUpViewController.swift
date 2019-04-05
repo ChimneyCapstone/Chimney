@@ -78,7 +78,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 if error == nil {
 //                    let md5Data = self.MD5(string:self.emailTextField.text!)
 //                    let md5Hex = md5Data!.map { String(format: "%02hhx", $0) }.joined()
-                    
                     let userData = ["phone": self.phoneTextField.text,
                                     "fullname": self.fullNameTextField.text,
                                     "email": self.emailTextField.text,
@@ -121,7 +120,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 //    func MD5(string: String) -> Data? {
 //        guard let messageData = string.data(using:String.Encoding.utf8) else { return nil }
 //        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
-//
 //        _ = digestData.withUnsafeMutableBytes {digestBytes in
 //            messageData.withUnsafeBytes {messageBytes in
 //                CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes)

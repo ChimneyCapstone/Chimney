@@ -52,19 +52,21 @@ import Firebase
 
 class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let sections = ["Fruit", "Vegetables"]
-    let fruit = ["Apple", "Orange", "Mango"]
-    let vegetables = ["Carrot", "Broccoli", "Cucumber"]
+    var contents:[String] = []
+    var index = -1
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        super.viewDidLoad()
+
     }
     
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section]
+
+        return "Requests"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,22 +74,10 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-//        case 0:
-//            // Fruit Section
-//            return fruit.count
-//        case 1:
-//            // Vegetable Section
-//            return vegetables.count
-        default:
-            return 10
-        }
+        return 10
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Create an object of the dynamic cell "PlainCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
-        // Depending on the section, fill the textLabel with the relevant text
+    func loadInfo(){
         var ref: DatabaseReference!
         ref = Database.database().reference().child("users");
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -101,18 +91,37 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                             let value = snap.value as? Dictionary<String, AnyObject>
                             if value?["request"] != nil {
                                 let content = value?["request"] as? Dictionary<String, Dictionary<String, String>>
-                                print(content!.values)
                                 let val = content!.values
                                 for (a) in val{
-                                    let task = "amount $: \(a["amount"]!)    task:  \(a["task"]!)";
-                                    cell.textLabel?.text = task
+                                    let task: String = "amount $: \(a["amount"]!)    task:  \(a["task"]!)";
+                                    self.contents.append(task)
+//                                    print(self.contents)
                                 }
                             }
                         }
                     }
                 }
             }
-        });
+            
+      });
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Create an object of the dynamic cell "PlainCell"
+        self.index+=1
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
+        // Depending on the section, fill the textLabel with the relevant text
+        
+        loadInfo()
+        print("second")
+//        print(self.index)
+//        print(whole)
+        if self.index < self.contents.count {
+            cell.textLabel?.text = self.contents[self.index]
+            print(self.contents[self.index])
+        }
         return cell
+
     }
 }

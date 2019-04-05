@@ -365,11 +365,11 @@
             </objects>
             <point key="canvasLocation" x="6335" y="-564"/>
         </scene>
-        <!--Item-->
+        <!--Request-->
         <scene sceneID="cC1-G7-BEh">
             <objects>
                 <navigationController id="dug-24-rem" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UiE-M7-DXR"/>
+                    <tabBarItem key="tabBarItem" title="Request" id="UiE-M7-DXR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ihq-2A-ezS">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -382,11 +382,11 @@
             </objects>
             <point key="canvasLocation" x="5358" y="-564"/>
         </scene>
-        <!--Item-->
+        <!--Explore-->
         <scene sceneID="1fz-S7-SRl">
             <objects>
                 <navigationController id="nNe-aL-A4Q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Fwk-EI-Kwx"/>
+                    <tabBarItem key="tabBarItem" title="Explore" id="Fwk-EI-Kwx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QHd-DB-3Na">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

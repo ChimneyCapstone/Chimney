@@ -6,14 +6,14 @@
 //  Copyright © 2019 chimney. All rights reserved.
 //
 
-// this is the class for the request
+// Class for the request
 class Request {
     var address: String
     var task: String
     var amount: String
     // save through uid
     var requested_user: String
-//    // received
+    // received
     var receiver: String
     
     init (address: String, task: String, amount: String, requested_user: String, receiver: String) {

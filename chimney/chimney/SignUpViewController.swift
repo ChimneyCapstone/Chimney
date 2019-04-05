@@ -9,8 +9,8 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth // for authenication
 import Firebase
+import CommonCrypto
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -76,8 +76,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             // create user on Firebase
             Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
                 if error == nil {
+//                    let md5Data = self.MD5(string:self.emailTextField.text!)
+//                    let md5Hex = md5Data!.map { String(format: "%02hhx", $0) }.joined()
                     let userData = ["phone": self.phoneTextField.text,
-                                    "fullname": self.fullNameTextField.text]
+                                    "fullname": self.fullNameTextField.text,
+                                    "email": self.emailTextField.text,
+                                    ]
                     self.ref.child("users").child(user!.user.uid).setValue(userData)
                     self.performSegue(withIdentifier: "nextStep", sender: self)
                 } else {
@@ -112,6 +116,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+//    // Reference: https://github.com/hakanozer/GravatarSwift/blob/master/GravatarSwift/Profile.swift
+//    func MD5(string: String) -> Data? {
+//        guard let messageData = string.data(using:String.Encoding.utf8) else { return nil }
+//        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
+//        
+//        _ = digestData.withUnsafeMutableBytes {digestBytes in
+//            messageData.withUnsafeBytes {messageBytes in
+//                CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes)
+//            }
+//        }
+//        return digestData
+//    }
 }
 
 // to check whether the textfield is empty or not

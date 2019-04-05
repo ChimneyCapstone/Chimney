@@ -7,7 +7,21 @@
 //
 
 import Foundation
+import UIKit
+import Firebase
 
-class ProfileViewController: ViewController {
+class ProfileViewController: UIViewController {
+//
+//
+    var ref: DatabaseReference!
+    
+    override func viewDidLoad() {
+        self.title = "Profile"
+        ref = Database.database().reference()
+    }
+    
+    
+    
+    
     
 }

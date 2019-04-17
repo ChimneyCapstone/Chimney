@@ -87,8 +87,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                                 for (a) in val{
                                     let task: String = "amount $: \(a["amount"]!)    task:  \(a["task"]!)";
                                     self.contents.append(task)
-                                    //                                    print(self.contents)
-//                                    cell.textLabel?.text = self.contents[self.index]
                                 }
                             }
                         }
@@ -98,7 +96,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
             
         });
         // Depending on the section, fill the textLabel with the relevant text
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             if self.index < self.contents.count {
                 self.index+=1
                 cell.textLabel?.text = self.contents[self.index]
@@ -106,11 +104,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
 
             }
         }
-//        loadInfo()
-//        print("second")
-//        print(self.index)
-//        print(whole)
-        print(cell.textLabel?.text)
         return cell
 
 

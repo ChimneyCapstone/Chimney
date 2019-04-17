@@ -447,10 +447,40 @@
             </objects>
             <point key="canvasLocation" x="5358" y="-1525"/>
         </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="N4D-2z-QMT">
+            <objects>
+                <viewController id="cfY-6V-w19" customClass="EditViewController" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZUc-tc-3HG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jpg-of-Aez"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iiy-sR-cxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6334" y="-2307"/>
+        </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="Xel-v4-g1y">
+            <objects>
+                <viewController id="2jc-tu-1jm" customClass="ChangePasswordViewController" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHA-fj-ffJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LOI-wQ-PbG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icw-Mq-iSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6334" y="-1525"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Iqs-My-v6R"/>
-        <segue reference="BBu-bk-G0q"/>
-        <segue reference="yRe-KA-2IU"/>
+        <segue reference="2GL-Xb-SPI"/>
+        <segue reference="a7R-xX-A1G"/>
     </inferredMetricsTieBreakers>
 </document>

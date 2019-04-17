@@ -35,24 +35,4 @@ class Request {
     convenience init (address: String, task: String, amount: String, requested_user: String) {
         self.init(address: address, task: task, amount: amount, requested_user: requested_user, receiver: "")
     }
-
-    func getTask() -> String {
-        return self.task
-    }
-    
-    func getAmount() -> String {
-        return self.amount
-    }
-    
-    func getAddress() -> String {
-        return self.address
-    }
-    
-    func getReceiver() -> String {
-        return self.receiver
-    }
-    
-    func getRequestedUser() -> String {
-        return self.requested_user
-    }
 }

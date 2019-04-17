@@ -6,11 +6,12 @@
 //  Copyright © 2019 chimney. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
     
     var ref: DatabaseReference!
     
@@ -18,11 +19,21 @@ class ProfileViewController: UIViewController {
         self.title = "Profile"
         ref = Database.database().reference()
         let user = Auth.auth().currentUser
-        
+        ref.child("user").child(user!.uid).observeSingleEvent(of: .value, with: { snapshot in
+            if let getData = snapshot.value as? [String: Any] {
+                let name = getData["fullname"] as! String
+                self.nameTextField.text = name
+            }
+        })
     }
     
+    // handle edit profile button
+    @objc func handleEditProfileButtonTapped() {
+        let vc = EditViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
     
-    // handle sign out
+    // handle sign out button
     @objc func handleSignOutButtonTapped() {
         let alertController = UIAlertController(title: "Sign Out", message: "Are you sure that you sign out?", preferredStyle: .alert)
         let signout = UIAlertAction(title: "Sign Out", style: .default) { (action:UIAlertAction) in
@@ -44,5 +55,4 @@ class ProfileViewController: UIViewController {
         alertController.addAction(cancel)
         self.present(alertController, animated: true, completion: nil)
     }
-    
 }

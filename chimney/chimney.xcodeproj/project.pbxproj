@@ -14,7 +14,10 @@
 		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
 		D30417B7225546F200483F42 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30417B6225546F200483F42 /* Requests.swift */; };
 		D30417B92256C95900483F42 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30417B82256C95900483F42 /* ProfileViewController.swift */; };
+		D30417C22258163A00483F42 /* default_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D30417C12258163A00483F42 /* default_profile.jpg */; };
 		D34E784522512EC10062ED78 /* VerifiedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E784422512EC10062ED78 /* VerifiedUser.swift */; };
+		D384C3F62266692000496CEF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F52266692000496CEF /* EditViewController.swift */; };
+		D384C3F8226670EE00496CEF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */; };
 		D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
 		D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546422417C74000B0253 /* RequestViewController.swift */; };
@@ -62,7 +65,10 @@
 		BC455CD1D8746C238BFCB783 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30417B6225546F200483F42 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		D30417B82256C95900483F42 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D30417C12258163A00483F42 /* default_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default_profile.jpg; path = ../../../../default_profile.jpg; sourceTree = "<group>"; };
 		D34E784422512EC10062ED78 /* VerifiedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedUser.swift; sourceTree = "<group>"; };
+		D384C3F52266692000496CEF /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D3A7546422417C74000B0253 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +142,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D30417C02258162400483F42 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				D30417C12258163A00483F42 /* default_profile.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		D3C5AB93220133C000CE200A = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +175,7 @@
 		D3C5AB9E220133C000CE200A /* chimney */ = {
 			isa = PBXGroup;
 			children = (
+				D30417C02258162400483F42 /* img */,
 				D3C5AB9F220133C000CE200A /* AppDelegate.swift */,
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
 				D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */,
@@ -179,6 +194,8 @@
 				D34E784422512EC10062ED78 /* VerifiedUser.swift */,
 				D30417B6225546F200483F42 /* Requests.swift */,
 				D30417B82256C95900483F42 /* ProfileViewController.swift */,
+				D384C3F52266692000496CEF /* EditViewController.swift */,
+				D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -316,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */,
+				D30417C22258163A00483F42 /* default_profile.jpg in Resources */,
 				9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */,
 				D3C5ABA7220133C100CE200A /* Assets.xcassets in Resources */,
 				D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */,
@@ -467,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D384C3F62266692000496CEF /* EditViewController.swift in Sources */,
 				D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */,
 				D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */,
 				D30417B7225546F200483F42 /* Requests.swift in Sources */,
@@ -479,6 +498,7 @@
 				D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */,
 				D34E784522512EC10062ED78 /* VerifiedUser.swift in Sources */,
 				D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */,
+				D384C3F8226670EE00496CEF /* ChangePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

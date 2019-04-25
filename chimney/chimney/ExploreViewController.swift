@@ -54,10 +54,10 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                                 for (a) in content!{
                                     let id = a.key
                                     var mission = a.value
+                                    let uid = Auth.auth().currentUser!.uid
                                     // do not render task that are already picked up by someone
                                     // do not render task that I posted myself
-                                    if (mission["picker"] != nil ) {
-                                        print(mission["picker"])
+                                    if (mission["picker"] != nil || key == uid) {
                                         break;
                                     }
                                     var task:[String]=[]
@@ -133,37 +133,11 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                 refe.updateChildValues(childUpdates)
 
                 })
-                
-                    
-//        },;
-//                )
         alertController.addAction(defaultAction)
 
         present(alertController, animated: true, completion: nil)
+        
+        // PROBLEM!! DOES NOT UPDATE AFTER I PICK UP A TASK
     }
     
-    // function to handle the back end to connect the requester's task to the one who picks up
-    // needs to update the task with the name who picks it up
-    // (current design, under each task, put whoever picked up's name)
-//    func pickUpHandler(currentItem: String, detail: String)(alertAction:UIAlertAction) -> () {
-//        var ref: DatabaseReference!
-//        // current user is the user who picked up the task
-//        let uid = Auth.auth().currentUser!.uid
-//        ref = Database.database().reference().child("users").child(uid).child("pickedup");
-//        ref.childByAutoId().setValue(currentItem)
-//
-//
-//        // how to get the user who posted the task????
-//        // .....
-//        var infoArr = detail.components(separatedBy: "\\t")
-////        var refe: DatabaseReference!
-//        let posterId: String = String(infoArr[0].dropFirst(8))
-//        let taskId: String = String(infoArr[1].dropFirst(8))
-//        print(posterId)
-//        print(taskId)
-////        var update = [String: String]()
-////        update.
-//        Database.database().reference().child("users").child(posterId).child("request").child(taskId).updateChildValues(["picker": uid])
-//
-//    }
 }

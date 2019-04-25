@@ -12,7 +12,6 @@ import Firebase
 
 class TableViewController: UIViewController, UITableViewDataSource {
     
-    
     @IBOutlet weak var TableView: UITableViewCell!
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

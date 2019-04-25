@@ -47,18 +47,22 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                     for snap in snapshots {
                         if (snap.value as? Dictionary<String, AnyObject>) != nil {
                             let key = snap.key
-//                            print(key)
                             let value = snap.value as? Dictionary<String, AnyObject>
                             if value?["request"] != nil {
                                 let content = value?["request"] as? Dictionary<String, Dictionary<String, String>>
                                 let val = content!.values
                                 for (a) in content!{
                                     let id = a.key
-                                    let mission = a.value
-//                                    let task: String = "id: \(id)  amount $: \(mission["amount"]!)    task:  \(mission["task"]!)";
+                                    var mission = a.value
+                                    let uid = Auth.auth().currentUser!.uid
+                                    // do not render task that are already picked up by someone
+                                    // do not render task that I posted myself
+                                    if (mission["picker"] != nil || key == uid) {
+                                        break;
+                                    }
                                     var task:[String]=[]
-                                    task.append("amount $: \(mission["amount"]!)    task:  \(mission["task"]!)")
-                                    task.append("poster:\(key) taskId:\(id)")
+                                    task.append("amount$:\(mission["amount"]!)\t\ttask:\(mission["task"]!)")
+                                    task.append("poster:\(key)\t\ttaskId:\(id)")
                                     self.contents.append(task)
                                 }
                             }
@@ -73,6 +77,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.index+=1
                 cell.textLabel?.text = self.contents[self.index][0]
                 cell.detailTextLabel?.text = self.contents[self.index][1]
+                cell.detailTextLabel?.isHidden = true
             }
         }
         return cell
@@ -101,53 +106,38 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                 ref.childByAutoId().setValue(currentItem)
                 
                 
-                // how to get the user who posted the task????
-                // .....
-                var infoArr = detail.components(separatedBy: " ")
-                //        var refe: DatabaseReference!
-                print(infoArr)
-                print(infoArr[0])
-                let posterId: String = String(infoArr[0].dropFirst(8))
-                let taskId: String = String(infoArr[1].dropFirst(8))
-                print(posterId)
-                print(taskId)
-                //        var update = [String: String]()
-                //        update.
+                // update the user who posted the task
+                var infoArr = detail.components(separatedBy: "\t\t")
+                let posterId: String = String(infoArr[0].dropFirst(7))
+                let taskId: String = String(infoArr[1].dropFirst(7))
                 var refe: DatabaseReference!
+                refe = Database.database().reference().child("users").child(posterId)
+                var specific = currentItem.components(separatedBy: "\t\t")
+                var amountInfo = specific[0]
+                var str = specific[1]
+                // get the amount number
+                let startAmount = amountInfo.index(amountInfo.startIndex, offsetBy: 8)
+                let endAmount = amountInfo.index(amountInfo.endIndex, offsetBy: 0)
+                let rangeAmount = startAmount..<endAmount
+                let amountString = amountInfo[rangeAmount]
+                // get the task content
+                let start = str.index(str.startIndex, offsetBy: 5)
+                let end = str.index(str.endIndex, offsetBy: 0)
+                let range = start..<end
+                let taskString = str[range]
+                print(taskString)
+                let post = ["task": taskString,
+                            "amount": amountString,
+                            "picker": uid] as [String : Any]
+                let childUpdates = ["request/\(taskId)": post]
+                refe.updateChildValues(childUpdates)
 
-                refe = Database.database().reference().child("users").child(posterId).child("request").child(taskId)
-//                refe.updateChildValues({"picker": uid})
-                
-
-        }
-                )
+                })
         alertController.addAction(defaultAction)
 
         present(alertController, animated: true, completion: nil)
+        
+        // PROBLEM!! DOES NOT UPDATE AFTER I PICK UP A TASK
     }
     
-    // function to handle the back end to connect the requester's task to the one who picks up
-    // needs to update the task with the name who picks it up
-    // (current design, under each task, put whoever picked up's name)
-//    func pickUpHandler(currentItem: String, detail: String)(alertAction:UIAlertAction) -> () {
-//        var ref: DatabaseReference!
-//        // current user is the user who picked up the task
-//        let uid = Auth.auth().currentUser!.uid
-//        ref = Database.database().reference().child("users").child(uid).child("pickedup");
-//        ref.childByAutoId().setValue(currentItem)
-//
-//
-//        // how to get the user who posted the task????
-//        // .....
-//        var infoArr = detail.components(separatedBy: "\\t")
-////        var refe: DatabaseReference!
-//        let posterId: String = String(infoArr[0].dropFirst(8))
-//        let taskId: String = String(infoArr[1].dropFirst(8))
-//        print(posterId)
-//        print(taskId)
-////        var update = [String: String]()
-////        update.
-//        Database.database().reference().child("users").child(posterId).child("request").child(taskId).updateChildValues(["picker": uid])
-//
-//    }
 }

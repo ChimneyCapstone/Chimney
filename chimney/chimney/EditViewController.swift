@@ -26,8 +26,8 @@ class EditViewController: UIViewController {
     }
     
     @objc func saveButtonTapped() {
-//        let updateValueAddress
-//        self.ref.child("user").child(self.uid).child("address").updateChildValues(updateValue)
+        let updateValue = [""]
+        self.ref.child("user").child(self.uid).child("address").updateChildValues(updateValue)
     }
     
     @objc func resetPasswordButtonTapped() {

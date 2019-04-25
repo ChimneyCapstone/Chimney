@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Photos
 
 class ProfileViewController: UIViewController {
     

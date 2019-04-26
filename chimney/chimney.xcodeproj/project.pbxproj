@@ -26,6 +26,7 @@
 		D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546622417C9A000B0253 /* ReviewViewController.swift */; };
 		D3A7546922417CB5000B0253 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546822417CB5000B0253 /* ExploreViewController.swift */; };
 		D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546A22417CD6000B0253 /* TableViewController.swift */; };
+		D3A7D7F122726D2100072E6B /* ChangeAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D7F022726D2100072E6B /* ChangeAddressViewController.swift */; };
 		D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5AB9F220133C000CE200A /* AppDelegate.swift */; };
 		D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABA1220133C000CE200A /* ViewController.swift */; };
 		D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C5ABA3220133C000CE200A /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 		D3A7546622417C9A000B0253 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		D3A7546822417CB5000B0253 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		D3A7546A22417CD6000B0253 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D3A7D7F022726D2100072E6B /* ChangeAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAddressViewController.swift; sourceTree = "<group>"; };
 		D3C5AB9C220133C000CE200A /* chimney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5AB9F220133C000CE200A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C5ABA1220133C000CE200A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +187,6 @@
 				D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */,
 				D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */,
 				D3C5ABAB220133C100CE200A /* Info.plist */,
-				D3C5ABA3220133C000CE200A /* Main.storyboard */,
 				9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */,
 				9D684D4E2229CAB70070B0FA /* Keys.plist */,
 				D3C5ABA6220133C100CE200A /* Assets.xcassets */,
@@ -200,8 +201,10 @@
 				D34E784422512EC10062ED78 /* VerifiedUser.swift */,
 				D30417B6225546F200483F42 /* Requests.swift */,
 				D30417B82256C95900483F42 /* ProfileViewController.swift */,
+				D3C5ABA3220133C000CE200A /* Main.storyboard */,
 				D384C3F52266692000496CEF /* EditViewController.swift */,
 				D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */,
+				D3A7D7F022726D2100072E6B /* ChangeAddressViewController.swift */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 			files = (
 				D384C3F62266692000496CEF /* EditViewController.swift in Sources */,
 				D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */,
+				D3A7D7F122726D2100072E6B /* ChangeAddressViewController.swift in Sources */,
 				D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */,
 				D30417B7225546F200483F42 /* Requests.swift in Sources */,
 				D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */,

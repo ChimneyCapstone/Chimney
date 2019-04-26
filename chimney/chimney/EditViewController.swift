@@ -9,25 +9,81 @@
 import UIKit
 import Firebase
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     var ref: DatabaseReference!
     var uid: String?
+    var myPhoneNumber = String()
     
     override func viewDidLoad() {
         self.title = "Edit Profile"
         ref = Database.database().reference()
         self.uid = Auth.auth().currentUser!.uid
-        
+        // for phone text field
+        phoneTextField.delegate = self
+        phoneTextField.keyboardType = .phonePad
+        if (emailTextField.isEmpty) || (phoneTextField.isEmpty) || (fullNameTextField.isEmpty) {
+            saveButton.isEnabled = false
+        } else {
+            saveButton.isEnabled = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if (textField == self.phoneTextField) && textField.text == ""{
+            textField.text = "+1 (" //your country code default
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == phoneTextField {
+            let res = phoneMask(phoneTextField: phoneTextField, textField: textField, range, string)
+            myPhoneNumber = res.phoneNumber != "" ? "+\(res.phoneNumber)" : ""
+            print("Phone - \(myPhoneNumber)  MaskPhone=\(res.maskPhoneNumber)")
+            if (res.phoneNumber.count == 11) || (res.phoneNumber.count == 0) {
+                //phone number entered or completely cleared
+                print("EDIT END: Phone = \(myPhoneNumber)  MaskPhone = \(res.maskPhoneNumber)")
+            }
+            return res.result
+        }
+        return true
     }
     
     @objc func saveButtonTapped() {
-//        let updateValueAddress
-//        self.ref.child("user").child(self.uid).child("address").updateChildValues(updateValue)
+        let updateValue = [
+            "fullname": fullNameTextField.text,
+            "phonenumber": emailTextField.text
+        ]
+        self.ref.child("user").child(self.uid!).updateChildValues(updateValue)
+        Auth.auth().currentUser?.updateEmail(to: emailTextField.text!) { (error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("CHANGED")
+            }
+        }
+    }
+    
+    // check if it's valid phone number
+    // Reference: https://stackoverflow.com/questions/53427424/how-to-validate-american-phone-format-in-swift-4
+    func isValidMobile(testStr:String) -> Bool {
+        let mobileRegEx = "(\\([0-9]{3}\\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}"
+        let mobileTest = NSPredicate(format:"SELF MATCHES %@", mobileRegEx)
+        return mobileTest.evaluate(with: testStr)
+    }
+    
+    //     sending data to next view controller
+    //     reference: https://www.youtube.com/watch?v=uKQjJb-KSwU
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "nextStep") {
+            var vc = segue.destination as! AddAddressViewController
+            vc.fullName = self.fullNameTextField.text!
+        }
     }
     
     @objc func resetPasswordButtonTapped() {

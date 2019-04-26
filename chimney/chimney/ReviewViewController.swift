@@ -40,12 +40,50 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     
     @objc func segmentControl(_ segmentedControl: UISegmentedControl) {
         switch (segmentedControl.selectedSegmentIndex) {
+        // neighbors
         case 0:
-            print("1")
+//            var ref: DatabaseReference!
+//            ref = Database.database().reference().child("users");
+//            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+//                for child in snapshot.children {
+//                    let snap = child as! DataSnapshot
+//                    let key = snap.key
+//                    if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+//                        for snap in snapshots {
+//                            if (snap.value as? Dictionary<String, AnyObject>) != nil {
+//                                let key = snap.key
+//                                let value = snap.value as? Dictionary<String, AnyObject>
+//                                if value?["request"] != nil {
+//                                    let content = value?["request"] as? Dictionary<String, Dictionary<String, String>>
+//                                    let val = content!.values
+//                                    for (a) in content!{
+//                                        let id = a.key
+//                                        var mission = a.value
+//                                        let uid = Auth.auth().currentUser!.uid
+//                                        // do not render task that are already picked up by someone
+//                                        // do not render task that I posted myself
+//                                        if (mission["picker"] != nil || key == uid) {
+//                                            break;
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            })
+            
             break
+        // my requests
         case 1:
             // Second segment tapped
-            print("2")
+            var ref: DatabaseReference!
+            let uid = Auth.auth().currentUser!.uid
+            ref = Database.database().reference().child("users").child(uid);
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                print(snapshot.value)
+            })
+
 
             break
         default:

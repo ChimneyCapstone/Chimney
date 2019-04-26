@@ -9,79 +9,48 @@
 import Foundation
 import UIKit
 import Firebase
-import GoogleMaps
 
 
 // This class is the view controller of sign-up page
-class ReviewViewController: UIViewController {
-    
-    enum TabIndex : Int {
-        case firstChildTab = 0
-        case secondChildTab = 1
-    }
-    
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    @IBOutlet weak var contentView: UIView!
-    
-    var currentViewController: UIViewController?
-    lazy var firstChildTabVC: UIViewController? = {
-        let firstChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "FirstViewControllerId")
-        return firstChildTabVC
-    }()
-    lazy var secondChildTabVC : UIViewController? = {
-        let secondChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewControllerId")
-        
-        return secondChildTabVC
-    }()
-    
-    // MARK: - View Controller Lifecycle
-    
+class ReviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-//        SegmentedControl.initUI()
-        segmentControl.selectedSegmentIndex = TabIndex.firstChildTab.rawValue
-        displayCurrentTab(TabIndex.firstChildTab.rawValue)
+        addControl()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if let currentViewController = currentViewController {
-            currentViewController.viewWillDisappear(animated)
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-    // MARK: - Switching Tabs Functions
-    @IBAction func switchTabs(_ sender: UISegmentedControl) {
-        self.currentViewController!.view.removeFromSuperview()
-        self.currentViewController!.removeFromParent()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "PlainCell")
+        return cell
+    }
+
+    func addControl() {
+        let segmentItems = ["Neighbors", "Mine"]
+        let control = UISegmentedControl(items: segmentItems)
+        control.frame = CGRect(x: 10, y: 100, width: (self.view.frame.width - 20), height: 50)
+        control.addTarget(self, action: #selector(segmentControl(_:)), for: .valueChanged)
+        control.selectedSegmentIndex = 1
+        view.addSubview(control)
         
-        displayCurrentTab(sender.selectedSegmentIndex)
     }
     
-    func displayCurrentTab(_ tabIndex: Int){
-        if let vc = viewControllerForSelectedSegmentIndex(tabIndex) {
-            
-            self.addChild(vc)
-            vc.didMove(toParent: self)
-            
-//            vc.view.frame = self.contentView.bounds
-//            self.contentView.addSubview(vc.view)
-            self.currentViewController = vc
-        }
-    }
     
-    func viewControllerForSelectedSegmentIndex(_ index: Int) -> UIViewController? {
-        var vc: UIViewController?
-        switch index {
-        case TabIndex.firstChildTab.rawValue :
-            vc = firstChildTabVC
-        case TabIndex.secondChildTab.rawValue :
-            vc = secondChildTabVC
+    @objc func segmentControl(_ segmentedControl: UISegmentedControl) {
+        switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            print("1")
+            break
+        case 1:
+            // Second segment tapped
+            print("2")
+
+            break
         default:
-            return nil
+            break
         }
-        
-        return vc
     }
 }
 

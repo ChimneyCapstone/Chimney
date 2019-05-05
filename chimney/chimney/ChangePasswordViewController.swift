@@ -18,8 +18,9 @@ class ChangePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    // handle a save button
-    @objc func saveButtonTapped() {
+    
+    // handle save button
+    @IBAction func saveButtonTapped() {
         if (passwordTextField.text == retypePasswordTextField.text) {
             Auth.auth().sendPasswordReset(withEmail: Auth.auth().currentUser!.email!) { (error) in {
                     if (error != nil) {
@@ -41,7 +42,13 @@ class ChangePasswordViewController: UIViewController {
         }
     }
     
-    // handle a sign out button
+    // handle cancel button
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        let vc = EditViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    // handle sign out button
     @objc func handleSignOutButtonTapped() {
         let alertController = UIAlertController(title: "Sign Out", message: "Are you sure that you sign out?", preferredStyle: .alert)
         let signout = UIAlertAction(title: "Sign Out", style: .default) { (action:UIAlertAction) in

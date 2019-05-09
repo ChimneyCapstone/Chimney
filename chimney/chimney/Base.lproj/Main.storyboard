@@ -435,7 +435,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ce9-yL-sPR">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TableViewCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ce9-yL-sPR" id="ufH-km-sNb">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ce9-yL-sPR" id="ufH-km-sNb" customClass="UITableViewCell">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -447,6 +447,9 @@
                         <viewLayoutGuide key="safeArea" id="gOT-Rk-MRo"/>
                     </view>
                     <navigationItem key="navigationItem" id="WmR-x4-e9a"/>
+                    <connections>
+                        <outlet property="tableView" destination="Sd7-Fv-3OU" id="BdI-5W-WhT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbN-AW-l7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

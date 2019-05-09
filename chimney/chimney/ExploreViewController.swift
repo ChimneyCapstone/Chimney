@@ -84,6 +84,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     
+    // deal with the row selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //getting the index path of selected row
         let indexPath = tableView.indexPathForSelectedRow

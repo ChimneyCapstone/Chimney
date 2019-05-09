@@ -24,6 +24,9 @@ class RequestViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         RequestTextField.delegate = self
         RequestTextField.text = "What do you need? Please be as specific as possible."
+        MoneyTextField.text = ""
+//        MoneyTextField.textColor = UIColor.lightGray
+
         RequestTextField.textColor = UIColor.lightGray
     }
     
@@ -38,7 +41,7 @@ class RequestViewController: UIViewController, UITextViewDelegate {
         
         if RequestTextField.text == "" {
             
-            RequestTextField.text = "Placeholder text ..."
+            RequestTextField.text = "What do you need? Please be as specific as possible."
             RequestTextField.textColor = UIColor.lightGray
         }
     }
@@ -64,6 +67,10 @@ class RequestViewController: UIViewController, UITextViewDelegate {
             let uid = Auth.auth().currentUser!.uid
             ref = Database.database().reference().child("users").child(uid).child("request");
             ref.childByAutoId().setValue(["task": RequestTextField.text, "amount": MoneyTextField.text])
+            let alertController = UIAlertController(title: "Successfully Requested!", message: "Your request has been posted!"/*error!.localizedDescription*/, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Great!", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+            viewDidLoad()
         } else {
             // Error: check error and show message
             let alertController = UIAlertController(title: "Error occurs", message: "something went wrong"/*error!.localizedDescription*/, preferredStyle: .alert)

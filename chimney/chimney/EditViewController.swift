@@ -14,7 +14,6 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
-    @IBOutlet weak var saveButton: UIButton!
     
     var ref: DatabaseReference!
     var uid: String?
@@ -27,15 +26,11 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         // for phone text field
         phoneTextField.delegate = self
         phoneTextField.keyboardType = .phonePad
-        if (emailTextField.isEmpty) || (phoneTextField.isEmpty) || (fullNameTextField.isEmpty) {
-            saveButton.isEnabled = false
-        } else {
-            saveButton.isEnabled = true
-        }
+
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if (textField == self.phoneTextField) && textField.text == ""{
+        if (textField == self.phoneTextField) && textField.text == "" {
             textField.text = "+1 (" //your country code default
         }
     }
@@ -54,7 +49,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @objc func saveButtonTapped() {
+    @IBAction func saveButtonTapped() {
         let updateValue = [
             "fullname": fullNameTextField.text,
             "phonenumber": emailTextField.text
@@ -77,8 +72,8 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         return mobileTest.evaluate(with: testStr)
     }
     
-    //     sending data to next view controller
-    //     reference: https://www.youtube.com/watch?v=uKQjJb-KSwU
+    // sending data to next view controller
+    // reference: https://www.youtube.com/watch?v=uKQjJb-KSwU
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "nextStep") {
             var vc = segue.destination as! AddAddressViewController

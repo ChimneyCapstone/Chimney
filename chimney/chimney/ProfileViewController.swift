@@ -28,10 +28,8 @@ class ProfileViewController: UIViewController {
         })
     }
     
-    // handle edit profile button
-    @objc func handleEditProfileButtonTapped() {
-        let vc = EditViewController()
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func handleEditProfileButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "segToEdit", sender: <#T##Any?#>)
     }
     
     // handle sign out button
@@ -48,7 +46,7 @@ class ProfileViewController: UIViewController {
             }
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction) in
             print("You've pressed cancel");
         }
         

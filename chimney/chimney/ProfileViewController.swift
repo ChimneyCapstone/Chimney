@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func handleEditProfileButtonTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "segToEdit", sender: <#T##Any?#>)
+//        self.performSegue(withIdentifier: "segToEdit", sender: <#T##Any?#>)
     }
     
     // handle sign out button

@@ -34,6 +34,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         return 10
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "PlainCell")
         

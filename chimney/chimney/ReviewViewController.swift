@@ -16,8 +16,11 @@ import CoreLocation
 class ReviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var contents:[String] = []
+    var neighborReq:[String] = [];
     var index = -1
+    var curSeg = -1;
 
+    @IBOutlet weak var control: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -36,17 +39,38 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "PlainCell")
-        addControl()
+//        addControl()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) {
-            if self.index < self.contents.count {
-                self.index+=1
-                cell.textLabel?.text = self.contents[self.index]
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            switch(self.curSeg) {
+            case 0:
+                print("yoyo")
+                print(self.neighborReq.count - 1)
+
+                if self.index < self.neighborReq.count - 1 {
+                    self.index+=1
+                    print(self.index)
+                    cell.textLabel?.text = self.neighborReq[self.index]
+                }
+            case 1:
+                if self.index < self.contents.count {
+                    self.index+=1
+                    cell.textLabel?.text = self.contents[self.index]
+                }
+            default:
+                cell.textLabel?.text = "please wait"
+
             }
         }
         return cell
     }
-
+    
+    @IBAction func segmentValueChanged(_ sender: UISegmentedControl)
+    {
+        self.index = 0
+        self.tableView.reloadData()
+    }
+    
     func addControl() {
         let segmentItems = ["Neighbors", "Mine"]
         let control = UISegmentedControl(items: segmentItems)
@@ -60,11 +84,15 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewWillAppear(animated)
     }
     
-    @objc func segmentControl( _ segmentedControl: UISegmentedControl) {
-        print(segmentedControl.selectedSegmentIndex)
+    @IBAction func segmentControl( _ segmentedControl: UISegmentedControl) {
         switch (segmentedControl.selectedSegmentIndex) {
         // neighbors' requests
         case 0:
+            neighborReq.append("amount 4   task starbucks")
+            neighborReq.append("amount 11   task icecream")
+            neighborReq.append("amount 10   task kfc")
+            self.curSeg = 0
+
             var ref: DatabaseReference!
             let uid = Auth.auth().currentUser!.uid
             ref = Database.database().reference().child("users").child(uid).child("address");
@@ -80,7 +108,6 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             var lat: CLLocationDegrees?;
             var lon: CLLocationDegrees?;
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                print(myAddr)
                 let geoCoder = CLGeocoder()
                 geoCoder.geocodeAddressString(myAddr) {
                     placemarks, error in
@@ -90,7 +117,8 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
                     print("Lat: \(lat), Lon: \(lon)")
                 }
             }
-            
+
+
             // loop through all users and look for requests(no pickedup field) and address 10 min away
             var refe: DatabaseReference!
             refe = Database.database().reference().child("users")
@@ -104,7 +132,34 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
                                 let key = snap.key
                                 if (key != uid) {
                                     let value = snap.value as? Dictionary<String, AnyObject>
+                                    // getting request
                                     for add in value! {
+//                                        if (add.key == "request") {
+//                                            if (add.value as? Dictionary<String, AnyObject>) != nil {
+//                                                let req = add.value as? Dictionary<String, AnyObject>
+//                                                for child in req! {
+//                                                    let content = req as? Dictionary<String, Dictionary<String, String>>
+//                                                    let val = content!.values
+//                                                    print("here")
+//                                                    print(val)
+//                                                    for (a) in content!{
+////                                                        print(a)
+//                                                        let tasks = a.value as? Dictionary<String, AnyObject>
+////                                                        print(tasks)
+//                                                        var cur = "";
+//                                                        for task in tasks! {
+//                                                            if (task.key != "picker") {
+//                                                                cur.append(task.value as! String);
+//                                                            } else{
+//                                                                break;
+//                                                            }
+//                                                        }
+////                                                        print(cur)
+//                                                    }
+//                                                }
+//                                            }
+//
+                                        
                                         var otherAddress = "";
                                         if (add.key == "address") {
                                             if (add.value as? Dictionary<String, AnyObject>) != nil {
@@ -119,7 +174,6 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
                                         var lon2: CLLocationDegrees?;
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                                             let geoCoder = CLGeocoder()
-                                            print(otherAddress)
                                             geoCoder.geocodeAddressString(otherAddress) {
                                                 placemarks, error in
                                                 let placemark = placemarks?.first
@@ -128,14 +182,17 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
                                                 print("Lat2: \(lat), Lon2: \(lon)")
                                             }
                                         }
-                                        var startLocation = CLLocation(latitude: lat!, longitude: lon!)
-                                        var endLocation = CLLocation(latitude: lat2!, longitude: lon2!)
-                                        var distance: CLLocationDistance = startLocation.distance(from: endLocation)
+                                        if (lat2 == nil || lon2 == nil) {
+                                            break;
+                                        }
+                                        let startLocation = CLLocation(latitude: lat!, longitude: lon!)
+                                        let endLocation = CLLocation(latitude: lat2!, longitude: lon2!)
+                                        let distance: CLLocationDistance = startLocation.distance(from: endLocation)
                                         // in meters
                                         if (distance < 10000) {
-                                            // considered neighbors
+                                            // yes, neighbors
+                                            
                                         }
-                                        
                                     }
                                 }
                             }
@@ -147,6 +204,7 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             break
         // my requests
         case 1:
+            self.curSeg = 1
             // Second segment tapped
             var ref: DatabaseReference!
             let uid = Auth.auth().currentUser!.uid
@@ -183,7 +241,6 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
                                 for info in res {
                                     context.append(info.key + "\t" + info.value + "\t")
                                 }
-                                print(self.contents)
                                 self.contents.append(context)
                             }
                         }

@@ -73,7 +73,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
             }
             
         });
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
             if self.index < self.contents.count {
                 self.index+=1
                 cell.textLabel?.text = self.contents[self.index][0]

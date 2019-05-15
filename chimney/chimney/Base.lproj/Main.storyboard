@@ -485,8 +485,8 @@
                                 <rect key="frame" x="7" y="131" width="360" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Neighbor's"/>
+                                    <segment title="Mine"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentControl:" destination="YsM-jr-Wq9" eventType="valueChanged" id="ZBV-6Z-1ME"/>

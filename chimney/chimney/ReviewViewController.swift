@@ -34,7 +34,10 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+
+        }
+        return self.contents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +52,6 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
 
                 if self.index < self.neighborReq.count - 1 {
                     self.index+=1
-                    print(self.index)
                     cell.textLabel?.text = self.neighborReq[self.index]
                 }
             case 1:
@@ -76,7 +78,6 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
         let control = UISegmentedControl(items: segmentItems)
         control.frame = CGRect(x: 10, y: 100, width: (self.view.frame.width - 20), height: 50)
         control.addTarget(self, action: #selector(segmentControl(_:)), for: .valueChanged)
-//        control.selectedSegmentIndex = 1
         view.addSubview(control)
     }
     
@@ -204,50 +205,96 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             break
         // my requests
         case 1:
+            
             self.curSeg = 1
             // Second segment tapped
-            var ref: DatabaseReference!
-            let uid = Auth.auth().currentUser!.uid
-            ref = Database.database().reference().child("users").child(uid).child("request");
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                for child in snapshot.children {
-                    let snap = child as! DataSnapshot
-                    if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                        for snap in snapshots {
-                            if let res =  snap.value as? Dictionary<String,String>  {
-                                var context: String = "";
-                                for info in res {
-                                    context.append(info.key + "\t" + info.value + "\t")
+            if(self.contents == []){
+                var ref: DatabaseReference!
+                let uid = Auth.auth().currentUser!.uid
+                ref = Database.database().reference().child("users").child(uid).child("request");
+                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                    for child in snapshot.children {
+                        let snap = child as! DataSnapshot
+                        if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                            for snap in snapshots {
+                                if let res =  snap.value as? Dictionary<String,String>  {
+                                    var context: String = "";
+                                    for info in res {
+                                        if (info.key == "picker") {
+                                            break
+                                        }
+                                        context.append(info.key + "\t" + info.value + "\t")
+                                    }
+                                    self.contents.append(context)
                                 }
-//                                print(self.contents)
-                                self.contents.append(context)
                             }
                         }
                     }
-                }
-            })
-            break
+                })
+                break
+            }
         default:
-            var ref: DatabaseReference!
-            let uid = Auth.auth().currentUser!.uid
-            ref = Database.database().reference().child("users").child(uid).child("request");
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                for child in snapshot.children {
-                    let snap = child as! DataSnapshot
-                    if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                        for snap in snapshots {
-                            if let res =  snap.value as? Dictionary<String,String>  {
-                                var context: String = "";
-                                for info in res {
-                                    context.append(info.key + "\t" + info.value + "\t")
+            if (self.contents == []) {
+                var ref: DatabaseReference!
+                let uid = Auth.auth().currentUser!.uid
+                ref = Database.database().reference().child("users").child(uid).child("request");
+                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                    for child in snapshot.children {
+                        let snap = child as! DataSnapshot
+                        if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                            for snap in snapshots {
+                                if let res =  snap.value as? Dictionary<String,String>  {
+                                    var context: String = "";
+                                    for info in res {
+                                        context.append(info.key + "\t" + info.value + "\t")
+                                    }
+                                    self.contents.append(context)
                                 }
-                                self.contents.append(context)
                             }
                         }
                     }
-                }
-            })
-            break
+                })
+                break
+            }
+        }
+    }
+    
+    // deal with the row selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //getting the index path of selected row
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        //getting the current cell from the index path
+        let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
+        
+        //getting the text of that cell
+        if (currentCell.textLabel != nil && currentCell.textLabel!.text != nil) {
+            let currentItem: String = currentCell.textLabel!.text!
+    //        let detail: String = currentCell.detailTextLabel!.text!
+            
+
+            let alertController = UIAlertController(title: "Alert", message: "Are you sure you want to delete this task?", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
+                // delete row
+                print("toto")
+                self.contents.remove(at: indexPath!.row)
+                print("here")
+                self.tableView.deleteRows(at: [indexPath!], with: .automatic)
+
+
+            }
+            
+            let action2 = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction) in
+                print("You've pressed no");
+            }
+            
+            alertController.addAction(action1)
+            alertController.addAction(action2)
+
+            
+            present(alertController, animated: true, completion: nil)
         }
     }
 }
+

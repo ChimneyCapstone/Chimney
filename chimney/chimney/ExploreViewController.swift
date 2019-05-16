@@ -142,4 +142,8 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         // PROBLEM!! DOES NOT UPDATE AFTER I PICK UP A TASK
     }
     
+    @IBAction func ProfileButtonTapped(_ sender: Any) {
+        let vc = EditViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
 }

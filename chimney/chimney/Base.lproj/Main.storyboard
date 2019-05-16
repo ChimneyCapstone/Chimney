@@ -350,7 +350,18 @@
                             <outlet property="delegate" destination="yFt-2K-n0B" id="Egi-oh-EdJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="e4p-jN-p77"/>
+                    <navigationItem key="navigationItem" id="e4p-jN-p77">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="TaZ-l3-4jJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F3L-n1-FPp">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <connections>
+                                <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" id="5vL-gh-8SF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmg-V1-owb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,12 +404,16 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LzH-ZS-aSh"/>
                     <navigationItem key="navigationItem" id="w3Z-86-X3t">
-                        <barButtonItem key="rightBarButtonItem" title="Profile" style="plain" id="sIL-8q-cfP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bOk-PG-Ucb">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="apw-Ug-OQq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JgV-ax-N9G">
+                                <rect key="frame" x="315" y="7" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Profile"/>
                             </button>
+                            <connections>
+                                <action selector="ProfileButtonTapped:" destination="Z2Z-wc-PYm" id="DIQ-4W-HWL"/>
+                                <segue destination="cfY-6V-w19" kind="show" id="HgP-Xe-etM"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -410,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVR-Rh-W1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6335" y="-564"/>
+            <point key="canvasLocation" x="6334" y="-564"/>
         </scene>
         <!--Request-->
         <scene sceneID="cC1-G7-BEh">
@@ -471,9 +486,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-Fv-3OU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-Fv-3OU">
                                 <rect key="frame" x="0.0" y="215" width="375" height="452"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="Ce9-yL-sPR">
@@ -486,9 +500,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Drr-4r-ofa">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Drr-4r-ofa">
                                 <rect key="frame" x="7" y="131" width="360" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="0tB-gC-gVw"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Accepted"/>
                                     <segment title="Submitted"/>
@@ -500,9 +516,26 @@
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sd7-Fv-3OU" secondAttribute="trailing" id="2zU-Bf-AE6"/>
+                            <constraint firstItem="Drr-4r-ofa" firstAttribute="leading" secondItem="gOT-Rk-MRo" secondAttribute="leading" constant="7" id="5h6-3k-pnh"/>
+                            <constraint firstItem="Drr-4r-ofa" firstAttribute="top" secondItem="gOT-Rk-MRo" secondAttribute="top" constant="67" id="Xbv-NF-pxT"/>
+                            <constraint firstItem="Sd7-Fv-3OU" firstAttribute="leading" secondItem="6wi-Cs-Ljo" secondAttribute="leading" id="bfY-G7-ax0"/>
+                            <constraint firstAttribute="bottom" secondItem="Sd7-Fv-3OU" secondAttribute="bottom" id="oaj-ZA-obn"/>
+                            <constraint firstItem="Drr-4r-ofa" firstAttribute="centerX" secondItem="Sd7-Fv-3OU" secondAttribute="centerX" id="sbn-ew-ewi"/>
+                            <constraint firstItem="Sd7-Fv-3OU" firstAttribute="top" secondItem="Drr-4r-ofa" secondAttribute="bottom" constant="57" id="yS2-yP-L7r"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gOT-Rk-MRo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WmR-x4-e9a"/>
+                    <navigationItem key="navigationItem" id="WmR-x4-e9a">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="dUe-iz-raM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o4P-nM-4y9">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="control" destination="Drr-4r-ofa" id="vva-It-muC"/>
                         <outlet property="tableView" destination="Sd7-Fv-3OU" id="BdI-5W-WhT"/>
@@ -521,7 +554,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Joe-a7-KCI">
-                                <rect key="frame" x="69" y="135" width="237" height="30"/>
+                                <rect key="frame" x="69" y="179" width="237" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="m4l-Ge-4Bu"/>
                                 </constraints>
@@ -530,26 +563,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9E5-fW-75P">
-                                <rect key="frame" x="69" y="318.5" width="237" height="30"/>
+                                <rect key="frame" x="69" y="332" width="237" height="3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-lG-YxC">
-                                <rect key="frame" x="69" y="232" width="237" height="30.5"/>
+                                <rect key="frame" x="69" y="276" width="237" height="0.0"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUG-Mw-9T7">
-                                <rect key="frame" x="146" y="453" width="83" height="30"/>
+                                <rect key="frame" x="146" y="404" width="83" height="30"/>
                                 <state key="normal" title="Save Button"/>
                                 <connections>
                                     <action selector="saveButtonTapped" destination="cfY-6V-w19" eventType="touchUpInside" id="ArC-nd-1mA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4c-6q-fBK">
-                                <rect key="frame" x="126" y="550" width="123" height="52"/>
+                                <rect key="frame" x="126" y="501" width="123" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="PRU-8I-Qq0"/>
                                 </constraints>
@@ -559,7 +592,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY2-30-Wi1">
-                                <rect key="frame" x="130" y="512" width="115" height="30"/>
+                                <rect key="frame" x="130" y="463" width="115" height="30"/>
                                 <state key="normal" title="Change Address"/>
                                 <connections>
                                     <segue destination="8fd-fU-6Hu" kind="show" id="hCO-58-2v5"/>
@@ -607,13 +640,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nz1-rJ-NBI">
-                                <rect key="frame" x="70" y="197" width="225" height="30"/>
+                                <rect key="frame" x="70" y="241" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1X0-Tz-O17">
-                                <rect key="frame" x="70" y="282" width="225" height="30"/>
+                                <rect key="frame" x="70" y="326" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>

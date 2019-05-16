@@ -392,6 +392,7 @@
                         <viewLayoutGuide key="safeArea" id="a0h-o3-uvd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LzH-ZS-aSh"/>
+<<<<<<< HEAD
                     <navigationItem key="navigationItem" id="w3Z-86-X3t">
                         <barButtonItem key="rightBarButtonItem" title="Profile" style="plain" id="sIL-8q-cfP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bOk-PG-Ucb">
@@ -405,6 +406,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+=======
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="w3Z-86-X3t">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="hamburger" id="GSj-1K-zMW"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+>>>>>>> 2d46a07921b1639dcacb9428c8deed99368eea58
                     <connections>
                         <outlet property="MoneyTextField" destination="FzG-r4-BaI" id="WdK-by-Vzh"/>
                         <outlet property="RequestTextField" destination="7DG-cU-k6g" id="3Oy-ex-yPu"/>
@@ -514,44 +522,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbN-AW-l7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6333.6000000000004" y="882.90854572713647"/>
-        </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="yYg-Rb-LoB">
-            <objects>
-                <viewController id="PzR-ad-Xle" customClass="ProfileViewController" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4ba-sg-4fr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6c-wt-AnV">
-                                <rect key="frame" x="139" y="318" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edd-YZ-owq">
-                                <rect key="frame" x="150" y="525" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit Profile"/>
-                                <connections>
-                                    <action selector="handleEditProfileButton:" destination="PzR-ad-Xle" eventType="touchUpInside" id="h9h-Cj-x1s"/>
-                                    <action selector="handleEditProfileButtonTapped:" destination="PzR-ad-Xle" eventType="touchUpInside" id="bxa-c1-c47"/>
-                                    <segue destination="cfY-6V-w19" kind="show" identifier="segToEdit" id="vMa-CN-uhz"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="1bU-fy-Ixy"/>
-                    </view>
-                    <connections>
-                        <outlet property="editProfileButton" destination="edd-YZ-owq" id="1kh-8d-3eW"/>
-                        <outlet property="nameTextField" destination="r6c-wt-AnV" id="KBu-E0-gdn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9V8-hM-9Lj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5358" y="-1525"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="N4D-2z-QMT">
@@ -715,9 +685,17 @@
             <point key="canvasLocation" x="6334" y="-2892"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamburger" width="50" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Iqs-My-v6R"/>
+<<<<<<< HEAD
         <segue reference="BBu-bk-G0q"/>
         <segue reference="SY5-s2-Z8Q"/>
+=======
+        <segue reference="2GL-Xb-SPI"/>
+        <segue reference="a7R-xX-A1G"/>
+>>>>>>> 2d46a07921b1639dcacb9428c8deed99368eea58
     </inferredMetricsTieBreakers>
 </document>

@@ -13,8 +13,6 @@
 		9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */; };
 		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
 		D30417B7225546F200483F42 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30417B6225546F200483F42 /* Requests.swift */; };
-		D30417B92256C95900483F42 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30417B82256C95900483F42 /* ProfileViewController.swift */; };
-		D30417C22258163A00483F42 /* default_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D30417C12258163A00483F42 /* default_profile.jpg */; };
 		D34E784522512EC10062ED78 /* VerifiedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E784422512EC10062ED78 /* VerifiedUser.swift */; };
 		D384C3F62266692000496CEF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F52266692000496CEF /* EditViewController.swift */; };
 		D384C3F8226670EE00496CEF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */; };
@@ -52,6 +50,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D3E85B48228BF3D7002C78E6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00A8D0815B19E7C9DC4050E6 /* Pods-chimneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.release.xcconfig"; path = "Target Support Files/Pods-chimneyTests/Pods-chimneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		190904512C90C1AE04CDEFC1 /* Pods-chimney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.debug.xcconfig"; path = "Target Support Files/Pods-chimney/Pods-chimney.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,8 +75,6 @@
 		B26A0C6CD493F8C89A118584 /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC455CD1D8746C238BFCB783 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30417B6225546F200483F42 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
-		D30417B82256C95900483F42 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D30417C12258163A00483F42 /* default_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default_profile.jpg; path = ../../../../default_profile.jpg; sourceTree = "<group>"; };
 		D34E784422512EC10062ED78 /* VerifiedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedUser.swift; sourceTree = "<group>"; };
 		D384C3F52266692000496CEF /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -144,14 +152,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D30417C02258162400483F42 /* img */ = {
-			isa = PBXGroup;
-			children = (
-				D30417C12258163A00483F42 /* default_profile.jpg */,
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
 		D3C5AB93220133C000CE200A = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +177,6 @@
 		D3C5AB9E220133C000CE200A /* chimney */ = {
 			isa = PBXGroup;
 			children = (
-				D30417C02258162400483F42 /* img */,
 				D3C5AB9F220133C000CE200A /* AppDelegate.swift */,
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
 				D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */,
@@ -194,7 +193,6 @@
 				D3A7546A22417CD6000B0253 /* TableViewController.swift */,
 				D34E784422512EC10062ED78 /* VerifiedUser.swift */,
 				D30417B6225546F200483F42 /* Requests.swift */,
-				D30417B82256C95900483F42 /* ProfileViewController.swift */,
 				D3C5ABA3220133C000CE200A /* Main.storyboard */,
 				D384C3F52266692000496CEF /* EditViewController.swift */,
 				D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */,
@@ -234,6 +232,7 @@
 				D3C5AB9A220133C000CE200A /* Resources */,
 				96637103620E3119BDA23B1B /* [CP] Embed Pods Frameworks */,
 				F5A75DBB3A44BD2B173E981B /* [CP] Copy Pods Resources */,
+				D3E85B48228BF3D7002C78E6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -336,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */,
-				D30417C22258163A00483F42 /* default_profile.jpg in Resources */,
 				9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */,
 				D3C5ABA7220133C100CE200A /* Assets.xcassets in Resources */,
 				D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */,
@@ -496,7 +494,6 @@
 				D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */,
 				D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */,
 				D3A7546922417CB5000B0253 /* ExploreViewController.swift in Sources */,
-				D30417B92256C95900483F42 /* ProfileViewController.swift in Sources */,
 				D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
 				D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */,

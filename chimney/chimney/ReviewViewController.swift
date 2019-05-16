@@ -221,8 +221,10 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
                                     var context: String = "";
                                     for info in res {
                                         if (info.key == "picker") {
+//                                            context = "";
                                             break
                                         }
+                                        // picker
                                         context.append(info.key + "\t" + info.value + "\t")
                                     }
                                     self.contents.append(context)

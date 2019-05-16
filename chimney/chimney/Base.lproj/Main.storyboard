@@ -392,7 +392,18 @@
                         <viewLayoutGuide key="safeArea" id="a0h-o3-uvd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LzH-ZS-aSh"/>
-                    <navigationItem key="navigationItem" id="w3Z-86-X3t"/>
+                    <navigationItem key="navigationItem" id="w3Z-86-X3t">
+                        <barButtonItem key="rightBarButtonItem" title="Profile" style="plain" id="sIL-8q-cfP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bOk-PG-Ucb">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <connections>
+                                <segue destination="PzR-ad-Xle" kind="show" id="nhn-ZT-Kak"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MoneyTextField" destination="FzG-r4-BaI" id="WdK-by-Vzh"/>
@@ -415,7 +426,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="Z2Z-wc-PYm" kind="relationship" relationship="rootViewController" id="L2k-DR-jxj"/>
-                        <segue destination="PzR-ad-Xle" kind="show" identifier="ToProfile" id="Cne-x1-Xlq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7GG-2A-FRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,7 +443,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="yFt-2K-n0B" kind="relationship" relationship="rootViewController" id="3Hw-nf-Vdb"/>
-                        <segue destination="PzR-ad-Xle" kind="show" identifier="ToProfile" id="qjf-uI-NVm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbF-6I-jQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,7 +460,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="YsM-jr-Wq9" kind="relationship" relationship="rootViewController" id="B22-5Y-jJe"/>
-                        <segue destination="PzR-ad-Xle" kind="show" identifier="ToProfile" id="OL9-Td-MQr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGi-8Q-ylm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,8 +493,8 @@
                                 <rect key="frame" x="7" y="131" width="360" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Neighbor's"/>
-                                    <segment title="Mine"/>
+                                    <segment title="Accepted"/>
+                                    <segment title="Submitted"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentControl:" destination="YsM-jr-Wq9" eventType="valueChanged" id="ZBV-6Z-1ME"/>
@@ -554,7 +562,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Joe-a7-KCI">
-                                <rect key="frame" x="69" y="135" width="237" height="30"/>
+                                <rect key="frame" x="69" y="179" width="237" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="m4l-Ge-4Bu"/>
                                 </constraints>
@@ -563,26 +571,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9E5-fW-75P">
-                                <rect key="frame" x="69" y="318.5" width="237" height="30"/>
+                                <rect key="frame" x="69" y="332" width="237" height="3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-lG-YxC">
-                                <rect key="frame" x="69" y="232" width="237" height="30.5"/>
+                                <rect key="frame" x="69" y="276" width="237" height="0.0"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUG-Mw-9T7">
-                                <rect key="frame" x="146" y="453" width="83" height="30"/>
+                                <rect key="frame" x="146" y="404" width="83" height="30"/>
                                 <state key="normal" title="Save Button"/>
                                 <connections>
                                     <action selector="saveButtonTapped" destination="cfY-6V-w19" eventType="touchUpInside" id="ArC-nd-1mA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4c-6q-fBK">
-                                <rect key="frame" x="126" y="550" width="123" height="52"/>
+                                <rect key="frame" x="126" y="501" width="123" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="PRU-8I-Qq0"/>
                                 </constraints>
@@ -592,7 +600,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY2-30-Wi1">
-                                <rect key="frame" x="130" y="512" width="115" height="30"/>
+                                <rect key="frame" x="130" y="463" width="115" height="30"/>
                                 <state key="normal" title="Change Address"/>
                                 <connections>
                                     <segue destination="8fd-fU-6Hu" kind="show" id="hCO-58-2v5"/>
@@ -640,13 +648,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nz1-rJ-NBI">
-                                <rect key="frame" x="70" y="197" width="225" height="30"/>
+                                <rect key="frame" x="70" y="241" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1X0-Tz-O17">
-                                <rect key="frame" x="70" y="282" width="225" height="30"/>
+                                <rect key="frame" x="70" y="326" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -708,9 +716,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OL9-Td-MQr"/>
         <segue reference="Iqs-My-v6R"/>
-        <segue reference="2GL-Xb-SPI"/>
+        <segue reference="BBu-bk-G0q"/>
         <segue reference="SY5-s2-Z8Q"/>
     </inferredMetricsTieBreakers>
 </document>

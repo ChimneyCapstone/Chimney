@@ -29,8 +29,8 @@ class ChangePasswordViewController: UIViewController {
                         alertController.addAction(action)
                         self.present(alertController, animated: true, completion: nil)
                     } else {
-                        let vc = ProfileViewController()
-                        self.present(vc, animated: true, completion: nil)
+//                        let vc = ProfileViewController()
+//                        self.present(vc, animated: true, completion: nil)
                     }
                 }()
             }

@@ -392,8 +392,11 @@
                         <viewLayoutGuide key="safeArea" id="a0h-o3-uvd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LzH-ZS-aSh"/>
-                    <navigationItem key="navigationItem" id="w3Z-86-X3t"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="w3Z-86-X3t">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="hamburger" id="GSj-1K-zMW"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MoneyTextField" destination="FzG-r4-BaI" id="WdK-by-Vzh"/>
                         <outlet property="RequestTextField" destination="7DG-cU-k6g" id="3Oy-ex-yPu"/>
@@ -415,7 +418,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="Z2Z-wc-PYm" kind="relationship" relationship="rootViewController" id="L2k-DR-jxj"/>
-                        <segue destination="cfY-6V-w19" kind="show" id="DmH-YZ-M7S"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7GG-2A-FRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,7 +435,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="yFt-2K-n0B" kind="relationship" relationship="rootViewController" id="3Hw-nf-Vdb"/>
-                        <segue destination="cfY-6V-w19" kind="show" id="tuw-ue-Cjt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbF-6I-jQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,7 +452,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="YsM-jr-Wq9" kind="relationship" relationship="rootViewController" id="B22-5Y-jJe"/>
-                        <segue destination="cfY-6V-w19" kind="show" id="3QF-9g-u2p"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGi-8Q-ylm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -669,8 +669,10 @@
             <point key="canvasLocation" x="6334" y="-2892"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamburger" width="50" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DmH-YZ-M7S"/>
         <segue reference="Iqs-My-v6R"/>
         <segue reference="2GL-Xb-SPI"/>
         <segue reference="a7R-xX-A1G"/>

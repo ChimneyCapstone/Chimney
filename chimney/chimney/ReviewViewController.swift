@@ -268,6 +268,15 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
         
         //getting the current cell from the index path
         let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
+        switch (curSeg) {
+        // neighbors' requests
+        case 0:
+             if (currentCell.textLabel != nil && currentCell.textLabel!.text != nil) {
+                self.performSegue(withIdentifier: "info", sender: self)
+
+            }
+        case 1:
+
         
         //getting the text of that cell
         if (currentCell.textLabel != nil && currentCell.textLabel!.text != nil) {
@@ -279,9 +288,7 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             
             let action1 = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
                 // delete row
-                print("toto")
                 self.contents.remove(at: indexPath!.row)
-                print("here")
                 self.tableView.deleteRows(at: [indexPath!], with: .automatic)
 
 
@@ -296,6 +303,12 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
 
             
             present(alertController, animated: true, completion: nil)
+        }
+        default:
+            if (currentCell.textLabel != nil && currentCell.textLabel!.text != nil) {
+                self.performSegue(withIdentifier: "info", sender: self)
+                
+            }
         }
     }
     

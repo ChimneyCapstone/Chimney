@@ -80,8 +80,6 @@ class RequestViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func ProfileButtonTapped(_ sender: UIButton) {
-//        let vc = EditViewController()
-        print("here!!!!")
         self.performSegue(withIdentifier: "profile", sender: self)
     }
 }

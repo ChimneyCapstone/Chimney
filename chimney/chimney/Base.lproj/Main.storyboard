@@ -355,7 +355,11 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F3L-n1-FPp">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" eventType="touchUpInside" id="IHW-bC-vAE"/>
+                                    <segue destination="cfY-6V-w19" kind="show" identifier="profile" id="H94-68-3ap"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" id="5vL-gh-8SF"/>
@@ -488,20 +492,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-Fv-3OU">
-                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="Ce9-yL-sPR">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ce9-yL-sPR" id="ufH-km-sNb" customClass="UITableViewCell">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Drr-4r-ofa">
                                 <rect key="frame" x="7" y="131" width="360" height="28"/>
                                 <constraints>
@@ -516,6 +506,20 @@
                                     <action selector="segmentValueChanged:" destination="YsM-jr-Wq9" eventType="valueChanged" id="3lH-fI-hB7"/>
                                 </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-Fv-3OU">
+                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="Ce9-yL-sPR">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ce9-yL-sPR" id="ufH-km-sNb" customClass="UITableViewCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -534,8 +538,14 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o4P-nM-4y9">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <action selector="ProfileButtonTapped:" destination="YsM-jr-Wq9" eventType="touchUpInside" id="Ejn-Gf-pdS"/>
+                                </connections>
                             </button>
+                            <connections>
+                                <segue destination="cfY-6V-w19" kind="show" identifier="profile" id="cek-Ub-Yal"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -710,6 +720,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="H94-68-3ap"/>
         <segue reference="2SI-6b-gLo"/>
         <segue reference="2GL-Xb-SPI"/>
         <segue reference="a7R-xX-A1G"/>

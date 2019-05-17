@@ -506,8 +506,8 @@
                                     <action selector="segmentValueChanged:" destination="YsM-jr-Wq9" eventType="valueChanged" id="3lH-fI-hB7"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-Fv-3OU">
-                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-Fv-3OU">
+                                <rect key="frame" x="0.0" y="99" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="Ce9-yL-sPR">
@@ -525,11 +525,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Sd7-Fv-3OU" secondAttribute="trailing" id="2zU-Bf-AE6"/>
                             <constraint firstItem="Drr-4r-ofa" firstAttribute="leading" secondItem="gOT-Rk-MRo" secondAttribute="leading" constant="7" id="5h6-3k-pnh"/>
-                            <constraint firstItem="Drr-4r-ofa" firstAttribute="top" secondItem="gOT-Rk-MRo" secondAttribute="top" constant="67" id="Xbv-NF-pxT"/>
+                            <constraint firstItem="Drr-4r-ofa" firstAttribute="top" secondItem="gOT-Rk-MRo" secondAttribute="top" id="Xbv-NF-pxT"/>
                             <constraint firstItem="Sd7-Fv-3OU" firstAttribute="leading" secondItem="6wi-Cs-Ljo" secondAttribute="leading" id="bfY-G7-ax0"/>
-                            <constraint firstAttribute="bottom" secondItem="Sd7-Fv-3OU" secondAttribute="bottom" id="oaj-ZA-obn"/>
+                            <constraint firstAttribute="bottom" secondItem="Sd7-Fv-3OU" secondAttribute="bottom" constant="20" symbolic="YES" id="oaj-ZA-obn"/>
                             <constraint firstItem="Drr-4r-ofa" firstAttribute="centerX" secondItem="Sd7-Fv-3OU" secondAttribute="centerX" id="sbn-ew-ewi"/>
-                            <constraint firstItem="Sd7-Fv-3OU" firstAttribute="top" secondItem="Drr-4r-ofa" secondAttribute="bottom" constant="57" id="yS2-yP-L7r"/>
+                            <constraint firstItem="Sd7-Fv-3OU" firstAttribute="top" secondItem="Drr-4r-ofa" secondAttribute="bottom" constant="8" symbolic="YES" id="yS2-yP-L7r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gOT-Rk-MRo"/>
                     </view>
@@ -760,7 +760,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xqK-vV-aPE"/>
+        <segue reference="cek-Ub-Yal"/>
         <segue reference="2SI-6b-gLo"/>
         <segue reference="BBu-bk-G0q"/>
         <segue reference="yRe-KA-2IU"/>

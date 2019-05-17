@@ -17,15 +17,14 @@ class ChangeAddressViewController: UIViewController {
     var searchController: UISearchController?
     var resultView: UITextView?
     var ref: DatabaseReference!
-    
+    var fullName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // initialize the database reference
         ref = Database.database().reference()
-        var uid = Auth.auth().currentUser!.uid
-        
-        welcomeLabel.text = "Welcome!\nPlease change your Home address!"
+        self.title = "Change Address"
+        welcomeLabel.text = "Welcome! " + fullName + "\nChange your Home address!"
         // check whether a user logged in or not
         checkLoggedInUserStatus()
         
@@ -45,6 +44,8 @@ class ChangeAddressViewController: UIViewController {
         // When UISearchController presents the results view, present it in
         // this view controller, not one further up the chain.
         definesPresentationContext = true
+        
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     // this function is for checking the user status

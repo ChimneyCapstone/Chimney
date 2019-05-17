@@ -98,7 +98,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     // reference: https://www.youtube.com/watch?v=uKQjJb-KSwU
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "nextStep") {
-            var vc = segue.destination as! AddAddressViewController
+            var vc = segue.destination as! ChangeAddressViewController
             vc.fullName = self.fullNameTextField.text!
         }
     }

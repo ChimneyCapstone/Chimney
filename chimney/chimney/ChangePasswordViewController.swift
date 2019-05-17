@@ -17,6 +17,7 @@ class ChangePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Change Password"
     }
     
     // handle save button
@@ -29,8 +30,8 @@ class ChangePasswordViewController: UIViewController {
                         alertController.addAction(action)
                         self.present(alertController, animated: true, completion: nil)
                     } else {
-//                        let vc = ProfileViewController()
-//                        self.present(vc, animated: true, completion: nil)
+                        let vc = EditViewController()
+                        self.present(vc, animated: true, completion: nil)
                     }
                 }()
             }

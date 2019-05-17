@@ -357,12 +357,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
-                                    <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" eventType="touchUpInside" id="IHW-bC-vAE"/>
-                                    <segue destination="cfY-6V-w19" kind="show" identifier="profile" id="H94-68-3ap"/>
+                                    <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" eventType="touchUpInside" id="B20-dj-RvW"/>
                                 </connections>
                             </button>
                             <connections>
                                 <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" id="5vL-gh-8SF"/>
+                                <segue destination="cfY-6V-w19" kind="show" identifier="profile" id="xqK-vV-aPE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -760,7 +760,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vBa-Pg-5Qa"/>
+        <segue reference="xqK-vV-aPE"/>
         <segue reference="2SI-6b-gLo"/>
         <segue reference="BBu-bk-G0q"/>
         <segue reference="yRe-KA-2IU"/>

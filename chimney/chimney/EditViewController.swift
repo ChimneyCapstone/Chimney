@@ -86,13 +86,8 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         self.present(changeViewController, animated: true, completion: nil)
     }
     
-    @objc func cancelButtonTapped() {
-//        let profileViewController = ProfileViewController()
-//        self.present(profileViewController, animated: true, completion: nil)
-    }
-    
     // handle sign out button
-    @objc func handleSignOutButtonTapped() {
+    @IBAction func SignOutButtonTapped(_ sender: Any) {
         let alertController = UIAlertController(title: "Sign Out", message: "Are you sure that you sign out?", preferredStyle: .alert)
         let signout = UIAlertAction(title: "Sign Out", style: .default) { (action:UIAlertAction) in
             do {

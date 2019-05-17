@@ -560,10 +560,10 @@
             </objects>
             <point key="canvasLocation" x="6333.6000000000004" y="882.90854572713647"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="IMr-dh-nDv">
             <objects>
-                <viewController id="Syw-wQ-YlF" sceneMemberID="viewController">
+                <viewController id="Syw-wQ-YlF" customClass="InfoViewController" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9J3-YK-qxZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,6 +600,9 @@
                                 <rect key="frame" x="53" y="460" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Direction"/>
+                                <connections>
+                                    <action selector="MapButtonTapped:" destination="Syw-wQ-YlF" eventType="touchUpInside" id="mdM-Il-RZG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-sd-6ih">
                                 <rect key="frame" x="226" y="460" width="62" height="30"/>

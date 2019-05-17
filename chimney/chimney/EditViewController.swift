@@ -50,17 +50,39 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveButtonTapped() {
-        let updateValue = [
-            "fullname": fullNameTextField.text,
-            "phonenumber": emailTextField.text
-        ]
-        self.ref.child("user").child(self.uid!).updateChildValues(updateValue)
-        Auth.auth().currentUser?.updateEmail(to: emailTextField.text!) { (error) in
-            if let error = error {
-                print(error)
-            } else {
-                print("CHANGED")
+        if (emailTextField.text == "" || fullNameTextField.text == "" || phoneTextField.text == "") {
+            let alertController = UIAlertController(title: "Fields are empty", message: "You Should fill out at least one of the fields", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "ok", style: .cancel) { (action:UIAlertAction) in
+                print("You've pressed cancel");
             }
+            alertController.addAction(ok)
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            if (emailTextField.text != "") {
+                Auth.auth().currentUser?.updateEmail(to: emailTextField.text!) { (error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        print("CHANGED Email")
+                    }
+                }
+            }
+            var updateValue = [String:String]()
+            if (fullNameTextField.text == "") {
+                updateValue = [
+                    "fullname": fullNameTextField.text!
+                ]
+            } else if (fullNameTextField.text == "") {
+                updateValue = [
+                    "phonenumber": phoneTextField.text!
+                ]
+            } else {
+                updateValue = [
+                    "fullname": fullNameTextField.text!,
+                    "phonenumber": phoneTextField.text!
+                ]
+            }
+            self.ref.child("users").child(self.uid!).updateChildValues(updateValue)
         }
     }
     
@@ -92,6 +114,10 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         let signout = UIAlertAction(title: "Sign Out", style: .default) { (action:UIAlertAction) in
             do {
                 try Auth.auth().signOut()
+                if let storyboard = self.storyboard {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
+                    self.present(vc, animated: false, completion: nil)
+                }
             } catch let err {
                 let errorAlertController = UIAlertController(title:"Error", message: err.localizedDescription, preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default)
@@ -109,3 +135,4 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         self.present(alertController, animated: true, completion: nil)
     }
 }
+

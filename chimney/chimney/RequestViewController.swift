@@ -79,10 +79,10 @@ class RequestViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    @IBAction func ProfileButtonTapped(_ sender: Any) {
-        let vc = EditViewController()
+    @IBAction func ProfileButtonTapped(_ sender: UIButton) {
+//        let vc = EditViewController()
         print("here!!!!")
-        self.present(vc, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "profile", sender: self)
     }
 }
 

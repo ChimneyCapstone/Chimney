@@ -298,5 +298,9 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             present(alertController, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func ProfileButtonTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "profile", sender: self)
+    }
 }
 

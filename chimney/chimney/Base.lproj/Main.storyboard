@@ -18,46 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrV-UC-qoM">
-                                <rect key="frame" x="245" y="417" width="54" height="27"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <segue destination="FGu-vu-DGD" kind="show" id="BBu-bk-G0q"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHIMNEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUg-Fx-6s4">
-                                <rect key="frame" x="149" y="143" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-M4-bhf">
-                                <rect key="frame" x="80" y="417" width="47" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-M4-bhf">
+                                <rect key="frame" x="74" y="538" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <segue destination="ETg-hY-Sif" kind="presentation" id="TG7-Nn-q9g"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrV-UC-qoM">
+                                <rect key="frame" x="245" y="538" width="54" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <segue destination="FGu-vu-DGD" kind="show" id="BBu-bk-G0q"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Lz-uX-TkL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4ae-NS-5uI">
+                                        <rect key="frame" x="168" y="429" width="39" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yrV-UC-qoM" secondAttribute="trailing" constant="76" id="65Y-8P-JxO"/>
-                            <constraint firstItem="E7q-M4-bhf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="395" id="6sI-Us-eOJ"/>
-                            <constraint firstItem="aUg-Fx-6s4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8dG-5o-FSf"/>
-                            <constraint firstItem="E7q-M4-bhf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="AEM-Wd-gYq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E7q-M4-bhf" secondAttribute="bottom" constant="222" id="QMx-xi-7Zg"/>
-                            <constraint firstItem="E7q-M4-bhf" firstAttribute="centerY" secondItem="yrV-UC-qoM" secondAttribute="centerY" id="SC3-k2-gky"/>
-                            <constraint firstItem="yrV-UC-qoM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="397" id="lfQ-7V-w0Q"/>
-                            <constraint firstItem="aUg-Fx-6s4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="mJp-Nm-NPd"/>
-                            <constraint firstItem="aUg-Fx-6s4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="o4e-KL-ciE"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="XN9-Gw-ova"/>
+                    <connections>
+                        <outlet property="scrollView" destination="5Lz-uX-TkL" id="Eo4-6D-MWc"/>
+                        <outlet property="signInButton" destination="E7q-M4-bhf" id="fFx-Cm-w7E"/>
+                        <outlet property="signUpButton" destination="yrV-UC-qoM" id="cPs-b6-Shr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="133.5832083958021"/>
+            <point key="canvasLocation" x="821.60000000000002" y="133.5832083958021"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="frx-Ab-kAE">
@@ -195,17 +195,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfF-yB-866" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="134"/>
+            <point key="canvasLocation" x="-30" y="134"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="vSH-mY-RNS">
             <objects>
                 <viewController id="FGu-vu-DGD" customClass="SignUpViewController" customModule="chimney" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="2xh-gp-u5Y">
+                    <view key="view" contentMode="scaleToFill" id="2xh-gp-u5Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djd-PY-ang">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djd-PY-ang">
                                 <rect key="frame" x="254" y="521" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="mZ6-Zo-nSW"/>
@@ -215,7 +215,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="SY5-s2-Z8Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-7W-gO8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-7W-gO8">
                                 <rect key="frame" x="75" y="521" width="52" height="30"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
@@ -262,7 +262,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lf-le-7UK">
-                                <rect key="frame" x="154" y="103" width="67" height="21"/>
+                                <rect key="frame" x="154" y="59" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -793,6 +793,6 @@
         <segue reference="cek-Ub-Yal"/>
         <segue reference="2SI-6b-gLo"/>
         <segue reference="BBu-bk-G0q"/>
-        <segue reference="yRe-KA-2IU"/>
+        <segue reference="a7R-xX-A1G"/>
     </inferredMetricsTieBreakers>
 </document>

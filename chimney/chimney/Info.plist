@@ -33,6 +33,7 @@
 	<true/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>sms:</string>
 		<string>comgooglemaps</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

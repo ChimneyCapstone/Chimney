@@ -348,7 +348,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F3L-n1-FPp">
                                 <rect key="frame" x="344" y="0.0" width="50" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="iconsuser"/>
+                                <state key="normal" image="user_male"/>
                                 <connections>
                                     <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" eventType="touchUpInside" id="B20-dj-RvW"/>
                                 </connections>
@@ -414,11 +414,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LzH-ZS-aSh"/>
                     <navigationItem key="navigationItem" id="w3Z-86-X3t">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="puJ-EN-HI1">
+                        <barButtonItem key="rightBarButtonItem" image="user_male" style="plain" id="puJ-EN-HI1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U6k-2d-hbI">
                                 <rect key="frame" x="344" y="0.0" width="50" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="iconsuser"/>
+                                <state key="normal" image="user_male"/>
                                 <connections>
                                     <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" eventType="touchUpInside" id="oU6-W2-rmn"/>
                                     <segue destination="cfY-6V-w19" kind="show" id="07J-oj-YeM"/>
@@ -548,14 +548,14 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tJI-qY-B7P">
                                 <rect key="frame" x="344" y="0.0" width="50" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="iconsuser"/>
+                                <state key="normal" image="user_male"/>
                                 <connections>
                                     <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" eventType="touchUpInside" id="9TI-qE-ZM4"/>
                                 </connections>
                             </button>
                             <connections>
                                 <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" id="zns-2D-LV2"/>
-                                <segue destination="cfY-6V-w19" kind="show" id="bep-RA-W9X"/>
+                                <segue destination="cfY-6V-w19" kind="show" id="1U4-oL-nUz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -823,9 +823,9 @@
     <resources>
         <image name="Logo" width="141" height="43"/>
         <image name="create_new" width="30" height="30"/>
-        <image name="iconsuser" width="50" height="50"/>
         <image name="info" width="30" height="30"/>
         <image name="search" width="30" height="30"/>
+        <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xqK-vV-aPE"/>

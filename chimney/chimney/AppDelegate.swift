@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleMaps
 import GooglePlaces // address auto-completing
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             GMSPlacesClient.provideAPIKey(clientKey!) // address auto-completing
             GMSServices.provideAPIKey(clientKey!)
         }
+        
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_TYooMQauvdEDq54NiTphI7jx"
         
         return true
     }

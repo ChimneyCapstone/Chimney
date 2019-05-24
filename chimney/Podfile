@@ -13,7 +13,8 @@ target 'chimney' do
   pod 'GooglePlaces'
   pod 'GoogleMaps'
   pod 'GooglePlacePicker'
-  
+
+  pod 'Stripe'
   target 'chimneyTests' do
     inherit! :search_paths
     # Pods for testing

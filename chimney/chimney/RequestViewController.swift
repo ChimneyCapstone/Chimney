@@ -22,6 +22,7 @@ class RequestViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Request"
         RequestTextField.delegate = self
         RequestTextField.text = "What do you need? Please be as specific as possible."
         MoneyTextField.text = ""

@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
 //        scrollView.delegate = self
-//
+
 //        slides = createSlides()
 //        setupSlideScrollView(slides: slides)
 //

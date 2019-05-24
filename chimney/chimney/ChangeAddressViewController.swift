@@ -39,13 +39,14 @@ class ChangeAddressViewController: UIViewController {
         subView.addSubview((searchController?.searchBar)!)
         view.addSubview(subView)
         searchController?.searchBar.sizeToFit()
-        searchController?.hidesNavigationBarDuringPresentation = false
+        searchController?.hidesNavigationBarDuringPresentation = true
         
         // When UISearchController presents the results view, present it in
         // this view controller, not one further up the chain.
         definesPresentationContext = true
         
-        self.navigationController?.navigationBar.isTranslucent = false
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.extendedLayoutIncludesOpaqueBars = true
     }
     
     // this function is for checking the user status

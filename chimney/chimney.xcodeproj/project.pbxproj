@@ -17,7 +17,7 @@
 		D34E784522512EC10062ED78 /* VerifiedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E784422512EC10062ED78 /* VerifiedUser.swift */; };
 		D384C3F62266692000496CEF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F52266692000496CEF /* EditViewController.swift */; };
 		D384C3F8226670EE00496CEF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */; };
-		D39A43002295F023005FFAFD /* Slides.xib in Resources */ = {isa = PBXBuildFile; fileRef = D39A42FF2295F023005FFAFD /* Slides.xib */; };
+		D39A43002295F023005FFAFD /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = D39A42FF2295F023005FFAFD /* Slide.xib */; };
 		D39A43022295F44F005FFAFD /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A43012295F44F005FFAFD /* Slide.swift */; };
 		D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */; };
 		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
@@ -82,7 +82,7 @@
 		D34E784422512EC10062ED78 /* VerifiedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedUser.swift; sourceTree = "<group>"; };
 		D384C3F52266692000496CEF /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
-		D39A42FF2295F023005FFAFD /* Slides.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slides.xib; sourceTree = "<group>"; };
+		D39A42FF2295F023005FFAFD /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		D39A43012295F44F005FFAFD /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		D39A42FE2295F008005FFAFD /* views */ = {
 			isa = PBXGroup;
 			children = (
-				D39A42FF2295F023005FFAFD /* Slides.xib */,
+				D39A42FF2295F023005FFAFD /* Slide.xib */,
 				D39A43012295F44F005FFAFD /* Slide.swift */,
 			);
 			path = views;
@@ -194,6 +194,7 @@
 			children = (
 				D39A42FE2295F008005FFAFD /* views */,
 				D3C5AB9F220133C000CE200A /* AppDelegate.swift */,
+				D3C5ABA3220133C000CE200A /* Main.storyboard */,
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
 				D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */,
 				D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */,
@@ -210,7 +211,6 @@
 				D3A7546A22417CD6000B0253 /* TableViewController.swift */,
 				D34E784422512EC10062ED78 /* VerifiedUser.swift */,
 				D30417B6225546F200483F42 /* Requests.swift */,
-				D3C5ABA3220133C000CE200A /* Main.storyboard */,
 				D384C3F52266692000496CEF /* EditViewController.swift */,
 				D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */,
 				D3A7D7F022726D2100072E6B /* ChangeAddressViewController.swift */,
@@ -352,7 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */,
-				D39A43002295F023005FFAFD /* Slides.xib in Resources */,
+				D39A43002295F023005FFAFD /* Slide.xib in Resources */,
 				9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */,
 				D3C5ABA7220133C100CE200A /* Assets.xcassets in Resources */,
 				D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */,

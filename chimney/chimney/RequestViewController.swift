@@ -19,16 +19,53 @@ class RequestViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var RequestTextField: UITextView!
     
     @IBOutlet weak var MoneyTextField: UITextField!
+    var buttonscheck = [UIButton]()
+    @IBOutlet weak var free: UIButton!
+    @IBOutlet weak var cash: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SubmitButton.isEnabled = false;
         self.title = "Request"
         RequestTextField.delegate = self
         RequestTextField.text = "What do you need? Please be as specific as possible."
         MoneyTextField.text = ""
-//        MoneyTextField.textColor = UIColor.lightGray
-
         RequestTextField.textColor = UIColor.lightGray
+        buttonscheck.append(free)
+        buttonscheck.append(cash)
+        MoneyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
+
+    }
+    
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        if textField.text == "" {
+            SubmitButton.isEnabled = false;
+        } else {
+            SubmitButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func btn_box(sender: UIButton)
+    {
+        for btn in buttonscheck {
+            btn.isSelected = false
+        }
+        if let index = buttonscheck.index(where: { $0 == sender }) {
+            buttonscheck[index].isSelected = true
+        }
+        if free.isSelected {
+            SubmitButton.isEnabled = true;
+        } else {
+            SubmitButton.isEnabled = false;
+        }
+        if cash.isSelected {
+            if Double(MoneyTextField.text!) == nil {
+                SubmitButton.isEnabled = false;
+            }else {
+                SubmitButton.isEnabled = true;
+            }
+        }
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -49,11 +86,19 @@ class RequestViewController: UIViewController, UITextViewDelegate {
     
     // check the field whether it fulfilled or not
     func checkFulfilled () -> Bool {
-        if Double(MoneyTextField.text!) == nil {
-            let alertController = UIAlertController(title: "Bad currency format", message: "please check format of currency", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-            self.present(alertController, animated: true, completion: nil)
-            return false
+        if free.isSelected {
+            SubmitButton.isEnabled = true;
+        } else {
+            SubmitButton.isEnabled = false;
+        }
+        if cash.isSelected {
+            if Double(MoneyTextField.text!) == nil {
+                let alertController = UIAlertController(title: "Bad currency format", message: "please check format of currency", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+                return false
+            }
+            SubmitButton.isEnabled = true;
         }
         return true
     }

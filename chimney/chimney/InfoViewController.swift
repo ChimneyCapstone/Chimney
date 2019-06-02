@@ -30,9 +30,6 @@ class InfoViewController: UIViewController{
     }
     
     @IBAction func MessageButtonTapped(_ sender: UIButton) {
-//        if UIApplication.shared.canOpenURL(URL(string:"sms:2062281234")!) {
-//            UIApplication.shared.open(URL(string:"sms:2062281234")!, options: [:], completionHandler: nil)
-//        }
         let sms: String = "sms:2061231231&body=Hello, I am on my way."
         let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)

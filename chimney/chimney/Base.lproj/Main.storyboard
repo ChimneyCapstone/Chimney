@@ -398,6 +398,22 @@
                                     <action selector="RequestButtonTapped:" destination="Z2Z-wc-PYm" eventType="touchUpInside" id="icg-MW-2pW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hg0-0D-P3Q">
+                                <rect key="frame" x="124" y="489" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Free"/>
+                                <connections>
+                                    <action selector="btn_boxWithSender:" destination="Z2Z-wc-PYm" eventType="touchUpInside" id="6D0-Fl-Arv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlj-r4-tbM">
+                                <rect key="frame" x="266" y="489" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cash"/>
+                                <connections>
+                                    <action selector="btn_boxWithSender:" destination="Z2Z-wc-PYm" eventType="touchUpInside" id="svE-6i-ZKj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -434,6 +450,8 @@
                         <outlet property="MoneyTextField" destination="FzG-r4-BaI" id="WdK-by-Vzh"/>
                         <outlet property="RequestTextField" destination="7DG-cU-k6g" id="3Oy-ex-yPu"/>
                         <outlet property="SubmitButton" destination="OAe-rA-jdB" id="dSY-3j-PHF"/>
+                        <outlet property="cash" destination="Tlj-r4-tbM" id="MW3-x1-oVK"/>
+                        <outlet property="free" destination="hg0-0D-P3Q" id="w3T-LR-FZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVR-Rh-W1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -614,6 +632,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-sd-6ih">
                                 <rect key="frame" x="282" y="675" width="62" height="30"/>
                                 <state key="normal" title="Message"/>
+                                <connections>
+                                    <action selector="MessageButtonTapped:" destination="Syw-wQ-YlF" eventType="touchUpInside" id="agc-f2-oZG"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hey, would you please bring some chicken nuggets from kfc? Thank you so much!! :)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a3U-gU-pRH">
                                 <rect key="frame" x="61" y="155" width="279" height="248"/>
@@ -828,7 +849,7 @@
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xqK-vV-aPE"/>
+        <segue reference="07J-oj-YeM"/>
         <segue reference="Iqs-My-v6R"/>
         <segue reference="BBu-bk-G0q"/>
         <segue reference="SY5-s2-Z8Q"/>

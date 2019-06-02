@@ -18,45 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-M4-bhf">
-                                <rect key="frame" x="89" y="467" width="47" height="341"/>
-                                <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <segue destination="ETg-hY-Sif" kind="presentation" id="TG7-Nn-q9g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrV-UC-qoM">
-                                <rect key="frame" x="255" y="426" width="54" height="423"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <segue destination="FGu-vu-DGD" kind="show" id="BBu-bk-G0q"/>
-                                </connections>
-                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5pc-TD-mWF">
+                                <rect key="frame" x="187" y="429" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdi-fA-rcP">
-                                <rect key="frame" x="87" y="467" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="39" width="414" height="857"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="E7q-M4-bhf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="423" id="CTi-dv-Ikw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yrV-UC-qoM" secondAttribute="trailing" constant="105" id="NYd-BD-w30"/>
-                            <constraint firstItem="E7q-M4-bhf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="ONc-2G-IXL"/>
-                            <constraint firstItem="yrV-UC-qoM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="382" id="S7k-d7-UEh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yrV-UC-qoM" secondAttribute="bottom" constant="13" id="WEr-8F-oCE"/>
-                            <constraint firstItem="yrV-UC-qoM" firstAttribute="baseline" secondItem="E7q-M4-bhf" secondAttribute="firstBaseline" id="XHF-bc-BEf"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="XN9-Gw-ova"/>
                     <connections>
-                        <outlet property="signInButton" destination="E7q-M4-bhf" id="fFx-Cm-w7E"/>
-                        <outlet property="signUpButton" destination="yrV-UC-qoM" id="cPs-b6-Shr"/>
+                        <outlet property="pageControl" destination="5pc-TD-mWF" id="D9t-2d-hbV"/>
+                        <outlet property="scrollView" destination="kdi-fA-rcP" id="wCW-Gg-nDL"/>
+                        <segue destination="ETg-hY-Sif" kind="show" identifier="segueToSignIn" id="y8V-xi-Ypu"/>
+                        <segue destination="FGu-vu-DGD" kind="show" identifier="segueToSignUp" id="hcF-A7-fkk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="820.28985507246387" y="133.25892857142856"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="frx-Ab-kAE">
@@ -851,7 +835,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="07J-oj-YeM"/>
         <segue reference="Iqs-My-v6R"/>
-        <segue reference="BBu-bk-G0q"/>
+        <segue reference="hcF-A7-fkk"/>
         <segue reference="SY5-s2-Z8Q"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,5 @@ import UIKit
 
 class Slide: UIView {
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var logoImageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
 }

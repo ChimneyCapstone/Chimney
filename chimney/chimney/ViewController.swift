@@ -19,7 +19,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         scrollView.delegate = self
 
         slides = createSlides()
@@ -53,7 +52,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
         let slide2: Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide2.imageView.image = UIImage(named: "landing2")
-        slide2.textView.text = "Maybe you need help around the housee with something. Small repairs, yard work, whatever it is, use Chimney to get help from a neighbor, not a stranger."
+        slide2.textView.text = "Maybe you need help around the house with something. Small repairs, yard work, whatever it is, use Chimney to get help from a neighbor, not a stranger."
         
         let slide3: Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide3.imageView.image = UIImage(named: "Profile")

@@ -23,7 +23,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     // MARK: UITableViewDataSource
@@ -46,7 +46,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "PlainCell")
-        self.contents.removeAll()
+//        self.contents.removeAll()
         var ref: DatabaseReference!
         ref = Database.database().reference().child("users");
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -67,13 +67,14 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                                     let uid = Auth.auth().currentUser!.uid
                                     // do not render task that are already picked up by someone
                                     // do not render task that I posted myself
-                                    if (mission["picker"] != nil || key == uid) {
-                                        break;
+                                    if (mission["picker"] == nil && key != uid) {
+                                        
+                                        var task:[String]=[]
+                                        print(self.contents);
+                                        task.append("amount$:\(mission["amount"]!)\t\ttask:\(mission["task"]!)")
+                                        task.append("poster:\(key)\t\ttaskId:\(id)")
+                                        self.contents.append(task)
                                     }
-                                    var task:[String]=[]
-                                    task.append("amount$:\(mission["amount"]!)\t\ttask:\(mission["task"]!)")
-                                    task.append("poster:\(key)\t\ttaskId:\(id)")
-                                    self.contents.append(task)
                                 }
                             }
                         }
@@ -82,12 +83,13 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
             }
             
         });
-        DispatchQueue.main.asyncAfter(deadline: .now() + 8.0) {
-            if self.index < self.contents.count {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 9.0) {
+            let unique = Array(Set(self.contents))
+            if self.index < unique.count - 1 {
                 self.index+=1
-                print(self.index)
-                cell.textLabel?.text = self.contents[self.index][0]
-                cell.detailTextLabel?.text = self.contents[self.index][1]
+//                print(self.contents)
+                cell.textLabel?.text = unique[self.index][0]
+                cell.detailTextLabel?.text = unique[self.index][1]
                 cell.detailTextLabel?.isHidden = true
             }
         }

@@ -49,15 +49,17 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             case 0:
                 print("yoyo")
                 print(self.neighborReq.count - 1)
+                let unique = Array(Set(self.neighborReq))
 
-                if self.index < self.neighborReq.count - 1 {
+                if self.index < unique.count - 1 {
                     self.index+=1
-                    cell.textLabel?.text = self.neighborReq[self.index]
+                    cell.textLabel?.text = unique[self.index]
                 }
             case 1:
-                if self.index < self.contents.count {
+                let unique = Array(Set(self.contents))
+                if self.index < unique.count - 1 {
                     self.index+=1
-                    cell.textLabel?.text = self.contents[self.index]
+                    cell.textLabel?.text = unique[self.index]
                 }
             default:
                 cell.textLabel?.text = "please wait"
@@ -83,7 +85,8 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        self.tableView.reloadData()
+        print("will appear")
     }
     
     @IBAction func segmentControl( _ segmentedControl: UISegmentedControl) {
@@ -94,7 +97,6 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             neighborReq.append("amount 11   task icecream")
             neighborReq.append("amount 10   task kfc")
             self.curSeg = 0
-
             var ref: DatabaseReference!
             let uid = Auth.auth().currentUser!.uid
             ref = Database.database().reference().child("users").child(uid).child("address");
@@ -206,7 +208,7 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             break
         // my requests
         case 1:
-            self.contents.removeAll()
+//            self.contents.removeAll()
 
             self.curSeg = 1
             // Second segment tapped

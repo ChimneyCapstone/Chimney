@@ -359,6 +359,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="wf0-Nq-z93" id="E4V-pC-HLZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmg-V1-owb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -568,12 +571,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="user_male"/>
                                 <connections>
-                                    <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" eventType="touchUpInside" id="9TI-qE-ZM4"/>
+                                    <action selector="ProfileButtonTapped:" destination="YsM-jr-Wq9" eventType="touchUpInside" id="kSR-2C-aB0"/>
                                 </connections>
                             </button>
                             <connections>
                                 <action selector="ProfileButtonTapped:" destination="yFt-2K-n0B" id="zns-2D-LV2"/>
-                                <segue destination="cfY-6V-w19" kind="show" id="1U4-oL-nUz"/>
+                                <segue destination="cfY-6V-w19" kind="show" identifier="profile" id="1U4-oL-nUz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -849,7 +852,7 @@
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="07J-oj-YeM"/>
+        <segue reference="1U4-oL-nUz"/>
         <segue reference="Iqs-My-v6R"/>
         <segue reference="BBu-bk-G0q"/>
         <segue reference="SY5-s2-Z8Q"/>

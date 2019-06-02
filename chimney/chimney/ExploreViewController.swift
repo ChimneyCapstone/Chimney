@@ -15,10 +15,15 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     var contents:[[String]] = []
     var index = -1
     
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
         super.viewDidLoad()
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     // MARK: UITableViewDataSource
@@ -31,13 +36,17 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+//
+//        }
+//        print(contents.count)
+        return 5
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "PlainCell")
-        
+        self.contents.removeAll()
         var ref: DatabaseReference!
         ref = Database.database().reference().child("users");
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -73,9 +82,10 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
             }
             
         });
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 8.0) {
             if self.index < self.contents.count {
                 self.index+=1
+                print(self.index)
                 cell.textLabel?.text = self.contents[self.index][0]
                 cell.detailTextLabel?.text = self.contents[self.index][1]
                 cell.detailTextLabel?.isHidden = true
@@ -127,7 +137,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                 let end = str.index(str.endIndex, offsetBy: 0)
                 let range = start..<end
                 let taskString = str[range]
-                print(taskString)
                 let post = ["task": taskString,
                             "amount": amountString,
                             "picker": uid] as [String : Any]

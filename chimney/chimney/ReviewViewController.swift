@@ -83,6 +83,7 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     @IBAction func segmentControl( _ segmentedControl: UISegmentedControl) {
@@ -205,7 +206,8 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             break
         // my requests
         case 1:
-            
+            self.contents.removeAll()
+
             self.curSeg = 1
             // Second segment tapped
             if(self.contents == []){

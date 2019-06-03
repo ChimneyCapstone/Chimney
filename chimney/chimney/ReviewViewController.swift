@@ -50,13 +50,13 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
                 print("yoyo")
                 print(self.neighborReq.count - 1)
                 let unique = Array(Set(self.neighborReq))
-
                 if self.index < unique.count - 1 {
                     self.index+=1
                     cell.textLabel?.text = unique[self.index]
                 }
             case 1:
                 let unique = Array(Set(self.contents))
+                print(unique)
                 if self.index < unique.count - 1 {
                     self.index+=1
                     cell.textLabel?.text = unique[self.index]
@@ -85,8 +85,8 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
-        print("will appear")
+        tableView.reloadData()
+        self.contents.removeAll()
     }
     
     @IBAction func segmentControl( _ segmentedControl: UISegmentedControl) {
@@ -97,6 +97,7 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             neighborReq.append("amount 11   task icecream")
             neighborReq.append("amount 10   task kfc")
             self.curSeg = 0
+
             var ref: DatabaseReference!
             let uid = Auth.auth().currentUser!.uid
             ref = Database.database().reference().child("users").child(uid).child("address");
@@ -208,6 +209,7 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             break
         // my requests
         case 1:
+            print("entered reload")
 //            self.contents.removeAll()
 
             self.curSeg = 1

@@ -23,10 +23,21 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         self.title = "Edit Profile"
         ref = Database.database().reference()
         self.uid = Auth.auth().currentUser!.uid
+        emailTextField.delegate = self
+        fullNameTextField.delegate = self
         // for phone text field
         phoneTextField.delegate = self
         phoneTextField.keyboardType = .phonePad
 
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

@@ -62,94 +62,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="FLT-VB-DPP">
-                                <rect key="frame" x="87" y="65" width="240" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="gTX-wp-PTd"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="83" translatesAutoresizingMaskIntoConstraints="NO" id="taO-zf-q5l">
-                                <rect key="frame" x="77" y="348" width="262" height="369"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEp-VD-Uc4">
-                                        <rect key="frame" x="0.0" y="0.0" width="262" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiK-gY-PdR">
-                                        <rect key="frame" x="0.0" y="113" width="262" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-VE-Dai">
-                                        <rect key="frame" x="0.0" y="226" width="262" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you are not a member, click " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="wbw-Y5-t3g">
-                                                <rect key="frame" x="0.0" y="0.0" width="229" height="30"/>
-                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sff-M0-ZGC">
-                                                <rect key="frame" x="229" y="0.0" width="33" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="33" id="423-gX-cHu"/>
-                                                </constraints>
-                                                <state key="normal" title="Here"/>
-                                                <connections>
-                                                    <segue destination="FGu-vu-DGD" kind="show" id="2GL-Xb-SPI"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="166" translatesAutoresizingMaskIntoConstraints="NO" id="6qb-E6-LLO">
-                                        <rect key="frame" x="0.0" y="339" width="262" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-Ma-kOr">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
-                                                <state key="normal" title="Sign In"/>
-                                                <connections>
-                                                    <action selector="signInButtonTapped:" destination="ETg-hY-Sif" eventType="touchUpInside" id="jKB-H9-Mo2"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bc-SU-t64">
-                                                <rect key="frame" x="228" y="0.0" width="34" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="34" id="Ahm-Bd-Wvn"/>
-                                                </constraints>
-                                                <state key="normal" title="Back"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="a7R-xX-A1G"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text=" LOGIN" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckE-em-Iyk">
-                                <rect key="frame" x="173" y="219" width="68" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-Ma-kOr">
+                                <rect key="frame" x="71" y="706" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="ETg-hY-Sif" eventType="touchUpInside" id="jKB-H9-Mo2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEp-VD-Uc4">
+                                <rect key="frame" x="89" y="329" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiK-gY-PdR">
+                                <rect key="frame" x="89" y="458" width="234" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bc-SU-t64">
+                                <rect key="frame" x="247" y="706" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="a7R-xX-A1G"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text=" LOGIN" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckE-em-Iyk">
+                                <rect key="frame" x="174" y="241" width="67" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="ZKh-Gn-WYi"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you are not a member, click " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="wbw-Y5-t3g">
+                                <rect key="frame" x="63" y="592" width="273" height="20.333333333333314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sff-M0-ZGC">
+                                <rect key="frame" x="298" y="587" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Here"/>
+                                <connections>
+                                    <segue destination="FGu-vu-DGD" kind="show" id="2GL-Xb-SPI"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="FLT-VB-DPP">
+                                <rect key="frame" x="122" y="106" width="201" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="FLT-VB-DPP" firstAttribute="centerX" secondItem="ckE-em-Iyk" secondAttribute="centerX" id="0Kb-a5-Kll"/>
-                            <constraint firstItem="taO-zf-q5l" firstAttribute="top" secondItem="ckE-em-Iyk" secondAttribute="bottom" constant="91" id="8PN-fI-iBX"/>
-                            <constraint firstItem="FLT-VB-DPP" firstAttribute="top" secondItem="W5q-MQ-udq" secondAttribute="top" constant="21" id="Snf-an-ueU"/>
-                            <constraint firstItem="W5q-MQ-udq" firstAttribute="trailing" secondItem="taO-zf-q5l" secondAttribute="trailing" constant="75" id="TlV-fS-yTt"/>
-                            <constraint firstItem="FLT-VB-DPP" firstAttribute="centerX" secondItem="96q-CM-WgG" secondAttribute="centerX" id="duB-47-WfX"/>
-                            <constraint firstItem="ckE-em-Iyk" firstAttribute="top" secondItem="FLT-VB-DPP" secondAttribute="bottom" constant="68" id="lY7-AK-LgO"/>
-                            <constraint firstItem="taO-zf-q5l" firstAttribute="leading" secondItem="W5q-MQ-udq" secondAttribute="leading" constant="77" id="wp6-cE-T3U"/>
-                            <constraint firstItem="ckE-em-Iyk" firstAttribute="leading" secondItem="W5q-MQ-udq" secondAttribute="leading" constant="173" id="ySL-oa-dS5"/>
-                            <constraint firstItem="FLT-VB-DPP" firstAttribute="leading" secondItem="W5q-MQ-udq" secondAttribute="leading" constant="87" id="zAQ-v7-LtT"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W5q-MQ-udq"/>
                     </view>
                     <connections>
@@ -160,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIX-UB-t5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2169.5652173913045" y="-206.25"/>
+            <point key="canvasLocation" x="2168.8000000000002" y="-206.89655172413794"/>
         </scene>
         <!--Add Address View Controller-->
         <scene sceneID="uJb-6A-PUA">
@@ -849,9 +819,9 @@
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xqK-vV-aPE"/>
+        <segue reference="07J-oj-YeM"/>
         <segue reference="Iqs-My-v6R"/>
-        <segue reference="hcF-A7-fkk"/>
+        <segue reference="2GL-Xb-SPI"/>
         <segue reference="a7R-xX-A1G"/>
     </inferredMetricsTieBreakers>
 </document>

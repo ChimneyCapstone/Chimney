@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChangePasswordViewController: UIViewController {
+class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,7 +17,19 @@ class ChangePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.delegate = self
+        retypePasswordTextField.delegate = self
         self.title = "Change Password"
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     // handle save button

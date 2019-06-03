@@ -26,6 +26,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // sign in
     // Reference: https://www.youtube.com/watch?v=asKXHVUZiIY
     // https://www.youtube.com/watch?v=UPKCULKi0-A

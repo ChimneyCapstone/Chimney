@@ -29,9 +29,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // initialize the reference
         ref = Database.database().reference()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+        fullNameTextField.delegate = self
         // for phone text field
         phoneTextField.delegate = self
         phoneTextField.keyboardType = .phonePad
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
    
     func textFieldDidBeginEditing(_ textField: UITextField) {

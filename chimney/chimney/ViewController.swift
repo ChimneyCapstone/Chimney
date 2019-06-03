@@ -34,7 +34,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func setupSlideScrollView(slides: [Slide]) {
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: 0)
         scrollView.isPagingEnabled = true
 
         for i in 0 ..< slides.count {

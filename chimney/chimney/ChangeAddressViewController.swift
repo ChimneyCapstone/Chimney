@@ -24,27 +24,28 @@ class ChangeAddressViewController: UIViewController {
     var resultView: UITextView?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
         
-        ref = Database.database().reference()
-        welcomeLabel.text = "Welcome! " + fullName + "\nChange your Home address!"
-        
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
         
-        let subView = UIView(frame: CGRect(x: 0, y: 65.0, width: 350.0, height: 45.0))
+        ref = Database.database().reference()
+        welcomeLabel.text = "Welcome! Change your Home address!"
         
-        subView.addSubview((searchController?.searchBar)!)
-        view.addSubview(subView)
+        // Put the search bar in the navigation bar.
         searchController?.searchBar.sizeToFit()
-        searchController?.hidesNavigationBarDuringPresentation = false
+        navigationItem.titleView = searchController?.searchBar
         
         // When UISearchController presents the results view, present it in
         // this view controller, not one further up the chain.
         definesPresentationContext = true
+        
+        // Prevent the navigation bar from being hidden when searching.
+        searchController?.hidesNavigationBarDuringPresentation = false
     }
 }
 

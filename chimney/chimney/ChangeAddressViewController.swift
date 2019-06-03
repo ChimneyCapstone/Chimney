@@ -10,26 +10,27 @@ import UIKit
 import Firebase
 import GooglePlaces // for address autocompleting options
 
+
+import UIKit
+import GooglePlaces
+
 class ChangeAddressViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    var ref: DatabaseReference!
+    var fullName: String = ""
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
-    var ref: DatabaseReference!
-    var fullName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // initialize the database reference
-        ref = Database.database().reference()
-        self.title = "Change Address"
-        welcomeLabel.text = "Welcome! " + fullName + "\nChange your Home address!"
-        // check whether a user logged in or not
-        checkLoggedInUserStatus()
         
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
+        
+        ref = Database.database().reference()
+        welcomeLabel.text = "Welcome! " + fullName + "\nChange your Home address!"
         
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
@@ -39,30 +40,13 @@ class ChangeAddressViewController: UIViewController {
         subView.addSubview((searchController?.searchBar)!)
         view.addSubview(subView)
         searchController?.searchBar.sizeToFit()
-        searchController?.hidesNavigationBarDuringPresentation = true
+        searchController?.hidesNavigationBarDuringPresentation = false
         
         // When UISearchController presents the results view, present it in
         // this view controller, not one further up the chain.
         definesPresentationContext = true
-        
-        self.automaticallyAdjustsScrollViewInsets = false
-        self.extendedLayoutIncludesOpaqueBars = true
-    }
-    
-    // this function is for checking the user status
-    // Reference: https://www.youtube.com/watch?v=Syv_5XDWPjY
-    fileprivate func checkLoggedInUserStatus() {
-        if Auth.auth().currentUser == nil {
-            DispatchQueue.main.async {
-                let signInViewController = SignInViewController()
-                let signInNavigator = UINavigationController(rootViewController: signInViewController)
-                self.present(signInNavigator, animated: true, completion: nil)
-                return
-            }
-        }
     }
 }
-
 
 // Handle the user's selection.
 extension ChangeAddressViewController: GMSAutocompleteResultsViewControllerDelegate {
@@ -112,3 +96,4 @@ extension ChangeAddressViewController: GMSAutocompleteResultsViewControllerDeleg
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
+

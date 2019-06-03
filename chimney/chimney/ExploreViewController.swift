@@ -23,7 +23,8 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
+//        tableView.reloadData()
+//        self.contents.removeAll()
     }
     
     // MARK: UITableViewDataSource
@@ -36,11 +37,10 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-//
-//        }
-//        print(contents.count)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+        }
         return 5
+
     }
     
     
@@ -83,7 +83,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
             }
             
         });
-        DispatchQueue.main.asyncAfter(deadline: .now() + 9.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
             let unique = Array(Set(self.contents))
             if self.index < unique.count - 1 {
                 self.index+=1
@@ -95,7 +95,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         return cell
     }
-    
     
     // deal with the row selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -144,9 +143,25 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                             "picker": uid] as [String : Any]
                 let childUpdates = ["request/\(taskId)": post]
                 refe.updateChildValues(childUpdates)
+//                self.contents.remove(at: indexPath!.row)
+                self.tableView.beginUpdates()
+                let index:IndexPath = IndexPath(row:(4), section:0)
 
+                self.tableView.insertRows(at: [index], with: .automatic)
+                self.tableView.deleteRows(at: [indexPath!], with: .automatic)
+
+                self.tableView.endUpdates()
+//                self.tableView.deleteRows(at: [indexPath!], with: .automatic)
+//                self.tableView.insertRows(at: [indexPath!], with: .automatic)
+
+//                    self.tableView.reloadData()
                 })
+        let action2 = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction) in
+            print("You've pressed no");
+        }
         alertController.addAction(defaultAction)
+        alertController.addAction(action2)
+
 
         present(alertController, animated: true, completion: nil)
         

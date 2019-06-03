@@ -34,8 +34,6 @@ class RequestViewController: UIViewController, UITextViewDelegate {
         buttonscheck.append(free)
         buttonscheck.append(cash)
         MoneyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

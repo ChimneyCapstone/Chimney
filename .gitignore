@@ -151,5 +151,3 @@ iOSInjectionProject/
 # End of https://www.gitignore.io/api/xcode,swift,macos,firebase,visualstudiocode
 GoogleService-Info.plist
 Keys.plist
-
-*.pbxproj

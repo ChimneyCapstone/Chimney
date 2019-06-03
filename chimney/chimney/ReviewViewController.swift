@@ -6,7 +6,6 @@
 //  Copyright © 2019 chimney. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Firebase
 import CoreLocation

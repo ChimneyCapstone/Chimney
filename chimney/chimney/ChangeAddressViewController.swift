@@ -62,20 +62,33 @@ extension ChangeAddressViewController: GMSAutocompleteResultsViewControllerDeleg
         // US address only
         alertController.addAction(UIAlertAction(title: "Let's start!", style:.default, handler: { _ in
             let arr = place.formattedAddress!.components(separatedBy: ",")
-            let city = arr[1].replacingOccurrences(of: " ", with: "")
-            let stateAndzip = arr[2].components(separatedBy: " ")
-            let state = stateAndzip[1]
-            let zipcode = stateAndzip[2]
-            let userData = [
-                "address": place.name!,
-                "city": city,
-                "state": state,
-                "zipcode": zipcode
-            ]
-            self.ref.child("users").child(Auth.auth().currentUser!.uid).child("address").updateChildValues(userData)
-            // move to main view
-            let vc = EditViewController()
-            self.present(vc, animated: true, completion: nil)
+            if (arr.count  > 3) {
+                let city = arr[1].replacingOccurrences(of: " ", with: "")
+                let stateAndzip = arr[2].components(separatedBy: " ")
+                let state = stateAndzip[1]
+                let zipcode = stateAndzip[2]
+                let userData = [
+                    "address": place.name!,
+                    "city": city,
+                    "state": state,
+                    "zipcode": zipcode
+                ]
+                // saving error
+                self.ref.child("users").child(Auth.auth().currentUser!.uid).child("address").setValue(userData) {
+                    (error:Error?, ref:DatabaseReference) in
+                    if let error = error {
+                        print("Data could not be saved: \(error).")
+                    } else {
+                        print("Data saved successfully!")
+                    }
+                }
+                // move to main view
+                self.performSegue(withIdentifier: "pathToHome", sender: self)
+            } else {
+                let errorAlertController = UIAlertController(title:"Error", message: "You should set address with zipcode!", preferredStyle: .alert)
+                errorAlertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(errorAlertController, animated: true, completion: nil)
+            }
         }))
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
         self.present(alertController, animated: true, completion: nil)

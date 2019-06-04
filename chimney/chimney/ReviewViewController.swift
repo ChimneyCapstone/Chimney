@@ -33,35 +33,34 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "PlainCell")
-//        addControl()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             switch(self.curSeg) {
             case 0:
-                print("yoyo")
-                print(self.neighborReq.count - 1)
                 let unique = Array(Set(self.neighborReq))
                 if self.index < unique.count - 1 {
                     self.index+=1
                     cell.textLabel?.text = unique[self.index]
                 }
             case 1:
-                let unique = Array(Set(self.contents))
-                print(unique)
-                if self.index < unique.count - 1 {
-                    self.index+=1
-                    cell.textLabel?.text = unique[self.index]
+                DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
+
+                    let unique = Array(Set(self.contents))
+                    print(unique)
+                    if self.index < unique.count - 1 {
+                        self.index+=1
+                        cell.textLabel?.text = unique[self.index]
+                    }
                 }
+                return cell
             default:
                 cell.textLabel?.text = "please wait"
 
-            }
+            
         }
         return cell
     }
@@ -90,52 +89,57 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
         switch (segmentedControl.selectedSegmentIndex) {
         // neighbors' requests
         case 0:
+            print("case 0")
             neighborReq.append("amount 4   task starbucks")
             neighborReq.append("amount 11   task icecream")
             neighborReq.append("amount 10   task kfc")
             self.curSeg = 0
-
-            var ref: DatabaseReference!
-            let uid = Auth.auth().currentUser!.uid
-            ref = Database.database().reference().child("users").child(uid).child("address");
-            var myAddr = "";
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                if (snapshot.value as? Dictionary<String, AnyObject>) != nil {
-                    let snap = snapshot.value as? Dictionary<String, AnyObject>
-                    for child in snap! {
-                        myAddr.append(" " + (child.value as! String) as! String);
-                    }
-                }
-            })
-            var lat: CLLocationDegrees?;
-            var lon: CLLocationDegrees?;
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                let geoCoder = CLGeocoder()
-                geoCoder.geocodeAddressString(myAddr) {
-                    placemarks, error in
-                    let placemark = placemarks?.first
-                    lat = placemark?.location?.coordinate.latitude
-                    lon = placemark?.location?.coordinate.longitude
-                    print("Lat: \(lat), Lon: \(lon)")
-                }
-            }
+            break;
+//
+//            var ref: DatabaseReference!
+//            let uid = Auth.auth().currentUser!.uid
+//            ref = Database.database().reference().child("users").child(uid).child("address");
+//            var myAddr = "";
+//            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+//                if (snapshot.value as? Dictionary<String, AnyObject>) != nil {
+//                    let snap = snapshot.value as? Dictionary<String, AnyObject>
+//                    for child in snap! {
+//                        myAddr.append(" " + (child.value as! String) as! String);
+//                    }
+//                }
+//            })
+            
+            
+            
+//            var lat: CLLocationDegrees?;
+//            var lon: CLLocationDegrees?;
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//                let geoCoder = CLGeocoder()
+//                geoCoder.geocodeAddressString(myAddr) {
+//                    placemarks, error in
+//                    let placemark = placemarks?.first
+//                    lat = placemark?.location?.coordinate.latitude
+//                    lon = placemark?.location?.coordinate.longitude
+//                    print("Lat: \(lat), Lon: \(lon)")
+//                }
+//            }
 
 
             // loop through all users and look for requests(no pickedup field) and address 10 min away
-            var refe: DatabaseReference!
-            refe = Database.database().reference().child("users")
-            refe.observeSingleEvent(of: .value, with: { (snapshot) in
-                for child in snapshot.children {
-                    let snap = child as! DataSnapshot
-                    let key = snap.key
-                    if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                        for snap in snapshots {
-                            if (snap.value as? Dictionary<String, AnyObject>) != nil {
-                                let key = snap.key
-                                if (key != uid) {
-                                    let value = snap.value as? Dictionary<String, AnyObject>
-                                    // getting request
-                                    for add in value! {
+//            var refe: DatabaseReference!
+//            refe = Database.database().reference().child("users")
+//            refe.observeSingleEvent(of: .value, with: { (snapshot) in
+//                for child in snapshot.children {
+//                    let snap = child as! DataSnapshot
+//                    let key = snap.key
+//                    if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+//                        for snap in snapshots {
+//                            if (snap.value as? Dictionary<String, AnyObject>) != nil {
+//                                let key = snap.key
+//                                if (key != uid) {
+//                                    let value = snap.value as? Dictionary<String, AnyObject>
+//                                    // getting request
+//                                    for add in value! {
 //                                        if (add.key == "request") {
 //                                            if (add.value as? Dictionary<String, AnyObject>) != nil {
 //                                                let req = add.value as? Dictionary<String, AnyObject>
@@ -162,48 +166,40 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
 //                                            }
 //
                                         
-                                        var otherAddress = "";
-                                        if (add.key == "address") {
-                                            if (add.value as? Dictionary<String, AnyObject>) != nil {
-
-                                                let otherAdd = add.value as? Dictionary<String, AnyObject>
-                                                for child in otherAdd! {
-                                                    otherAddress.append(" " + (child.value as! String) as! String);
-                                                }
-                                            }
-                                        }
-                                        var lat2: CLLocationDegrees?;
-                                        var lon2: CLLocationDegrees?;
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                                            let geoCoder = CLGeocoder()
-                                            geoCoder.geocodeAddressString(otherAddress) {
-                                                placemarks, error in
-                                                let placemark = placemarks?.first
-                                                lat2 = placemark?.location?.coordinate.latitude
-                                                lon2 = placemark?.location?.coordinate.longitude
-                                                print("Lat2: \(lat), Lon2: \(lon)")
-                                            }
-                                        }
-                                        if (lat2 == nil || lon2 == nil) {
-                                            break;
-                                        }
-                                        let startLocation = CLLocation(latitude: lat!, longitude: lon!)
-                                        let endLocation = CLLocation(latitude: lat2!, longitude: lon2!)
-                                        let distance: CLLocationDistance = startLocation.distance(from: endLocation)
-                                        // in meters
-                                        if (distance < 10000) {
-                                            // yes, neighbors
-                                            
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                
-            });
-            break
+//                                        var otherAddress = "";
+//                                        if (add.key == "address") {
+//                                            if (add.value as? Dictionary<String, AnyObject>) != nil {
+//
+//                                                let otherAdd = add.value as? Dictionary<String, AnyObject>
+//                                                for child in otherAdd! {
+//                                                    otherAddress.append(" " + (child.value as! String) as! String);
+//                                                }
+//                                            }
+//                                        }
+//                                        var lat2: CLLocationDegrees?;
+//                                        var lon2: CLLocationDegrees?;
+//                                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//                                            let geoCoder = CLGeocoder()
+//                                            geoCoder.geocodeAddressString(otherAddress) {
+//                                                placemarks, error in
+//                                                let placemark = placemarks?.first
+//                                                lat2 = placemark?.location?.coordinate.latitude
+//                                                lon2 = placemark?.location?.coordinate.longitude
+//                                                print("Lat2: \(lat), Lon2: \(lon)")
+//                                            }
+//                                        }
+//                                        if (lat2 == nil || lon2 == nil) {
+//                                            break;
+//                                        }
+//                                        let startLocation = CLLocation(latitude: lat!, longitude: lon!)
+//                                        let endLocation = CLLocation(latitude: lat2!, longitude: lon2!)
+//                                        let distance: CLLocationDistance = startLocation.distance(from: endLocation)
+//                                        // in meters
+//                                        if (distance < 10000) {
+//                                            // yes, neighbors
+//
+//                                        }
+            
         // my requests
         case 1:
             print("entered reload")
@@ -276,7 +272,6 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
         case 0:
              if (currentCell.textLabel != nil && currentCell.textLabel!.text != nil) {
                 self.performSegue(withIdentifier: "info", sender: self)
-
             }
         case 1:
 

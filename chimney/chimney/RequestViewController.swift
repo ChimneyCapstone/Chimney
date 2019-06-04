@@ -48,28 +48,6 @@ class RequestViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-//    @IBAction func btn_box(sender: UIButton)
-//    {
-//        for btn in buttonscheck {
-//            btn.isSelected = false
-//        }
-//        if let index = buttonscheck.index(where: { $0 == sender }) {
-//            buttonscheck[index].isSelected = true
-//        }
-//        if free.isSelected {
-//            SubmitButton.isEnabled = true;
-//        } else {
-//            SubmitButton.isEnabled = false;
-//        }
-//        if cash.isSelected {
-//            if Double(MoneyTextField.text!) == nil {
-//                SubmitButton.isEnabled = false;
-//            }else {
-//                SubmitButton.isEnabled = true;
-//            }
-//        }
-//    }
-    
     func textViewDidBeginEditing(_ textView: UITextView) {
         
         if RequestTextField.textColor == UIColor.lightGray {
@@ -88,16 +66,12 @@ class RequestViewController: UIViewController, UITextViewDelegate {
     
     // check the field whether it fulfilled or not
     func checkFulfilled () -> Bool {
-        
-//        if cash.isSelected {
-            if Double(MoneyTextField.text!) == nil {
+        if Double(MoneyTextField.text!) == nil {
                 let alertController = UIAlertController(title: "Bad currency format", message: "please check format of currency", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(alertController, animated: true, completion: nil)
                 return false
             }
-//            SubmitButton.isEnabled = true;
-//        }
         return true
     }
     

@@ -23,8 +23,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        tableView.reloadData()
-//        self.contents.removeAll()
     }
     
     // MARK: UITableViewDataSource
@@ -149,10 +147,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.tableView.deleteRows(at: [indexPath!], with: .automatic)
 
                 self.tableView.endUpdates()
-//                self.tableView.deleteRows(at: [indexPath!], with: .automatic)
-//                self.tableView.insertRows(at: [indexPath!], with: .automatic)
-
-//                    self.tableView.reloadData()
                 })
         let action2 = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction) in
             print("You've pressed no");

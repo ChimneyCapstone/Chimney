@@ -10,10 +10,6 @@ import UIKit
 import Firebase
 import GooglePlaces // for address autocompleting options
 
-
-import UIKit
-import GooglePlaces
-
 class ChangeAddressViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     

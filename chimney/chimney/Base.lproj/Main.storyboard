@@ -725,7 +725,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUG-Mw-9T7">
-                                <rect key="frame" x="163" y="541" width="55" height="30"/>
+                                <rect key="frame" x="163" y="590" width="55" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped" destination="cfY-6V-w19" eventType="touchUpInside" id="ArC-nd-1mA"/>
@@ -805,6 +805,7 @@
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="2jc-tu-1jm" eventType="touchUpInside" id="e0V-Yp-fNM"/>
                                     <action selector="saveButtonTapped" destination="2jc-tu-1jm" eventType="touchUpInside" id="gSC-FZ-qzZ"/>
+                                    <segue destination="cfY-6V-w19" kind="show" identifier="cancel" id="EPx-Tg-y8P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -861,7 +862,7 @@
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="07J-oj-YeM"/>
+        <segue reference="EPx-Tg-y8P"/>
         <segue reference="Iqs-My-v6R"/>
         <segue reference="hcF-A7-fkk"/>
         <segue reference="a7R-xX-A1G"/>

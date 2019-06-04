@@ -42,8 +42,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
                         alertController.addAction(action)
                         self.present(alertController, animated: true, completion: nil)
                     } else {
-                        let vc = EditViewController()
-                        self.present(vc, animated: true, completion: nil)
+                        self.performSegue(withIdentifier: "cancel", sender: self)
                     }
                 }()
             }
@@ -53,12 +52,6 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
             alertController.addAction(action)
             self.present(alertController, animated: true, completion: nil)
         }
-    }
-    
-    // handle cancel button
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        let vc = EditViewController()
-        self.present(vc, animated: true, completion: nil)
     }
     
     // handle sign out button

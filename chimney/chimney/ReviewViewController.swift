@@ -42,12 +42,13 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
             switch(self.curSeg) {
             case 0:
                 let unique = Array(Set(self.neighborReq))
+                print(unique)
                 if self.index < unique.count - 1 {
                     self.index+=1
                     cell.textLabel?.text = unique[self.index]
                 }
             case 1:
-                DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
 
                     let unique = Array(Set(self.contents))
                     print(unique)
@@ -90,9 +91,10 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
         // neighbors' requests
         case 0:
             print("case 0")
-            neighborReq.append("amount 4   task starbucks")
-            neighborReq.append("amount 11   task icecream")
             neighborReq.append("amount 10   task kfc")
+            neighborReq.append("amount 4   task chicken")
+            neighborReq.append("amount 5   task nuggets")
+
             self.curSeg = 0
             break;
 //

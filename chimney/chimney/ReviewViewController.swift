@@ -33,10 +33,8 @@ class ReviewViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-
-        }
-        return self.contents.count
+        
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

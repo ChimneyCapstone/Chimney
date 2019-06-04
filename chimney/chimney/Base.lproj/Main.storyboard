@@ -411,57 +411,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FzG-r4-BaI" customClass="MoneyTextField" customModule="chimney" customModuleProvider="target">
-                                <rect key="frame" x="87" y="520" width="116" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FzG-r4-BaI" customClass="MoneyTextField" customModule="chimney" customModuleProvider="target">
+                                <rect key="frame" x="87" y="520" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <accessibility key="accessibilityConfiguration" hint="What's the most you are willing to pay?"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7DG-cU-k6g" customClass="RequestTextField" customModule="chimney" customModuleProvider="target">
-                                <rect key="frame" x="87" y="276" width="201" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hg0-0D-P3Q">
-                                <rect key="frame" x="95" y="447" width="31" height="30"/>
-                                <state key="normal" title="Free"/>
-                                <connections>
-                                    <action selector="btn_boxWithSender:" destination="Z2Z-wc-PYm" eventType="touchUpInside" id="6D0-Fl-Arv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlj-r4-tbM">
-                                <rect key="frame" x="241" y="447" width="35" height="30"/>
-                                <state key="normal" title="Cash"/>
-                                <connections>
-                                    <action selector="btn_boxWithSender:" destination="Z2Z-wc-PYm" eventType="touchUpInside" id="svE-6i-ZKj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAe-rA-jdB">
-                                <rect key="frame" x="234" y="519" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAe-rA-jdB">
+                                <rect key="frame" x="239" y="520" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="RequestButtonTapped:" destination="Z2Z-wc-PYm" eventType="touchUpInside" id="icg-MW-2pW"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7DG-cU-k6g" customClass="RequestTextField" customModule="chimney" customModuleProvider="target">
+                                <rect key="frame" x="87" y="251" width="201" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="hg0-0D-P3Q" firstAttribute="leading" secondItem="a0h-o3-uvd" secondAttribute="leading" constant="95" id="D8W-pS-bxX"/>
-                            <constraint firstItem="hg0-0D-P3Q" firstAttribute="top" secondItem="7DG-cU-k6g" secondAttribute="bottom" constant="43" id="FSi-At-mfe"/>
-                            <constraint firstItem="OAe-rA-jdB" firstAttribute="leading" secondItem="FzG-r4-BaI" secondAttribute="trailing" constant="31" id="Tlo-Zy-s9I"/>
-                            <constraint firstItem="a0h-o3-uvd" firstAttribute="trailing" secondItem="Tlj-r4-tbM" secondAttribute="trailing" constant="99" id="UN0-9j-g6o"/>
-                            <constraint firstItem="a0h-o3-uvd" firstAttribute="bottom" secondItem="FzG-r4-BaI" secondAttribute="bottom" constant="179" id="cnl-R7-uaJ"/>
-                            <constraint firstItem="7DG-cU-k6g" firstAttribute="leading" secondItem="FzG-r4-BaI" secondAttribute="leading" id="elM-a5-QvQ"/>
-                            <constraint firstItem="7DG-cU-k6g" firstAttribute="centerX" secondItem="GHz-ij-dxg" secondAttribute="centerX" id="hkh-fH-oVI"/>
-                            <constraint firstItem="Tlj-r4-tbM" firstAttribute="centerX" secondItem="OAe-rA-jdB" secondAttribute="centerX" id="i4R-HQ-w87"/>
-                            <constraint firstItem="hg0-0D-P3Q" firstAttribute="baseline" secondItem="Tlj-r4-tbM" secondAttribute="baseline" id="iYW-4b-lOA"/>
-                            <constraint firstItem="7DG-cU-k6g" firstAttribute="leading" secondItem="a0h-o3-uvd" secondAttribute="leading" constant="87" id="lhb-66-7hE"/>
-                            <constraint firstItem="OAe-rA-jdB" firstAttribute="top" secondItem="Tlj-r4-tbM" secondAttribute="bottom" constant="42" id="sTF-le-s4U"/>
-                            <constraint firstItem="FzG-r4-BaI" firstAttribute="baseline" secondItem="OAe-rA-jdB" secondAttribute="baseline" id="sZd-Mg-1yY"/>
-                            <constraint firstItem="7DG-cU-k6g" firstAttribute="top" secondItem="a0h-o3-uvd" secondAttribute="top" constant="188" id="uMy-hN-rmI"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="a0h-o3-uvd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LzH-ZS-aSh"/>
@@ -484,10 +458,8 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MoneyTextField" destination="FzG-r4-BaI" id="WdK-by-Vzh"/>
-                        <outlet property="RequestTextField" destination="7DG-cU-k6g" id="3Oy-ex-yPu"/>
+                        <outlet property="RequestTextField" destination="7DG-cU-k6g" id="anS-Q1-rAd"/>
                         <outlet property="SubmitButton" destination="OAe-rA-jdB" id="dSY-3j-PHF"/>
-                        <outlet property="cash" destination="Tlj-r4-tbM" id="MW3-x1-oVK"/>
-                        <outlet property="free" destination="hg0-0D-P3Q" id="w3T-LR-FZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVR-Rh-W1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -889,7 +861,7 @@
         <image name="user_male" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1U4-oL-nUz"/>
+        <segue reference="07J-oj-YeM"/>
         <segue reference="Iqs-My-v6R"/>
         <segue reference="hcF-A7-fkk"/>
         <segue reference="a7R-xX-A1G"/>

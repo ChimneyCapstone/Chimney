@@ -37,8 +37,6 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-        }
         return 5
 
     }

@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BE155506A8555F548487CB2 /* Pods_chimneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */; };
-		468E8924BBE5AC2B723F1E72 /* Pods_chimney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */; };
-		C5AC7062C131385F83AB88EF /* Pods_chimneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */; };
-		D39AFAFF22177D4400BA8A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39AFAFE22177D4400BA8A5C /* GoogleService-Info.plist */; };
-		D39AFB032218B34600BA8A5C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* SignupViewController.swift */; };
-		D39AFB052219E48300BA8A5C /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SigninViewController.swift */; };
-		D39AFB0B221A179D00BA8A5C /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D39AFB0A221A179D00BA8A5C /* Keys.plist */; };
+		1392CCB328886E101360C4A1 /* Pods_chimney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A7D44DC52DD9C5414B8417 /* Pods_chimney.framework */; };
+		2BD79590228EBFC60010C1E2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7958F228EBFC60010C1E2 /* InfoViewController.swift */; };
+		2BDF084E3A08079F09CE8472 /* Pods_chimneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC455CD1D8746C238BFCB783 /* Pods_chimneyTests.framework */; };
+		62B59257FD0381FAE2EB0792 /* Pods_chimneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03DA0F85DC39C9A4FDCC23 /* Pods_chimneyUITests.framework */; };
+		9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */; };
+		9D684D502229CAB70070B0FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D684D4E2229CAB70070B0FA /* Keys.plist */; };
+		D30417B7225546F200483F42 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30417B6225546F200483F42 /* Requests.swift */; };
+		D384C3F62266692000496CEF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F52266692000496CEF /* EditViewController.swift */; };
+		D384C3F8226670EE00496CEF /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */; };
+		D39A43002295F023005FFAFD /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = D39A42FF2295F023005FFAFD /* Slide.xib */; };
+		D39A43022295F44F005FFAFD /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A43012295F44F005FFAFD /* Slide.swift */; };
+		D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */; };
+		D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AFB042219E48300BA8A5C /* SignInViewController.swift */; };
+		D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546422417C74000B0253 /* RequestViewController.swift */; };
+		D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546622417C9A000B0253 /* ReviewViewController.swift */; };
+		D3A7546922417CB5000B0253 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546822417CB5000B0253 /* ExploreViewController.swift */; };
+		D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7546A22417CD6000B0253 /* TableViewController.swift */; };
+		D3A7D7F122726D2100072E6B /* ChangeAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D7F022726D2100072E6B /* ChangeAddressViewController.swift */; };
 		D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5AB9F220133C000CE200A /* AppDelegate.swift */; };
 		D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABA1220133C000CE200A /* ViewController.swift */; };
 		D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C5ABA3220133C000CE200A /* Main.storyboard */; };
@@ -21,6 +32,19 @@
 		D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C5ABA8220133C100CE200A /* LaunchScreen.storyboard */; };
 		D3C5ABB5220133C100CE200A /* chimneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABB4220133C100CE200A /* chimneyTests.swift */; };
 		D3C5ABC0220133C100CE200A /* chimneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5ABBF220133C100CE200A /* chimneyUITests.swift */; };
+		D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */; };
+		D3F2249222A491BE0086ACCD /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248622A491BE0086ACCD /* SF-Pro-Text-Regular.otf */; };
+		D3F2249322A491BE0086ACCD /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248722A491BE0086ACCD /* SF-Pro-Text-BoldItalic.otf */; };
+		D3F2249422A491BE0086ACCD /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248822A491BE0086ACCD /* SF-Pro-Text-Semibold.otf */; };
+		D3F2249522A491BE0086ACCD /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248922A491BE0086ACCD /* SF-Pro-Text-SemiboldItalic.otf */; };
+		D3F2249622A491BE0086ACCD /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248A22A491BE0086ACCD /* SF-Pro-Text-Bold.otf */; };
+		D3F2249722A491BE0086ACCD /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248B22A491BE0086ACCD /* SF-Pro-Text-Light.otf */; };
+		D3F2249822A491BE0086ACCD /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248C22A491BE0086ACCD /* SF-Pro-Text-LightItalic.otf */; };
+		D3F2249922A491BE0086ACCD /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248D22A491BE0086ACCD /* SF-Pro-Text-Medium.otf */; };
+		D3F2249A22A491BE0086ACCD /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248E22A491BE0086ACCD /* SF-Pro-Text-HeavyItalic.otf */; };
+		D3F2249B22A491BE0086ACCD /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2248F22A491BE0086ACCD /* SF-Pro-Text-MediumItalic.otf */; };
+		D3F2249C22A491BE0086ACCD /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2249022A491BE0086ACCD /* SF-Pro-Text-RegularItalic.otf */; };
+		D3F2249D22A491BE0086ACCD /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3F2249122A491BE0086ACCD /* SF-Pro-Text-Heavy.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,19 +64,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D3E85B48228BF3D7002C78E6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21EE4F948C50CF93F05404AB /* Pods-chimneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C86F0A8CA20E2B53CC8CB2AC /* Pods-chimney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimney/Pods-chimney.release.xcconfig"; sourceTree = "<group>"; };
-		CCD253AC79CFAC1173D0A035 /* Pods-chimneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CE579A1634EF456DDBBCCCA5 /* Pods-chimneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyTests/Pods-chimneyTests.release.xcconfig"; sourceTree = "<group>"; };
-		D290603961E4A4BD2D513613 /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D39AFAFE22177D4400BA8A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D39AFB022218B34600BA8A5C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		D39AFB042219E48300BA8A5C /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
-		D39AFB0A221A179D00BA8A5C /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		00A8D0815B19E7C9DC4050E6 /* Pods-chimneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.release.xcconfig"; path = "Target Support Files/Pods-chimneyTests/Pods-chimneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		190904512C90C1AE04CDEFC1 /* Pods-chimney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.debug.xcconfig"; path = "Target Support Files/Pods-chimney/Pods-chimney.debug.xcconfig"; sourceTree = "<group>"; };
+		1C026903AE479C2DA09B4B85 /* Pods-chimney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.release.xcconfig"; path = "Target Support Files/Pods-chimney/Pods-chimney.release.xcconfig"; sourceTree = "<group>"; };
+		2BD7958F228EBFC60010C1E2 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		3959C6529C3230D6F27D4C1B /* Pods-chimneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		72A0829EDB01FEF07C904C5B /* Pods-chimneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyTests.debug.xcconfig"; path = "Target Support Files/Pods-chimneyTests/Pods-chimneyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C03DA0F85DC39C9A4FDCC23 /* Pods_chimneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D684D4E2229CAB70070B0FA /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keys.plist; path = ../../../../Downloads/Keys.plist; sourceTree = "<group>"; };
+		A4A7D44DC52DD9C5414B8417 /* Pods_chimney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B26A0C6CD493F8C89A118584 /* Pods-chimneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimneyUITests.release.xcconfig"; path = "Target Support Files/Pods-chimneyUITests/Pods-chimneyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BC455CD1D8746C238BFCB783 /* Pods_chimneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chimneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30417B6225546F200483F42 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		D384C3F52266692000496CEF /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		D39A42FF2295F023005FFAFD /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		D39A43012295F44F005FFAFD /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
+		D39AFB042219E48300BA8A5C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D3A7546422417C74000B0253 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		D3A7546622417C9A000B0253 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		D3A7546822417CB5000B0253 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		D3A7546A22417CD6000B0253 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D3A7D7F022726D2100072E6B /* ChangeAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAddressViewController.swift; sourceTree = "<group>"; };
 		D3C5AB9C220133C000CE200A /* chimney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chimney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5AB9F220133C000CE200A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C5ABA1220133C000CE200A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +114,19 @@
 		D3C5ABBB220133C100CE200A /* chimneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chimneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5ABBF220133C100CE200A /* chimneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chimneyUITests.swift; sourceTree = "<group>"; };
 		D3C5ABC1220133C100CE200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8710B333072A0E483FDA811 /* Pods-chimney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chimney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chimney/Pods-chimney.debug.xcconfig"; sourceTree = "<group>"; };
+		D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D3F2248622A491BE0086ACCD /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		D3F2248722A491BE0086ACCD /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		D3F2248822A491BE0086ACCD /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		D3F2248922A491BE0086ACCD /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		D3F2248A22A491BE0086ACCD /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		D3F2248B22A491BE0086ACCD /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		D3F2248C22A491BE0086ACCD /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		D3F2248D22A491BE0086ACCD /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		D3F2248E22A491BE0086ACCD /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		D3F2248F22A491BE0086ACCD /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		D3F2249022A491BE0086ACCD /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		D3F2249122A491BE0086ACCD /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				468E8924BBE5AC2B723F1E72 /* Pods_chimney.framework in Frameworks */,
+				1392CCB328886E101360C4A1 /* Pods_chimney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE155506A8555F548487CB2 /* Pods_chimneyTests.framework in Frameworks */,
+				2BDF084E3A08079F09CE8472 /* Pods_chimneyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,34 +150,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5AC7062C131385F83AB88EF /* Pods_chimneyUITests.framework in Frameworks */,
+				62B59257FD0381FAE2EB0792 /* Pods_chimneyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AEBF60B169DB033D00E8A33 /* Frameworks */ = {
+		920D3950D274EBA572B84906 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				79D98C3E450B57FD895A8DA0 /* Pods_chimney.framework */,
-				1A7C4E4F548675A777C688A1 /* Pods_chimneyTests.framework */,
-				AD96F15EF5B83F9C8AA76028 /* Pods_chimneyUITests.framework */,
+				190904512C90C1AE04CDEFC1 /* Pods-chimney.debug.xcconfig */,
+				1C026903AE479C2DA09B4B85 /* Pods-chimney.release.xcconfig */,
+				72A0829EDB01FEF07C904C5B /* Pods-chimneyTests.debug.xcconfig */,
+				00A8D0815B19E7C9DC4050E6 /* Pods-chimneyTests.release.xcconfig */,
+				3959C6529C3230D6F27D4C1B /* Pods-chimneyUITests.debug.xcconfig */,
+				B26A0C6CD493F8C89A118584 /* Pods-chimneyUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C133CDBAB411D3EFE1F4254C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4A7D44DC52DD9C5414B8417 /* Pods_chimney.framework */,
+				BC455CD1D8746C238BFCB783 /* Pods_chimneyTests.framework */,
+				7C03DA0F85DC39C9A4FDCC23 /* Pods_chimneyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		67E881B90CA6A746A7F99165 /* Pods */ = {
+		D39A42FE2295F008005FFAFD /* views */ = {
 			isa = PBXGroup;
 			children = (
-				D8710B333072A0E483FDA811 /* Pods-chimney.debug.xcconfig */,
-				C86F0A8CA20E2B53CC8CB2AC /* Pods-chimney.release.xcconfig */,
-				CCD253AC79CFAC1173D0A035 /* Pods-chimneyTests.debug.xcconfig */,
-				CE579A1634EF456DDBBCCCA5 /* Pods-chimneyTests.release.xcconfig */,
-				21EE4F948C50CF93F05404AB /* Pods-chimneyUITests.debug.xcconfig */,
-				D290603961E4A4BD2D513613 /* Pods-chimneyUITests.release.xcconfig */,
+				D39A42FF2295F023005FFAFD /* Slide.xib */,
+				D39A43012295F44F005FFAFD /* Slide.swift */,
 			);
-			name = Pods;
+			path = views;
 			sourceTree = "<group>";
 		};
 		D3C5AB93220133C000CE200A = {
@@ -127,8 +196,8 @@
 				D3C5ABB3220133C100CE200A /* chimneyTests */,
 				D3C5ABBE220133C100CE200A /* chimneyUITests */,
 				D3C5AB9D220133C000CE200A /* Products */,
-				67E881B90CA6A746A7F99165 /* Pods */,
-				0AEBF60B169DB033D00E8A33 /* Frameworks */,
+				920D3950D274EBA572B84906 /* Pods */,
+				C133CDBAB411D3EFE1F4254C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,16 +214,28 @@
 		D3C5AB9E220133C000CE200A /* chimney */ = {
 			isa = PBXGroup;
 			children = (
+				D3F2248522A491950086ACCD /* Resources */,
+				D39A42FE2295F008005FFAFD /* views */,
 				D3C5AB9F220133C000CE200A /* AppDelegate.swift */,
-				D39AFAFE22177D4400BA8A5C /* GoogleService-Info.plist */,
 				D3C5ABA1220133C000CE200A /* ViewController.swift */,
-				D39AFB022218B34600BA8A5C /* SignupViewController.swift */,
 				D3C5ABA3220133C000CE200A /* Main.storyboard */,
+				D39AFB022218B34600BA8A5C /* AddAddressViewController.swift */,
+				D3F11776222B2E4E00DFA7B9 /* SignUpViewController.swift */,
+				D3C5ABAB220133C100CE200A /* Info.plist */,
+				9D684D4D2229CAB70070B0FA /* GoogleService-Info.plist */,
+				9D684D4E2229CAB70070B0FA /* Keys.plist */,
 				D3C5ABA6220133C100CE200A /* Assets.xcassets */,
 				D3C5ABA8220133C100CE200A /* LaunchScreen.storyboard */,
-				D3C5ABAB220133C100CE200A /* Info.plist */,
-				D39AFB042219E48300BA8A5C /* SigninViewController.swift */,
-				D39AFB0A221A179D00BA8A5C /* Keys.plist */,
+				D39AFB042219E48300BA8A5C /* SignInViewController.swift */,
+				D3A7546422417C74000B0253 /* RequestViewController.swift */,
+				D3A7546622417C9A000B0253 /* ReviewViewController.swift */,
+				2BD7958F228EBFC60010C1E2 /* InfoViewController.swift */,
+				D3A7546822417CB5000B0253 /* ExploreViewController.swift */,
+				D3A7546A22417CD6000B0253 /* TableViewController.swift */,
+				D30417B6225546F200483F42 /* Requests.swift */,
+				D384C3F52266692000496CEF /* EditViewController.swift */,
+				D384C3F7226670ED00496CEF /* ChangePasswordViewController.swift */,
+				D3A7D7F022726D2100072E6B /* ChangeAddressViewController.swift */,
 			);
 			path = chimney;
 			sourceTree = "<group>";
@@ -177,6 +258,25 @@
 			path = chimneyUITests;
 			sourceTree = "<group>";
 		};
+		D3F2248522A491950086ACCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3F2248A22A491BE0086ACCD /* SF-Pro-Text-Bold.otf */,
+				D3F2248722A491BE0086ACCD /* SF-Pro-Text-BoldItalic.otf */,
+				D3F2249122A491BE0086ACCD /* SF-Pro-Text-Heavy.otf */,
+				D3F2248E22A491BE0086ACCD /* SF-Pro-Text-HeavyItalic.otf */,
+				D3F2248B22A491BE0086ACCD /* SF-Pro-Text-Light.otf */,
+				D3F2248C22A491BE0086ACCD /* SF-Pro-Text-LightItalic.otf */,
+				D3F2248D22A491BE0086ACCD /* SF-Pro-Text-Medium.otf */,
+				D3F2248F22A491BE0086ACCD /* SF-Pro-Text-MediumItalic.otf */,
+				D3F2248622A491BE0086ACCD /* SF-Pro-Text-Regular.otf */,
+				D3F2249022A491BE0086ACCD /* SF-Pro-Text-RegularItalic.otf */,
+				D3F2248822A491BE0086ACCD /* SF-Pro-Text-Semibold.otf */,
+				D3F2248922A491BE0086ACCD /* SF-Pro-Text-SemiboldItalic.otf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,12 +284,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5ABC4220133C100CE200A /* Build configuration list for PBXNativeTarget "chimney" */;
 			buildPhases = (
-				A1CF2746F86592AF294D5716 /* [CP] Check Pods Manifest.lock */,
+				3EC1AED43734071942D3DE40 /* [CP] Check Pods Manifest.lock */,
 				D3C5AB98220133C000CE200A /* Sources */,
 				D3C5AB99220133C000CE200A /* Frameworks */,
 				D3C5AB9A220133C000CE200A /* Resources */,
-				5DE0D01ACAAC6267B6E6546D /* [CP] Embed Pods Frameworks */,
-				A5DC06C4A46EA814513E5A50 /* [CP] Copy Pods Resources */,
+				96637103620E3119BDA23B1B /* [CP] Embed Pods Frameworks */,
+				F5A75DBB3A44BD2B173E981B /* [CP] Copy Pods Resources */,
+				D3E85B48228BF3D7002C78E6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -204,7 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5ABC7220133C100CE200A /* Build configuration list for PBXNativeTarget "chimneyTests" */;
 			buildPhases = (
-				A89E81656FCF91DDB45FD96C /* [CP] Check Pods Manifest.lock */,
+				5E7DA1789D7C275F19DA244E /* [CP] Check Pods Manifest.lock */,
 				D3C5ABAC220133C100CE200A /* Sources */,
 				D3C5ABAD220133C100CE200A /* Frameworks */,
 				D3C5ABAE220133C100CE200A /* Resources */,
@@ -223,7 +324,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5ABCA220133C100CE200A /* Build configuration list for PBXNativeTarget "chimneyUITests" */;
 			buildPhases = (
-				9068E226651992ACE43DE712 /* [CP] Check Pods Manifest.lock */,
+				7BB4FC581266827C1A08AEC4 /* [CP] Check Pods Manifest.lock */,
 				D3C5ABB7220133C100CE200A /* Sources */,
 				D3C5ABB8220133C100CE200A /* Frameworks */,
 				D3C5ABB9220133C100CE200A /* Resources */,
@@ -291,11 +392,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39AFB0B221A179D00BA8A5C /* Keys.plist in Resources */,
+				D3F2249B22A491BE0086ACCD /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				D3C5ABAA220133C100CE200A /* LaunchScreen.storyboard in Resources */,
-				D39AFAFF22177D4400BA8A5C /* GoogleService-Info.plist in Resources */,
+				D39A43002295F023005FFAFD /* Slide.xib in Resources */,
+				D3F2249722A491BE0086ACCD /* SF-Pro-Text-Light.otf in Resources */,
+				D3F2249C22A491BE0086ACCD /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				9D684D4F2229CAB70070B0FA /* GoogleService-Info.plist in Resources */,
 				D3C5ABA7220133C100CE200A /* Assets.xcassets in Resources */,
+				D3F2249522A491BE0086ACCD /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				D3F2249622A491BE0086ACCD /* SF-Pro-Text-Bold.otf in Resources */,
 				D3C5ABA5220133C000CE200A /* Main.storyboard in Resources */,
+				D3F2249A22A491BE0086ACCD /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				9D684D502229CAB70070B0FA /* Keys.plist in Resources */,
+				D3F2249822A491BE0086ACCD /* SF-Pro-Text-LightItalic.otf in Resources */,
+				D3F2249D22A491BE0086ACCD /* SF-Pro-Text-Heavy.otf in Resources */,
+				D3F2249422A491BE0086ACCD /* SF-Pro-Text-Semibold.otf in Resources */,
+				D3F2249322A491BE0086ACCD /* SF-Pro-Text-BoldItalic.otf in Resources */,
+				D3F2249922A491BE0086ACCD /* SF-Pro-Text-Medium.otf in Resources */,
+				D3F2249222A491BE0086ACCD /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,55 +430,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5DE0D01ACAAC6267B6E6546D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9068E226651992ACE43DE712 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-chimneyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A1CF2746F86592AF294D5716 /* [CP] Check Pods Manifest.lock */ = {
+		3EC1AED43734071942D3DE40 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,31 +452,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5DC06C4A46EA814513E5A50 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chimney/Pods-chimney-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A89E81656FCF91DDB45FD96C /* [CP] Check Pods Manifest.lock */ = {
+		5E7DA1789D7C275F19DA244E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,6 +474,84 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7BB4FC581266827C1A08AEC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chimneyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96637103620E3119BDA23B1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5A75DBB3A44BD2B173E981B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chimney/Pods-chimney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -439,10 +559,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39AFB052219E48300BA8A5C /* SigninViewController.swift in Sources */,
-				D39AFB032218B34600BA8A5C /* SignupViewController.swift in Sources */,
+				D384C3F62266692000496CEF /* EditViewController.swift in Sources */,
+				D39AFB052219E48300BA8A5C /* SignInViewController.swift in Sources */,
+				D3A7D7F122726D2100072E6B /* ChangeAddressViewController.swift in Sources */,
+				D39AFB032218B34600BA8A5C /* AddAddressViewController.swift in Sources */,
+				2BD79590228EBFC60010C1E2 /* InfoViewController.swift in Sources */,
+				D30417B7225546F200483F42 /* Requests.swift in Sources */,
+				D3A7546722417C9A000B0253 /* ReviewViewController.swift in Sources */,
+				D3A7546522417C74000B0253 /* RequestViewController.swift in Sources */,
+				D3A7546922417CB5000B0253 /* ExploreViewController.swift in Sources */,
+				D3F11777222B2E4F00DFA7B9 /* SignUpViewController.swift in Sources */,
 				D3C5ABA2220133C000CE200A /* ViewController.swift in Sources */,
+				D39A43022295F44F005FFAFD /* Slide.swift in Sources */,
+				D3A7546B22417CD6000B0253 /* TableViewController.swift in Sources */,
 				D3C5ABA0220133C000CE200A /* AppDelegate.swift in Sources */,
+				D384C3F8226670EE00496CEF /* ChangePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,10 +746,11 @@
 		};
 		D3C5ABC5220133C100CE200A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8710B333072A0E483FDA811 /* Pods-chimney.debug.xcconfig */;
+			baseConfigurationReference = 190904512C90C1AE04CDEFC1 /* Pods-chimney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BPLW8Y4PU4;
 				INFOPLIST_FILE = chimney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,10 +765,11 @@
 		};
 		D3C5ABC6220133C100CE200A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C86F0A8CA20E2B53CC8CB2AC /* Pods-chimney.release.xcconfig */;
+			baseConfigurationReference = 1C026903AE479C2DA09B4B85 /* Pods-chimney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BPLW8Y4PU4;
 				INFOPLIST_FILE = chimney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,7 +784,7 @@
 		};
 		D3C5ABC8220133C100CE200A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCD253AC79CFAC1173D0A035 /* Pods-chimneyTests.debug.xcconfig */;
+			baseConfigurationReference = 72A0829EDB01FEF07C904C5B /* Pods-chimneyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -672,7 +805,7 @@
 		};
 		D3C5ABC9220133C100CE200A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE579A1634EF456DDBBCCCA5 /* Pods-chimneyTests.release.xcconfig */;
+			baseConfigurationReference = 00A8D0815B19E7C9DC4050E6 /* Pods-chimneyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -693,7 +826,7 @@
 		};
 		D3C5ABCB220133C100CE200A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21EE4F948C50CF93F05404AB /* Pods-chimneyUITests.debug.xcconfig */;
+			baseConfigurationReference = 3959C6529C3230D6F27D4C1B /* Pods-chimneyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -713,7 +846,7 @@
 		};
 		D3C5ABCC220133C100CE200A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D290603961E4A4BD2D513613 /* Pods-chimneyUITests.release.xcconfig */;
+			baseConfigurationReference = B26A0C6CD493F8C89A118584 /* Pods-chimneyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
